@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.05052563, g: 0.07128504, b: 0.10819817, a: 1}
+  m_IndirectSpecularColor: {r: 0.062861495, g: 0.08891181, b: 0.13314913, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8995,6 +8995,11 @@ Terrain:
   m_GroupingID: 0
   m_RenderingLayerMask: 257
   m_AllowAutoConnect: 1
+--- !u!1 &790727216 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8227640780516273657, guid: 9d89a7e651c34fa41badea8f31fd7359, type: 3}
+  m_PrefabInstance: {fileID: 1995544372}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &806918453
 GameObject:
   m_ObjectHideFlags: 0
@@ -24916,6 +24921,8 @@ PlayableDirector:
     value: {fileID: 897250684}
   - key: {fileID: 8915382919413741040, guid: 8d12585c9cb277d47a28ed683e1bf802, type: 2}
     value: {fileID: 365228661}
+  - key: {fileID: -7787461038836078196, guid: 8d12585c9cb277d47a28ed683e1bf802, type: 2}
+    value: {fileID: 790727216}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &158323907502235968
@@ -25200,7 +25207,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.4426751, y: 1}
+    m_SensorSize: {x: 1.6532847, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
