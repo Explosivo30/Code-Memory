@@ -49,6 +49,10 @@ public class EnemyCalmState : EnemyState
 
         if (pathEnded == false)
         {
+            if(pathPoints == null)
+            {
+                return;
+            }
             PathPoints();
         }
         else

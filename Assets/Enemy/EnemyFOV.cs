@@ -60,7 +60,7 @@ public class EnemyFOV : MonoBehaviour
             //Debug.Log("Ya no lo veo");
         }
     }
-
+     /*
     private void OnDrawGizmosSelected()
     {
         Color c = new Color(0.2f, 0.9f, 0.9f, 0.4f);
@@ -77,7 +77,7 @@ public class EnemyFOV : MonoBehaviour
 
     }
 
-
+    */
     public bool GetPlayerInside()
     {
         return playerInside;

@@ -17,14 +17,15 @@ public class ActivateMenuPause : MonoBehaviour
     {
         if (menuPauseIsActive == false && Input.GetKeyDown(KeyCode.Escape))
         {
+            Time.timeScale = 0f;
             menuPauseIsActive = true;
             pauseMenu.SetActive(true);
-            Time.timeScale = 0f;
+            
         }
         
         if(pauseMenu.activeInHierarchy == false)
         {
-            Debug.Log("DEVOLVEMOS EL TIEMPO");
+            //Debug.Log("DEVOLVEMOS EL TIEMPO");
             pauseMenu.SetActive(false);
             menuPauseIsActive = false;
         }

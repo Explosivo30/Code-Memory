@@ -5,6 +5,7 @@ using UnityEngine;
 public class BulletScript : MonoBehaviour
 {
     Rigidbody rb;
+    [SerializeField] float speed = 25f;
 
     private void Awake()
     {
@@ -13,7 +14,7 @@ public class BulletScript : MonoBehaviour
     
     void Update()
     {
-        rb.AddForce(transform.forward * 20f);
+        rb.AddForce(transform.forward * speed);
     }
 
 
