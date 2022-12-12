@@ -143,7 +143,7 @@ public class MovementPlayer : MonoBehaviour
         //Debug.Log("is wall right " + isWallRight);
 
         
-        if (isWall && velocity.y < 0)
+        if (isGrounded && velocity.y < 0)
         {
             velocity.y = isWall ? -1 : 0f;
         }

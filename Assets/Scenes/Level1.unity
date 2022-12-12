@@ -7635,7 +7635,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3257320967774163232, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
       propertyPath: gravity
-      value: -50
+      value: -35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3257320967774163232, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
+      propertyPath: speedMax
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3257320967774163232, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
       propertyPath: jumpHeight
@@ -7651,7 +7655,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3257320967774163232, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
       propertyPath: sprintSpeedMax
-      value: 25
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 3257320967774163232, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
       propertyPath: groundMask.m_Bits
@@ -25954,7 +25958,6 @@ PrefabInstance:
       objectReference: {fileID: 829439219}
     m_RemovedComponents:
     - {fileID: 543923714880108771, guid: f5f1db0013f6fda4583d359494820461, type: 3}
-    - {fileID: 543923716448018548, guid: f5f1db0013f6fda4583d359494820461, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f5f1db0013f6fda4583d359494820461, type: 3}
 --- !u!1 &810761390
 GameObject:
