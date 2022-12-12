@@ -25,10 +25,10 @@ public class GrapplingHook : MonoBehaviour
     float grapplingCdTimer;
 
     [Header("Input")]
-    KeyCode grappleKey = KeyCode.Mouse1;
+    [SerializeField]KeyCode grappleKey = KeyCode.Mouse1;
 
 
-    bool grappling;
+    bool grappling = false;
 
     private void Awake()
     {
@@ -38,10 +38,10 @@ public class GrapplingHook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(grappleKey)) StartGrapple();
+        if (Input.GetKeyDown(grappleKey)) { StartGrapple(); }
 
-        if (grapplingCdTimer > 0)
-            grapplingCdTimer -= Time.deltaTime;
+        if (grapplingCdTimer > 0) { grapplingCdTimer -= Time.deltaTime; }
+            
     }
 
     private void LateUpdate()

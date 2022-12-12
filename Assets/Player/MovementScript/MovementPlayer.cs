@@ -19,6 +19,8 @@ public class MovementPlayer : MonoBehaviour
     RaycastHit rightWallHit;
 
     [SerializeField]float raycastLenght = 2f;
+    [SerializeField]float groundRaycastLenght = 1.5f;
+
     #endregion
 
     Vector3 move;
@@ -141,7 +143,7 @@ public class MovementPlayer : MonoBehaviour
         //Debug.Log("is wall right " + isWallRight);
 
         
-        if (isGrounded && velocity.y < 0)
+        if (isWall && velocity.y < 0)
         {
             velocity.y = isWall ? -1 : 0f;
         }
@@ -174,7 +176,7 @@ public class MovementPlayer : MonoBehaviour
 
     private void CheckForWall()
     {
-        isGrounded = Physics.CheckBox(groundCheck.position, new Vector3(1f, 0.4f, 1f), Quaternion.identity, groundMask);
+        isGrounded = Physics.Raycast(transform.position, -transform.up,groundRaycastLenght, groundMask);
         //isWallLeft = Physics.CheckBox(leftWallCheck.position, new Vector3(0.2f, 0.7f, 0.4f), Quaternion.identity, isWallGroundMask);
         isWallLeft = Physics.Raycast(transform.position, -transform.right, out leftWallHit, raycastLenght, isWallGroundMask);
         //isWallRight = Physics.CheckBox(rightWallCheck.position, new Vector3(0.2f, 0.7f, 0.4f), Quaternion.identity, isWallGroundMask);
@@ -228,7 +230,7 @@ public class MovementPlayer : MonoBehaviour
                 
                 JumpLeft();
             }
-            
+            isGrounded = false;
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             //Debug.Log(velocity.y);
 
