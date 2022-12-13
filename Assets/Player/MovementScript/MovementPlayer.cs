@@ -34,11 +34,10 @@ public class MovementPlayer : MonoBehaviour
     public LayerMask groundMask;
     public LayerMask isWallGroundMask;
     [SerializeField] float jumpHeight = 24f;
-<<<<<<< Updated upstream
-    [SerializeField] float sideJump = 11f;
-=======
+
+
     [SerializeField] float sideJump = 12f;
->>>>>>> Stashed changes
+
     bool isGrounded;
 
 
@@ -267,11 +266,11 @@ public class MovementPlayer : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Space))
         {
-<<<<<<< Updated upstream
+
             velocity = -transform.right * sideJump;
-=======
-            velocity = -transform.right *sideJump;
->>>>>>> Stashed changes
+
+            
+
             isWallRight = false;
         }
 
