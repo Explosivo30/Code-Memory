@@ -34,6 +34,7 @@ public class MovementPlayer : MonoBehaviour
     public LayerMask groundMask;
     public LayerMask isWallGroundMask;
     [SerializeField] float jumpHeight = 24f;
+    [SerializeField] float sideJump = 11f;
     bool isGrounded;
 
 
@@ -145,8 +146,8 @@ public class MovementPlayer : MonoBehaviour
         
         if (isGrounded && velocity.y < 0)
         {
-            velocity.y = isWall ? -1f : 0f;
-            velocity.y = -1f;
+            velocity.y = isWall ? -4f : 0f;
+            //velocity.y = -1;
         }
         
         velocity.y += gravity * Time.deltaTime;
@@ -262,7 +263,7 @@ public class MovementPlayer : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            velocity = -transform.right * 10f;
+            velocity = -transform.right * sideJump;
             isWallRight = false;
         }
 
@@ -278,7 +279,7 @@ public class MovementPlayer : MonoBehaviour
         //Debug.Log("esWallLeft");
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            velocity = transform.right * 10f; //Mathf.Sqrt(100f);
+            velocity = transform.right * sideJump; //Mathf.Sqrt(100f);
             isWallLeft = false;
         }
 

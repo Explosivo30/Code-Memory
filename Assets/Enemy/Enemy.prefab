@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 543923714418079524}
   - component: {fileID: 543923714418079525}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AlertState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ GameObject:
   m_Component:
   - component: {fileID: 543923714880108770}
   - component: {fileID: 543923714880108771}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: States
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 543923715425557619}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 543923715874660210}
   - component: {fileID: 543923715874660211}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AgressiveState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,7 +185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 543923716406308151}
   - component: {fileID: 543923716406308148}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CalmState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,7 +235,7 @@ GameObject:
   - component: {fileID: 543923716420810812}
   - component: {fileID: 543923716420810811}
   - component: {fileID: 543923716420810810}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,7 +323,8 @@ GameObject:
   - component: {fileID: 543923716448018551}
   - component: {fileID: 543923716448018550}
   - component: {fileID: 543923716448018549}
-  m_Layer: 0
+  - component: {fileID: 1457941314}
+  m_Layer: 10
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -478,3 +479,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1457941314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543923716448018543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1880eca4ced4bb4a9a2e8764b831bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 543923716448018536}

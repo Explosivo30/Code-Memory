@@ -19,6 +19,7 @@ public class AttackPlayer : MonoBehaviour
     #endregion
     [Tooltip("LayerMask que tienen los enemigos")]
     [SerializeField] LayerMask enemies;
+    [SerializeField] float rangeBackKill = 3.5f;
 
     #region SlowTime
     float slowedTimeScale = 0.2f;
@@ -40,7 +41,7 @@ public class AttackPlayer : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             RaycastHit ray;
-            if(Physics.Raycast(transform.position,transform.forward,out ray, 2f, enemies))
+            if(Physics.Raycast(transform.position,transform.forward,out ray, rangeBackKill, enemies))
             {
                 Vector3 dirEnemyToPlayer = (transform.position - ray.transform.position).normalized;
 

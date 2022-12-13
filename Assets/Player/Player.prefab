@@ -122,8 +122,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1929776673}
-  m_LocalRotation: {x: 0.096349284, y: -0.84540236, z: 0.1633531, w: 0.499327}
-  m_LocalPosition: {x: 13.022517, y: 6.576912, z: 7.177576}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -160,7 +160,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.6532847, y: 1}
+    m_SensorSize: {x: 1.0350318, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -300,6 +300,7 @@ GameObject:
   - component: {fileID: 3257320967774163234}
   - component: {fileID: 3257320967774163235}
   - component: {fileID: 3257320967774163232}
+  - component: {fileID: 4846051448659224292}
   m_Layer: 11
   m_Name: Player
   m_TagString: Untagged
@@ -361,6 +362,8 @@ MonoBehaviour:
   speedMax: 10
   ch: {fileID: 3257320967774163235}
   gravity: -20
+  raycastLenght: 2
+  groundRaycastLenght: 1.5
   velocity: {x: 0, y: 0, z: 0}
   groundCheck: {fileID: 3257320969761575936}
   rightWallCheck: {fileID: 7036515077969530560}
@@ -374,6 +377,7 @@ MonoBehaviour:
   jumpHeight: 1.8
   camTrans: {fileID: 1929776674}
   camMove: {fileID: 1929776676}
+  freeze: 0
   sprintSpeedMax: 15
   walkBobSpeed: 12
   walkBobAmount: 0.01
@@ -381,6 +385,25 @@ MonoBehaviour:
   sprintBobAmount: 0.014
   slideSpeedDecay: 20
   cameraSlideDown: -0.5
+--- !u!114 &4846051448659224292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3257320967774163237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 670f613e0e7643a4ba8bc578fc78201f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownAttack: 2
+  cuchillo: {fileID: 0}
+  cameraPlayer: {fileID: 1929776674}
+  enemies:
+    serializedVersion: 2
+    m_Bits: 1024
+  rangeBackKill: 3.5
 --- !u!1 &3257320968186378691
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,7 +533,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7036515077969530560
 Transform:
   m_ObjectHideFlags: 0
@@ -541,7 +564,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4007285067031650164
 Transform:
   m_ObjectHideFlags: 0
