@@ -145,7 +145,8 @@ public class MovementPlayer : MonoBehaviour
         
         if (isGrounded && velocity.y < 0)
         {
-            velocity.y = isWall ? -1 : 0f;
+            velocity.y = isWall ? -1f : 0f;
+            velocity.y = -1f;
         }
         
         velocity.y += gravity * Time.deltaTime;
