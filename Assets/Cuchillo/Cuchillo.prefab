@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: -2226085930692676299}
   - component: {fileID: -3440156389191085489}
   - component: {fileID: 26782967}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cuchillo
   m_TagString: Cuchillo
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85ddac78b19dcb5449c31eae86d7e454, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 25
+  speed: 45
 --- !u!54 &-3440156389191085489
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -143,6 +143,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c636d8a1fb335fa4a94133cad15ec14a, type: 3}
       propertyPath: m_Name
       value: CobineCuchillo
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c636d8a1fb335fa4a94133cad15ec14a, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191947015598728078, guid: c636d8a1fb335fa4a94133cad15ec14a, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c636d8a1fb335fa4a94133cad15ec14a, type: 3}
