@@ -51,7 +51,7 @@ public class AttackPlayer : MonoBehaviour
                 if (dot < -1f + backstabOffset)
                 {
                     Debug.Log("Backstab");
-                    var enemyCombat = ray.transform.GetComponent<EnemyCombat>();
+                    EnemyCombat enemyCombat = ray.transform.GetComponentInParent<EnemyCombat>();
                     enemyCombat.GetAssasinated();
                 }
             }

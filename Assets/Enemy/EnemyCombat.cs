@@ -31,13 +31,6 @@ public class EnemyCombat : MonoBehaviour
     }
 
 
-    public void OnCollisionEnter(Collision collision)
-    {
-        if (collision.transform.tag == "Cuchillo")
-        {
-            Destroy(gameObject);
-        }
-    }
 
     //Hola Edgar m'agraden los flors vermelles y els keebabs, espero que a tu també. Aquest codi es molt bonic, com els canelon beshamel.
 
