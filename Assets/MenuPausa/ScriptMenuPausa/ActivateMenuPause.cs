@@ -18,6 +18,8 @@ public class ActivateMenuPause : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Time.timeScale = 0f;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             menuPauseIsActive = true;
             pauseMenu.SetActive(true);
             
@@ -28,6 +30,8 @@ public class ActivateMenuPause : MonoBehaviour
             //Debug.Log("DEVOLVEMOS EL TIEMPO");
             pauseMenu.SetActive(false);
             menuPauseIsActive = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
     }
 }
