@@ -4,25 +4,26 @@ using UnityEngine;
 
 public class HasBeenAttacked : MonoBehaviour
 {
-    [SerializeField]Transform parentTrans;
+    Transform parentTrans;
+    EventForGame eventForGame;
 
-    private void Start()
+    private void Awake()
     {
         
     }
 
-
-    private void Update()
+    private void Start()
     {
-        
+        parentTrans = GetComponentInParent<Transform>();
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("ALGO NOS DIO + " + collision.transform.name);
+        
         if (collision.transform.tag == "Cuchillo")
         {
-            Destroy(parentTrans.gameObject);
+            eventForGame.hitmarker.Invoke();
+            Destroy(parentTrans.parent.gameObject);
         }
     }
 

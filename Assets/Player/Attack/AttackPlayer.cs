@@ -5,9 +5,11 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using System;
 
+
 public class AttackPlayer : MonoBehaviour
 {
     bool isAiming = false;
+    EventForGame eventForGame;
 
     #region Disparar Cuchillo
     [Tooltip("Cooldown entre cuchillo y cuchillo")]
@@ -27,6 +29,11 @@ public class AttackPlayer : MonoBehaviour
 
     #endregion
 
+
+    private void Awake()
+    {
+        eventForGame.hitmarker.AddListener(Hitmarker);
+    }
 
     void Start()
     {
@@ -92,12 +99,12 @@ public class AttackPlayer : MonoBehaviour
     {
         Instantiate(cuchillo,cameraPlayer.position,cameraPlayer.rotation);
     }
+
+    void Hitmarker()
+    {
+        Debug.Log("HITMARKER SPAWN");
+    }
+
+
+
 }
-
-
-
-
-
-   
-    
-
