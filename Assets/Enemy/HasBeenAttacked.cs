@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Timeline;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 public class HasBeenAttacked : MonoBehaviour
 {
@@ -22,7 +25,7 @@ public class HasBeenAttacked : MonoBehaviour
         
         if (collision.transform.tag == "Cuchillo")
         {
-            eventForGame.hitmarker.Invoke();
+            EventForGame.instance.hitmarker.Invoke();
             Destroy(parentTrans.parent.gameObject);
         }
     }

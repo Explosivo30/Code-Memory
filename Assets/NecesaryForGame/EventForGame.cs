@@ -5,16 +5,16 @@ using UnityEngine.Events;
 
 public class EventForGame: MonoBehaviour
 {
-    public static EventForGame eventForGame;
+    public static EventForGame instance;
 
-    private void Awake()
+    private void OnEnable()
     {
-        if(eventForGame == null)
+        if(instance)
         {
-            eventForGame = this;
+            Destroy(this.transform.parent.gameObject);
         }else
         {
-            Destroy(this);
+            instance = this;
         }
     }
 

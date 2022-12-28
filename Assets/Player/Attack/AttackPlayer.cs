@@ -9,7 +9,7 @@ using System;
 public class AttackPlayer : MonoBehaviour
 {
     bool isAiming = false;
-    EventForGame eventForGame;
+
 
     #region Disparar Cuchillo
     [Tooltip("Cooldown entre cuchillo y cuchillo")]
@@ -32,12 +32,13 @@ public class AttackPlayer : MonoBehaviour
 
     private void Awake()
     {
-        eventForGame.hitmarker.AddListener(Hitmarker);
+       
     }
 
     void Start()
     {
         currentCooldownAttack = cooldownAttack;
+        EventForGame.instance.hitmarker.AddListener(Hitmarker);
     }
 
     // Update is called once per frame
