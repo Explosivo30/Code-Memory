@@ -126,7 +126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad77863917ae5954599a2176de991b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentTrans: {fileID: 543923716448018536}
 --- !u!1 &543923715425557618
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,4 +505,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1880eca4ced4bb4a9a2e8764b831bc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 543923716448018536}
+  myTransform: {fileID: 543923716448018536}

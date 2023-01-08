@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class EnemyCombat : MonoBehaviour
 {
-    [SerializeField] Transform player;
+    [SerializeField] Transform myTransform;
     // Start is called before the first frame update
     void Start()
     {
