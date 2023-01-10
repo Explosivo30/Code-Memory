@@ -340,6 +340,9 @@ public class MovementPlayer : MonoBehaviour
                 ch.center = new Vector3(0f, -0.28f, 0f);
                 ch.height = 1.28f;
                 sprintSpeed -= Time.deltaTime * slideSpeedDecay;
+
+                // Hola Edgar soy Lidia
+                // Aunque te diga que programar es el lenguaje de los virgenes sé lo mucho que cuesta, mucho ánimo mi rey!!! <3
             } 
 
 

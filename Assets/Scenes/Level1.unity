@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1864.709, g: 2036.7461, b: 2480.9336, a: 1}
+  m_IndirectSpecularColor: {r: 1769.6953, g: 1904.75, b: 2266.6562, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -32568,6 +32568,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 543923716448018543, guid: f5f1db0013f6fda4583d359494820461, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 543923716448018550, guid: f5f1db0013f6fda4583d359494820461, type: 3}
       propertyPath: playerSeen
       value: 
@@ -46954,6 +46958,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 500988973}
     m_Modifications:
+    - target: {fileID: 125057933344433059, guid: db9f546689fedc640b980653c5daef26, type: 3}
+      propertyPath: weight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 125057933344433059, guid: db9f546689fedc640b980653c5daef26, type: 3}
+      propertyPath: blendDistance
+      value: 7.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243937251826256984, guid: db9f546689fedc640b980653c5daef26, type: 3}
+      propertyPath: m_Name
+      value: Box VolumeCasas
+      objectReference: {fileID: 0}
     - target: {fileID: 5765623989446181999, guid: db9f546689fedc640b980653c5daef26, type: 3}
       propertyPath: m_RootOrder
       value: 5
