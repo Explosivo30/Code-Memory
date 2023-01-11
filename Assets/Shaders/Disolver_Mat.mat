@@ -77,8 +77,8 @@ Material:
     - _DepthOffsetEnable: 0
     - _DisolveEmissiveMaximum: 50000
     - _DisolveWidth: 0.02
-    - _Disolve_Amount: 0
-    - _DissolveScale: 70.5
+    - _Disolve_Amount: 0.552
+    - _DissolveScale: 44.29
     - _DoubleSidedEnable: 1
     - _DoubleSidedGIMode: 0
     - _DoubleSidedNormalMode: 2
@@ -86,7 +86,7 @@ Material:
     - _EnableBlendModePreserveSpecularLighting: 1
     - _EnableFogOnTransparent: 1
     - _Metalic: 0.065
-    - _NormalStrength: 0.048
+    - _NormalStrength: 0
     - _OpaqueCullMode: 2
     - _RayTracing: 0
     - _ReceivesSSR: 1
@@ -122,7 +122,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Base_Color: {r: 1, g: 0.22755927, b: 0, a: 1}
-    - _DisolveColor: {r: 0.4190445, g: 0, b: 1, a: 0}
+    - _DisolveColor: {r: 10.19297, g: 0, b: 17.531908, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
