@@ -114,7 +114,6 @@ public class IABehaviour : MonoBehaviour
 
     private void OnParticleCollision(GameObject particles)
     {
-
         Debug.Log("Particula Tocada");
         if (particles.tag == "Tornado")
         {

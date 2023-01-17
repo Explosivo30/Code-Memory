@@ -45,6 +45,7 @@ public class BossAgressive : EnemyState
     {
         if (isInside == false)
         {
+            StopCoroutine(lookCoroutine);
             return alertState;
         }
         else

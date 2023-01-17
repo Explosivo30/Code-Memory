@@ -4,15 +4,23 @@ using DG.Tweening;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class LogoEasing : MonoBehaviour
 {
     [SerializeField] CanvasGroup canvasGroup;
     Tween fadeTween;
 
-    // Start is called before the first frame update
+    
+    private void Awake()
+    {
+       
+    }
     void Start()
     {
+        
         DOTween.Init();
         DOTween.SetTweensCapacity(500, 500);
 
@@ -20,16 +28,10 @@ public class LogoEasing : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-
-        //logo.DOFade();
-
-
+        fadeTween.OnComplete(OnEnter);
     }
-
-   
 
     void FadeIn(float duration)
     {
@@ -57,6 +59,12 @@ public class LogoEasing : MonoBehaviour
 
         fadeTween = canvasGroup.DOFade(endValue, duration);
         fadeTween.onComplete += onEnd;
-
+        
     }
+
+    void OnEnter()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
 }
