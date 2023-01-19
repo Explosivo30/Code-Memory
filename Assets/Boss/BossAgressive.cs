@@ -14,7 +14,7 @@ public class BossAgressive : EnemyState
 
     #region AttackPlayer
     [SerializeField] Transform fatherToRotate;
-
+    [SerializeField] Transform player;
     [SerializeField] GameObject bullet;
 
     float timeToAttack;
@@ -22,7 +22,7 @@ public class BossAgressive : EnemyState
 
     #endregion
 
-    NavMeshAgent navMeshAgent;
+    //NavMeshAgent navMeshAgent;
 
     [SerializeField] EnemyAlertState alertState;
 
@@ -36,25 +36,19 @@ public class BossAgressive : EnemyState
 
     private void Awake()
     {
-        navMeshAgent = GetComponentInParent<NavMeshAgent>();
+        //navMeshAgent = GetComponentInParent<NavMeshAgent>();
         enemyFOV = GetComponentInParent<EnemyFOV>();
         timeToAttack = timeResetAttack;
     }
 
     public override EnemyState RunCurrentState()
     {
-        if (isInside == false)
-        {
-            StopCoroutine(lookCoroutine);
-            return alertState;
-        }
-        else
-        {
-            LookAtPlayer();
-            UpdateAgressive();
-
-            return this;
-        }
+        //fatherToRotate.LookAt(player);
+        //LookAtPlayer();
+        UpdateAgressive();
+        return this;
+            
+        
     }
 
     private void LookAtPlayer()
@@ -90,7 +84,7 @@ public class BossAgressive : EnemyState
         if (enemyFOV.GetPlayerInside() == true)
         {
             fatherToRotate.LookAt(enemyFOV.GetPlayerTransform().position);
-            navMeshAgent.SetDestination(transform.position);
+            //navMeshAgent.SetDestination(transform.position);
             timeToAttack -= Time.deltaTime;
             AttackPlayer();
         }
@@ -111,7 +105,7 @@ public class BossAgressive : EnemyState
         if (timeToAttack < 0)
         {
             //playerAttack
-            Instantiate(bullet, fatherToRotate.position, fatherToRotate.rotation);
+            //Instantiate(bullet, fatherToRotate.position, fatherToRotate.rotation);
             Debug.Log("Atacamos");
             timeToAttack = timeResetAttack;
         }
