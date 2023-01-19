@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1864.709, g: 2036.7461, b: 2480.9336, a: 1}
+  m_IndirectSpecularColor: {r: 1769.5605, g: 1904.6406, b: 2266.5703, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2113,7 +2113,7 @@ GameObject:
   - component: {fileID: 90183534}
   - component: {fileID: 90183533}
   - component: {fileID: 90183532}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: f (724)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4369,7 +4369,7 @@ GameObject:
   - component: {fileID: 211210885}
   - component: {fileID: 211210884}
   - component: {fileID: 211210883}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: f (477)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5790,6 +5790,38 @@ PrefabInstance:
     - target: {fileID: 8095675445932394010, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8725318023452176416, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 8725318023452176416, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 8725318023452176416, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 8725318023452176416, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9985175
+      objectReference: {fileID: 0}
+    - target: {fileID: 8725318023452176416, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 2.3283062e-10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8725318023452176416, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.05443134
+      objectReference: {fileID: 0}
+    - target: {fileID: 8725318023452176416, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1.7462297e-10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8725318023452176416, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -6.24
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
@@ -8715,7 +8747,7 @@ GameObject:
   - component: {fileID: 332073653}
   - component: {fileID: 332073652}
   - component: {fileID: 332073651}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: f (719)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17505,7 +17537,7 @@ GameObject:
   - component: {fileID: 663604728}
   - component: {fileID: 663604727}
   - component: {fileID: 663604726}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: f (711)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22851,7 +22883,7 @@ GameObject:
   - component: {fileID: 906342029}
   - component: {fileID: 906342028}
   - component: {fileID: 906342027}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: f (389)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25037,7 +25069,7 @@ GameObject:
   - component: {fileID: 971352898}
   - component: {fileID: 971352897}
   - component: {fileID: 971352896}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: f (715)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26624,7 +26656,7 @@ GameObject:
   - component: {fileID: 1036011569}
   - component: {fileID: 1036011568}
   - component: {fileID: 1036011567}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: f (699)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34054,7 +34086,7 @@ GameObject:
   - component: {fileID: 1261587385}
   - component: {fileID: 1261587384}
   - component: {fileID: 1261587383}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: f (740)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37625,7 +37657,7 @@ GameObject:
   - component: {fileID: 1418203480}
   - component: {fileID: 1418203479}
   - component: {fileID: 1418203478}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: f (738)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37722,7 +37754,7 @@ GameObject:
   - component: {fileID: 1420503835}
   - component: {fileID: 1420503834}
   - component: {fileID: 1420503833}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: f (749)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39089,7 +39121,7 @@ GameObject:
   - component: {fileID: 1452905867}
   - component: {fileID: 1452905866}
   - component: {fileID: 1452905865}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: f (704)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45084,7 +45116,7 @@ GameObject:
   - component: {fileID: 1727547849}
   - component: {fileID: 1727547848}
   - component: {fileID: 1727547847}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: f (375)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46040,7 +46072,7 @@ GameObject:
   - component: {fileID: 1748253602}
   - component: {fileID: 1748253601}
   - component: {fileID: 1748253600}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: f (707)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52433,7 +52465,7 @@ GameObject:
   - component: {fileID: 2057190984}
   - component: {fileID: 2057190983}
   - component: {fileID: 2057190982}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: f (625)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
