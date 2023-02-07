@@ -1,0 +1,201 @@
+fileFormatVersion: 2
+guid: 24ab40b0d0f896649ab5d46b6a2cbed2
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GEO_Base_character_eyes_RMat
+    second: {fileID: 2100000, guid: bfc85e5f3c4cd0444a295a8a66fa5d16, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GEO_Capucha_Ropa_set_de_Uvs1Mat
+    second: {fileID: 2100000, guid: 132019b2dd813a24e8007e32cb6648a7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GEO_Cinta_rodilla_01_Ropa_set_de_UvsMat
+    second: {fileID: 2100000, guid: deb2bc5d31f0fe842921f59c222815ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GEO_Cituron_caida_Ropa_set_de_Uvs2Mat
+    second: {fileID: 2100000, guid: 1ad88c99c10859b49a308f0c7aa98122, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GEO_Ropa_set_de_Uvs1_CapaMat
+    second: {fileID: 2100000, guid: 499e29704b51d79438a3d73903327f0b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GEO_Ropa_set_de_Uvs1_Capa_cuelloMat
+    second: {fileID: 2100000, guid: ec430e7a8b92192428b95493d0f13cf6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GEO_Ropa_set_de_Uvs2_ChapaMat
+    second: {fileID: 2100000, guid: b99f646406200464d82b6080a5acd681, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GEO_Ropa_set_de_Uvs2_CinturonMat
+    second: {fileID: 2100000, guid: 9846e47a176b1e845b3d8e065c1af2bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GEO_Ropa_set_de_Uvs2_PantalonMat
+    second: {fileID: 2100000, guid: 891fb5343091df345b3cf187c1c52090, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GEO_Ropa_set_de_Uvs_Cina_Cruzada_01Mat
+    second: {fileID: 2100000, guid: 2c6b15cbe9e028041babbfdc8ad8eeed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GEO_Ropa_set_de_Uvs_Cina_Cruzada_02Mat
+    second: {fileID: 2100000, guid: 9907edf7c5cc6e64b93a3e078a53a11a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GEO_Ropa_set_de_Uvs_Cina_HombreraMat
+    second: {fileID: 2100000, guid: 3ad8a87f8df0db54491950f316926368, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GEO_Ropa_set_de_Uvs_HombreraMat
+    second: {fileID: 2100000, guid: a92d4b5aaad8d3f4ebd464f6114b79e4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Macara_GEOMat
+    second: {fileID: 2100000, guid: 5e0df1b4ab0c40e47a4079c46ecdeb1f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: initialShadingGroup_GEO_Body_Base_characterMat
+    second: {fileID: 2100000, guid: 99bb07a9ac05de0498cd90aba21c5374, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: initialShadingGroup_GEO_Botas_02Mat
+    second: {fileID: 2100000, guid: 697911efa16ac514a939bb1b68952c7c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: initialShadingGroup_GEO_Ropa_set_de_Uvs_Rodillera_01Mat
+    second: {fileID: 2100000, guid: e073668c91c6b05459e834e21234c527, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: initialShadingGroup_Macara_GEOMat
+    second: {fileID: 2100000, guid: a37d4b1bdcd12684ebbeff189d330d64, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: textureEditorIsolateSelectSet_Macara_GEOMat
+    second: {fileID: 2100000, guid: 2eeb1a1429cc6fe458692f371f7eca26, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
