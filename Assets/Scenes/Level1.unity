@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1769.6953, g: 1904.75, b: 2266.6562, a: 1}
+  m_IndirectSpecularColor: {r: 1770.4238, g: 1905.5, b: 2267.2656, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -46174,6 +46174,10 @@ PrefabInstance:
     - target: {fileID: 8623874900388527308, guid: a82bb711d635c3846b346b26fc815344, type: 3}
       propertyPath: m_Name
       value: Aldeano_Pacifico (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623874900388527308, guid: a82bb711d635c3846b346b26fc815344, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8623874900388527309, guid: a82bb711d635c3846b346b26fc815344, type: 3}
       propertyPath: m_RootOrder
