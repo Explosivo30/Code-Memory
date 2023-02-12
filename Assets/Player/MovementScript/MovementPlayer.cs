@@ -327,7 +327,7 @@ public class MovementPlayer : MonoBehaviour
         {
             isSliding = true;
             //No agachara la cabeza porque en HandleBOB con el movimiento siempre rota a traves de 
-            camTrans.localPosition = Vector3.Lerp(new Vector3(0f, camTrans.localPosition.y, 0f), new Vector3(0f, cameraSlideDown, 0f), 0.11f);
+            camTrans.localPosition = Vector3.Lerp(new Vector3(camTrans.localPosition.x, camTrans.localPosition.y, camTrans.localPosition.z), new Vector3(camTrans.localPosition.x, cameraSlideDown, camTrans.localPosition.z), 0.11f);
             //We slow the dash and stop it from going backwards
 
             if (sprintSpeed < 0.1f)
@@ -353,7 +353,7 @@ public class MovementPlayer : MonoBehaviour
             isSliding = false;
             Debug.Log("Subimos la camara");
             //Reseteamos el center del character controller cuando se levante
-            camTrans.localPosition = Vector3.Lerp(new Vector3(0f, camTrans.localPosition.y, 0f), new Vector3(0f, defaultYPos, 0f), 0.11f);
+            camTrans.localPosition = Vector3.Lerp(new Vector3(camTrans.localPosition.x, camTrans.localPosition.y, camTrans.localPosition.z), new Vector3(camTrans.localPosition.x, defaultYPos, camTrans.localPosition.z), 0.11f);
             ch.center = Vector3.zero;
             ch.height = 2f;
             speed = speedMax;
