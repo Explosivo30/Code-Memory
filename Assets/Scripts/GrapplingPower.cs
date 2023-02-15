@@ -10,10 +10,11 @@ public class GrapplingPower : MonoBehaviour
     [HideInInspector] public bool isGrappling = false;
     CharacterController cc;
     Vector3 hookShotPosition;
-    private float hookshotSize;
+    float hookshotSize;
     [SerializeField]LayerMask layerMask;
     [SerializeField] Transform hookshotTransform;
-    PlayerMovement playerMovement;
+    MovementPlayer playerMovement;
+    [SerializeField] float hookRange = 50f;
 
     
 
@@ -23,8 +24,6 @@ public class GrapplingPower : MonoBehaviour
         Normal,
         HookshotFlyingPlayer,
         HookshotThrown
-
-
     }
 
     private void Awake()
@@ -32,7 +31,7 @@ public class GrapplingPower : MonoBehaviour
         state = State.Normal;
         cc = GetComponent<CharacterController>();
         hookshotTransform.gameObject.SetActive(false);
-        playerMovement = GetComponent<PlayerMovement>();
+        playerMovement = GetComponent<MovementPlayer>();
     }
 
     // Start is called before the first frame update
@@ -89,7 +88,7 @@ public class GrapplingPower : MonoBehaviour
     {
         hookshotTransform.LookAt(hookShotPosition);
 
-        float hookshotThrowSpeed = 100f;
+        float hookshotThrowSpeed = 140f;
         hookshotSize += hookshotThrowSpeed * Time.deltaTime;
         hookshotTransform.localScale = new Vector3(1, 1, hookshotSize);
         if(hookshotSize >= Vector3.Distance(transform.position, hookShotPosition))
@@ -120,19 +119,19 @@ public class GrapplingPower : MonoBehaviour
             state = State.Normal;
         }
         
-        /*
+        
         if (playerMovement.TestInputJump())
         {
             float momentumExtraSpeed = 1f;
             playerMovement.characterVelocityMomentum = hookshotDir * hookshotSpeed * momentumExtraSpeed;
             state = State.Normal;
         }
-        */
+        
     }
 
     bool TestInputDownHookshot()
     {
-        return Input.GetMouseButtonDown(0);
+        return Input.GetMouseButtonDown(1);
     }
 
     

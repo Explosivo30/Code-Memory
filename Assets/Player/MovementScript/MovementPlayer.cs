@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class MovementPlayer : MonoBehaviour
 {
-
+    
     [Header("Player")]
     float speed = 12f;
     [SerializeField]float speedMax = 12f;
@@ -19,7 +19,7 @@ public class MovementPlayer : MonoBehaviour
     RaycastHit rightWallHit;
 
     [SerializeField]float raycastLenght = 2f;
-    [SerializeField]float groundRaycastLenght = 1.5f;
+    [SerializeField]float groundRaycastLenght = .2f;
 
     #endregion
 
@@ -35,6 +35,14 @@ public class MovementPlayer : MonoBehaviour
     public LayerMask isWallGroundMask;
     [SerializeField] float jumpHeight = 24f;
 
+
+    #region Grappling
+    GrapplingPower grapplingPower;
+
+
+    #endregion
+
+    public Vector3 characterVelocityMomentum;
 
     [SerializeField] float sideJump = 12f;
 
@@ -83,6 +91,11 @@ public class MovementPlayer : MonoBehaviour
         defaultYPos = camTrans.transform.localPosition.y;
     }
 
+    private void Awake()
+    {
+        grapplingPower = GetComponent<GrapplingPower>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -101,70 +114,59 @@ public class MovementPlayer : MonoBehaviour
     
     void Update()
     {
-        //NO ES QUE FUNCIONE MAL ES QUE HAS DE IR A WALL RUNNING MOVEMENT Y ACABARLO PORQUE ESTA EL LOCK CONTROLS
-        CheckForWall();
-
-
-        //if I'm wall running im grounded
-        if (isWallLeft || isWallRight) 
-        { 
-            isGrounded = true;
-            isWall = true;
-            WallRunningMovement();
-        }
-        else { isWall = false; }
-
-        Debug.Log("Is wall es + " + isWall);
-
-
-        /*
-        //MIRAMOS SI ESTOYEN MID AIR
-        Debug.Log("Estoy en suelo es : " + isGrounded);
-        if (isGrounded || isWallLeft || isWallRight && velocity.y < 0f)
+        if (!grapplingPower.isGrappling)
         {
-            Debug.Log("HACES COSAS");
-            velocity.y = -1f;
-        }
-        */
+            //NO ES QUE FUNCIONE MAL ES QUE HAS DE IR A WALL RUNNING MOVEMENT Y ACABARLO PORQUE ESTA EL LOCK CONTROLS
+            CheckForWall();
 
-        Slide();
 
-        ResetCamera();
+            //if I'm wall running im grounded
+            if (isWallLeft || isWallRight) 
+            { 
+                isGrounded = true;
+                isWall = true;
+                WallRunningMovement();
+            }
+            else { isWall = false; }
 
-        HandleHeadbob();
+            Debug.Log("Is wall es + " + isWall);
 
-        //Si lockear los controles es falso  sigues caminando
-        if (lockControls == false) { PlayerMovement(); }
 
-        //Debug.Log("El Left wall running es" + isWallLeft);
-        //Debug.Log("El Right wall running es" + isWallRight);
-        //Debug.Log("Is grounded es " + isGrounded);
+            Slide();
 
-        IsWallRunning();
-        Jump();
+            ResetCamera();
 
-        //Debug.Log("is wall  left " + isWallLeft);
-        //Debug.Log("is wall right " + isWallRight);
+            HandleHeadbob();
 
+            //Si lockear los controles es falso  sigues caminando
+            if (lockControls == false) { PlayerMovement(); }
+
+            IsWallRunning();
+            Jump();
+
+            if (isGrounded && velocity.y < 0)
+            {
+                velocity.y = isWall ? -4f : 0f;
+                //velocity.y = -1;
+            }
         
-        if (isGrounded && velocity.y < 0)
+            velocity.y += gravity * Time.deltaTime;
+
+            ch.Move(velocity * Time.deltaTime);
+        
+
+            //Tarda 0.5 en hacer efecto para que se desplace al lado
+            DelayTime();
+
+                // ¡Edgar tu puedes! ;)!!!!!!
+                //Gracias guapa
+
+        }
+        
+        if(grapplingPower.isGrappling)
         {
-            velocity.y = isWall ? -4f : 0f;
-            //velocity.y = -1;
+            velocity.y = 0f;
         }
-        
-        velocity.y += gravity * Time.deltaTime;
-
-        ch.Move(velocity * Time.deltaTime);
-        
-
-        //Tarda 0.5 en hacer efecto para que se desplace al lado
-        DelayTime();
-
-        // ¡Edgar tu puedes! ;)!!!!!!
-        //Gracias guapa
-
-
     }
 
     private void WallRunningMovement()
@@ -213,9 +215,22 @@ public class MovementPlayer : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
         move = transform.right * x + transform.forward * z;
-
+        move += characterVelocityMomentum;
         //El sprint
         ch.Move(move * (isSprinting ? sprintSpeed : speed) * Time.deltaTime);
+
+
+        //Dampen o restar momentum
+
+        if (characterVelocityMomentum.magnitude >= 0f)
+        {
+            float momentumDrag = 1f;
+            characterVelocityMomentum -= characterVelocityMomentum * momentumDrag * Time.deltaTime;
+            if (characterVelocityMomentum.magnitude < .0f)
+            {
+                characterVelocityMomentum = Vector3.zero;
+            }
+        }
     }
     
     
@@ -237,9 +252,15 @@ public class MovementPlayer : MonoBehaviour
             }
             isGrounded = false;
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-            //Debug.Log(velocity.y);
+            
 
         }
+    }
+
+    //For Test imput jump is for Hook
+    public bool TestInputJump()
+    {
+        return Input.GetKeyDown(KeyCode.Space);
     }
 
     void ZeroGravity()
