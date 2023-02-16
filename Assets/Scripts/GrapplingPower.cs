@@ -48,7 +48,9 @@ public class GrapplingPower : MonoBehaviour
             {
                 default:
                 case State.Normal:
+                hookshotTransform.transform.position = hookshotTransform.parent.transform.position;
                     hookshotTransform.gameObject.SetActive(false);
+                    
                     HandleHookshotStart();
                     isGrappling = false;
                     
@@ -71,7 +73,7 @@ public class GrapplingPower : MonoBehaviour
     {
         if (TestInputDownHookshot())
         {
-            if (Physics.Raycast(cameraTransform.position, cameraTransform.forward, out RaycastHit raycastHit, 25f, layerMask))
+            if (Physics.Raycast(cameraTransform.position, cameraTransform.forward, out RaycastHit raycastHit, hookRange, layerMask))
             {
                 DebugHitPointTransform.position = raycastHit.point;
                 hookShotPosition = raycastHit.point;

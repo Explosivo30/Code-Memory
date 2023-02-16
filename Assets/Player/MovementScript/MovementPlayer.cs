@@ -215,7 +215,7 @@ public class MovementPlayer : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
         move = transform.right * x + transform.forward * z;
-        move += characterVelocityMomentum;
+        move += characterVelocityMomentum * Time.deltaTime;
         //El sprint
         ch.Move(move * (isSprinting ? sprintSpeed : speed) * Time.deltaTime);
 

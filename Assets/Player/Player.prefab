@@ -63,7 +63,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.7197452, y: 1}
+    m_SensorSize: {x: 1.660584, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -316,8 +316,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 165600035156947364}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -0.751, z: -0.04}
+  m_LocalScale: {x: 0.14639722, y: 0.14639722, z: 0.14639722}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257320967774163234}
@@ -464,7 +464,7 @@ MonoBehaviour:
   ch: {fileID: 3257320967774163235}
   gravity: -35
   raycastLenght: 1.8
-  groundRaycastLenght: 2.5
+  groundRaycastLenght: 1.2
   velocity: {x: 0, y: 0, z: 0}
   groundCheck: {fileID: 3257320969761575936}
   rightWallCheck: {fileID: 7036515077969530560}
@@ -500,7 +500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 670f613e0e7643a4ba8bc578fc78201f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldownAttack: 2
+  cooldownAttack: 1
   cuchillo: {fileID: 3546880316604530816, guid: 1d5f73914a730cc4aaec7798634fcdc2, type: 3}
   cameraPlayer: {fileID: 349407472}
   enemies:
@@ -526,6 +526,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   hookshotTransform: {fileID: 5935089624508156149}
+  hookRange: 500
   state: 0
 --- !u!1 &3257320968186378691
 GameObject:
@@ -634,7 +635,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257320969761575939}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.976, z: 0.02}
+  m_LocalPosition: {x: 0, y: -1.138, z: 0.02}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
