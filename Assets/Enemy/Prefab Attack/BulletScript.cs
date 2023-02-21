@@ -5,7 +5,7 @@ using UnityEngine;
 public class BulletScript : MonoBehaviour
 {
     Rigidbody rb;
-    [SerializeField] float speed = 25f;
+    [SerializeField] float speed = 30f;
 
     private void Awake()
     {

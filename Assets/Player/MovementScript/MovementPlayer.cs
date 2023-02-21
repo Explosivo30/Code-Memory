@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class MovementPlayer : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class MovementPlayer : MonoBehaviour
     [SerializeField]float raycastLenght = 2f;
     [SerializeField]float groundRaycastLenght = .2f;
 
+    public UnityEvent onMovilityWallEvent = new UnityEvent();
+
     #endregion
 
     Vector3 move;
@@ -38,11 +41,8 @@ public class MovementPlayer : MonoBehaviour
 
     #region Grappling
     GrapplingPower grapplingPower;
-
-
-    #endregion
-
     public Vector3 characterVelocityMomentum;
+    #endregion
 
     [SerializeField] float sideJump = 12f;
 
@@ -50,7 +50,6 @@ public class MovementPlayer : MonoBehaviour
 
 
     bool isWall;
-    private bool activeGrapple;
 
     [Header("Camara")]
     [SerializeField] Transform camTrans;
@@ -65,8 +64,8 @@ public class MovementPlayer : MonoBehaviour
     float sprintSpeed = 24f;
     [SerializeField]float sprintSpeedMax = 24f;
     bool canSprint = true;
-    KeyCode sprintKey = KeyCode.LeftShift;
-    bool isSprinting => canSprint && Input.GetKey(sprintKey);
+    
+    bool isSprinting => canSprint;
     bool isWallrunning => isWall;
 
 
@@ -94,6 +93,8 @@ public class MovementPlayer : MonoBehaviour
     private void Awake()
     {
         grapplingPower = GetComponent<GrapplingPower>();
+        onMovilityWallEvent.AddListener(Jump);
+
     }
 
     // Start is called before the first frame update
@@ -132,6 +133,11 @@ public class MovementPlayer : MonoBehaviour
             Debug.Log("Is wall es + " + isWall);
 
 
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                DashMoment();
+            }
+
             Slide();
 
             ResetCamera();
@@ -155,8 +161,7 @@ public class MovementPlayer : MonoBehaviour
             ch.Move(velocity * Time.deltaTime);
         
 
-            //Tarda 0.5 en hacer efecto para que se desplace al lado
-            DelayTime();
+           
 
                 // ¡Edgar tu puedes! ;)!!!!!!
                 //Gracias guapa
@@ -240,7 +245,7 @@ public class MovementPlayer : MonoBehaviour
         if(isGrounded == false) { return; }
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            
+
             if (isWallLeft)
             {
                 JumpRight();
@@ -257,6 +262,11 @@ public class MovementPlayer : MonoBehaviour
         }
     }
 
+    void EventJumpWall()
+    {
+        canSprint = false;
+    }
+
     //For Test imput jump is for Hook
     public bool TestInputJump()
     {
@@ -270,7 +280,7 @@ public class MovementPlayer : MonoBehaviour
 
     void DashMovementSide()
     {
-
+        DashMoment();
     }
 
     void ClampCamera()
@@ -280,7 +290,18 @@ public class MovementPlayer : MonoBehaviour
         camMove.rotateZ = newClamp;
     }
 
+    IEnumerator DashMoment()
+    {
+        float startTime = 0;
+        float dashTime = 23f;
+        while (Time.time < startTime + dashTime)
+        {
+            ch.Move(transform.forward * _dashSpeed * Time.deltaTime);
+        }
+        
 
+        yield return null;
+    }
     void JumpLeft()
     {
         //Debug.Log("esWallRight");
@@ -344,7 +365,7 @@ public class MovementPlayer : MonoBehaviour
 
     void Slide()
     {
-        if (isSprinting && Input.GetKey(KeyCode.LeftControl))
+        if (canSprint == true && Input.GetKeyDown(KeyCode.LeftControl))
         {
             isSliding = true;
             //No agachara la cabeza porque en HandleBOB con el movimiento siempre rota a traves de 
@@ -366,8 +387,6 @@ public class MovementPlayer : MonoBehaviour
                 // Aunque te diga que programar es el lenguaje de los virgenes sé lo mucho que cuesta, mucho ánimo mi rey!!! <3
             } 
 
-
-            
         }
         else
         {
@@ -406,12 +425,13 @@ public class MovementPlayer : MonoBehaviour
 
     
     Vector3 velocityToSet;
+    float _dashSpeed = 200f;
 
     void SetVelocity()
     {
         velocity = velocityToSet;
     }
-
+    /*
     public void JumpToPosition(Vector3 targetPosition, float trajectoryHeight)
     {
         activeGrapple = true;
@@ -422,7 +442,7 @@ public class MovementPlayer : MonoBehaviour
 
 
     }
-
+    
 
     public Vector3 CalculateJumpVelocity(Vector3 startPoint, Vector3 endPoint, float trajectoryHeight)
     {
@@ -439,5 +459,5 @@ public class MovementPlayer : MonoBehaviour
         return velocityXZ + velocityY;
 
     }
-
+    */
 }

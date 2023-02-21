@@ -29,7 +29,7 @@ public class GrapplingHook : MonoBehaviour
 
 
     bool grappling = false;
-
+    /*
     private void Awake()
     {
         movementPlayer = GetComponent<MovementPlayer>();
@@ -43,83 +43,85 @@ public class GrapplingHook : MonoBehaviour
         if (grapplingCdTimer > 0) { grapplingCdTimer -= Time.deltaTime; }
             
     }
-
-    private void LateUpdate()
-    {
-        if (grappling)
+    
+        private void LateUpdate()
         {
-            lr.SetPosition(0, gunTip.position);
-        }
-    }
-
-    void StartGrapple()
-    {
-        if (grapplingCdTimer > 0) return;
-
-        grappling = true;
-
-        movementPlayer.freeze = true;
-
-        RaycastHit hit;
-
-        if (Physics.Raycast(cameraTransform.position, cameraTransform.forward, out hit, maxGrapplingDistance, whatIsGrappable))
-        {
-            grapplePoint = hit.point;
-
-            Invoke(nameof(ExecuteGrapple), grappleDelayTime);
-        }
-        else
-        {
-            grapplePoint = cameraTransform.position + cameraTransform.forward * maxGrapplingDistance;
-
-            Invoke(nameof(StopGrapple), grappleDelayTime);
+            if (grappling)
+            {
+                lr.SetPosition(0, gunTip.position);
+            }
         }
 
-        lr.enabled = true;
+        void StartGrapple()
+        {
+            if (grapplingCdTimer > 0) return;
 
-        lr.SetPosition(1, grapplePoint);
+            grappling = true;
 
-    }
+            movementPlayer.freeze = true;
 
+            RaycastHit hit;
 
-    void ExecuteGrapple()
-    {
-        movementPlayer.freeze = false;
+            if (Physics.Raycast(cameraTransform.position, cameraTransform.forward, out hit, maxGrapplingDistance, whatIsGrappable))
+            {
+                grapplePoint = hit.point;
 
-        Vector3 lowestPoint = new Vector3(transform.position.x, transform.position.y - 1f, transform.position.z);
+                Invoke(nameof(ExecuteGrapple), grappleDelayTime);
+            }
+            else
+            {
+                grapplePoint = cameraTransform.position + cameraTransform.forward * maxGrapplingDistance;
 
-        float grapplePointRelativeYPos = grapplePoint.y - lowestPoint.y;
-        float highestPointOnArc = grapplePointRelativeYPos + overshootYAxis;
+                Invoke(nameof(StopGrapple), grappleDelayTime);
+            }
 
-        if (grapplePointRelativeYPos < 0) highestPointOnArc = overshootYAxis;
+            lr.enabled = true;
 
-        movementPlayer.JumpToPosition(grapplePoint, highestPointOnArc);
+            lr.SetPosition(1, grapplePoint);
 
-        Invoke(nameof(StopGrapple), 8f);
-
-    }
-
-    void StopGrapple()
-    {
-        movementPlayer.freeze = false;
-
-        grappling = false;
-        grapplingCdTimer = grapplingCd;
-        lr.enabled = false;
+        }
 
 
-        Invoke(nameof(ResetGrappleVelocity), 0.1f);
-    }
+        void ExecuteGrapple()
+        {
+            movementPlayer.freeze = false;
 
-    void ResetGrappleVelocity()
-    {
-        movementPlayer.ResetVelocity();
-    }
+            Vector3 lowestPoint = new Vector3(transform.position.x, transform.position.y - 1f, transform.position.z);
+
+            float grapplePointRelativeYPos = grapplePoint.y - lowestPoint.y;
+            float highestPointOnArc = grapplePointRelativeYPos + overshootYAxis;
+
+            if (grapplePointRelativeYPos < 0) highestPointOnArc = overshootYAxis;
+
+            movementPlayer.JumpToPosition(grapplePoint, highestPointOnArc);
+
+            Invoke(nameof(StopGrapple), 8f);
+
+        }
+
+        void StopGrapple()
+        {
+            movementPlayer.freeze = false;
+
+            grappling = false;
+            grapplingCdTimer = grapplingCd;
+            lr.enabled = false;
 
 
-    private void OnControllerColliderHit(ControllerColliderHit hit)
-    {
-        Debug.Log("Le dimos algo con el collider hit");
-        StopGrapple();
-    }
+            Invoke(nameof(ResetGrappleVelocity), 0.1f);
+        }
+
+        void ResetGrappleVelocity()
+        {
+            movementPlayer.ResetVelocity();
+        }
+
+
+        private void OnControllerColliderHit(ControllerColliderHit hit)
+        {
+            Debug.Log("Le dimos algo con el collider hit");
+            StopGrapple();
+        }
+
+        */
 }
