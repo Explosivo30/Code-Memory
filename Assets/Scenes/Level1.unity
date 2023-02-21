@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1864.709, g: 2036.7461, b: 2480.9336, a: 1}
+  m_IndirectSpecularColor: {r: 1865.0898, g: 2037.1172, b: 2481.336, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -32811,7 +32811,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1594107373}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -442.8, y: 3.99, z: -3002.6}
+  m_LocalPosition: {x: -442.8, y: 91.92, z: -3002.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -45011,10 +45011,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 699487884616782864, guid: 80209607c9d9e8846965a50c81d7d796, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2548772165188223792, guid: 80209607c9d9e8846965a50c81d7d796, type: 3}
       propertyPath: m_Name
       value: Unity HD Render Pipeline (Metallic Standard)
@@ -45066,42 +45062,6 @@ PrefabInstance:
     - target: {fileID: 3502273931972605960, guid: 80209607c9d9e8846965a50c81d7d796, type: 3}
       propertyPath: m_Layer
       value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3502273931972605960, guid: 80209607c9d9e8846965a50c81d7d796, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6457511534621662807, guid: 80209607c9d9e8846965a50c81d7d796, type: 3}
-      propertyPath: m_Size.x
-      value: 364.612
-      objectReference: {fileID: 0}
-    - target: {fileID: 6457511534621662807, guid: 80209607c9d9e8846965a50c81d7d796, type: 3}
-      propertyPath: m_Size.y
-      value: 30.98851
-      objectReference: {fileID: 0}
-    - target: {fileID: 6457511534621662807, guid: 80209607c9d9e8846965a50c81d7d796, type: 3}
-      propertyPath: m_Center.x
-      value: -123.154144
-      objectReference: {fileID: 0}
-    - target: {fileID: 6457511534621662807, guid: 80209607c9d9e8846965a50c81d7d796, type: 3}
-      propertyPath: m_Center.y
-      value: 60.409863
-      objectReference: {fileID: 0}
-    - target: {fileID: 6832740360105622505, guid: 80209607c9d9e8846965a50c81d7d796, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8570006570608402412, guid: 80209607c9d9e8846965a50c81d7d796, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 70.81441
-      objectReference: {fileID: 0}
-    - target: {fileID: 8570006570608402412, guid: 80209607c9d9e8846965a50c81d7d796, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 17649
-      objectReference: {fileID: 0}
-    - target: {fileID: 8570006570608402412, guid: 80209607c9d9e8846965a50c81d7d796, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 496
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80209607c9d9e8846965a50c81d7d796, type: 3}
