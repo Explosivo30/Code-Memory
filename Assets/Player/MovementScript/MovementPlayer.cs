@@ -14,6 +14,12 @@ public class MovementPlayer : MonoBehaviour
     [SerializeField] float gravity = -9.81f;
     bool lockControls = false;
 
+    #region SprintWallRunning
+    float timeBoostLeft;
+    [SerializeField]float timerBoostTotal;
+    [SerializeField]float sumarVelocidad = 5f;
+    #endregion
+
     #region WallRunning
     RaycastHit leftWallHit;
 
@@ -56,12 +62,12 @@ public class MovementPlayer : MonoBehaviour
     [SerializeField] CameraMove camMove;
     bool isWallRight = false;
     bool isWallLeft = false;
-
+        
 
     public bool freeze;
 
     [Header("Sprint")]
-    float sprintSpeed = 24f;
+    float sprintSpeed = 2f;
     [SerializeField]float sprintSpeedMax = 24f;
     bool canSprint = true;
     
@@ -94,6 +100,8 @@ public class MovementPlayer : MonoBehaviour
     {
         grapplingPower = GetComponent<GrapplingPower>();
         onMovilityWallEvent.AddListener(Jump);
+        canSprint = false;
+        timeBoostLeft = timerBoostTotal;
 
     }
 
@@ -117,20 +125,24 @@ public class MovementPlayer : MonoBehaviour
     {
         if (!grapplingPower.isGrappling)
         {
+            timeBoostLeft -= Time.deltaTime;
+            if(timeBoostLeft <= 0)
+            {
+                canSprint = false;
+            }
             //NO ES QUE FUNCIONE MAL ES QUE HAS DE IR A WALL RUNNING MOVEMENT Y ACABARLO PORQUE ESTA EL LOCK CONTROLS
             CheckForWall();
 
-
             //if I'm wall running im grounded
             if (isWallLeft || isWallRight) 
-            { 
+            {
+                canSprint = true;
+                timeBoostLeft = timerBoostTotal;
                 isGrounded = true;
                 isWall = true;
                 WallRunningMovement();
             }
-            else { isWall = false; }
-
-            Debug.Log("Is wall es + " + isWall);
+            else { isWall = false; canSprint = false; }
 
 
             if (Input.GetKeyDown(KeyCode.LeftShift))
@@ -155,17 +167,12 @@ public class MovementPlayer : MonoBehaviour
                 velocity.y = isWall ? -4f : 0f;
                 //velocity.y = -1;
             }
-        
             velocity.y += gravity * Time.deltaTime;
 
             ch.Move(velocity * Time.deltaTime);
-        
-
-           
 
                 // ¡Edgar tu puedes! ;)!!!!!!
-                //Gracias guapa
-
+                // Gracias guapa
         }
         
         if(grapplingPower.isGrappling)
@@ -391,7 +398,7 @@ public class MovementPlayer : MonoBehaviour
         else
         {
             isSliding = false;
-            Debug.Log("Subimos la camara");
+            
             //Reseteamos el center del character controller cuando se levante
             camTrans.localPosition = Vector3.Lerp(new Vector3(camTrans.localPosition.x, camTrans.localPosition.y, camTrans.localPosition.z), new Vector3(camTrans.localPosition.x, defaultYPos, camTrans.localPosition.z), 0.11f);
             ch.center = Vector3.zero;
