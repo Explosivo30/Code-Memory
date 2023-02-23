@@ -17,6 +17,7 @@ public class AttackPlayer : MonoBehaviour
     float currentCooldownAttack;
     [SerializeField] GameObject cuchillo;
     [SerializeField] Transform cameraPlayer;
+    [SerializeField] Transform gunPoint; 
 
     #endregion
     [Tooltip("LayerMask que tienen los enemigos")]
@@ -98,7 +99,7 @@ public class AttackPlayer : MonoBehaviour
 
     void ShootKnife()
     {
-        Instantiate(cuchillo,cameraPlayer.position,cameraPlayer.rotation);
+        Instantiate(cuchillo,gunPoint.position,cameraPlayer.rotation);
     }
 
     void Hitmarker()
@@ -106,6 +107,8 @@ public class AttackPlayer : MonoBehaviour
         Debug.Log("HITMARKER SPAWN");
     }
 
+
+   
 
 
 }

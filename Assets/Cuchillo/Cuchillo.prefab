@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3546880316604530819}
-  - component: {fileID: -2226085930692676299}
   - component: {fileID: -3440156389191085489}
   - component: {fileID: 26782967}
+  - component: {fileID: 3059532526277484263}
   m_Layer: 11
   m_Name: Cuchillo
   m_TagString: Cuchillo
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3546880316604530816}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.2160473, y: 10.3717985, z: -89.778984}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -35,19 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-2226085930692676299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3546880316604530816}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85ddac78b19dcb5449c31eae86d7e454, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 200
 --- !u!54 &-3440156389191085489
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -75,8 +62,21 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.23136067, y: 0.077516556, z: 1.0984955}
-  m_Center: {x: -0.210863, y: 0.52762246, z: -1.388588}
+  m_Size: {x: 0.18471158, y: 0.06958704, z: 1.0473506}
+  m_Center: {x: 0.05543214, y: 0.09425498, z: 0.3475108}
+--- !u!114 &3059532526277484263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3546880316604530816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bdeb5d7c77719447b41ea99b166924b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: 200
 --- !u!1001 &3546880317395677970
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -102,15 +102,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c636d8a1fb335fa4a94133cad15ec14a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.27008
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c636d8a1fb335fa4a94133cad15ec14a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.43825
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c636d8a1fb335fa4a94133cad15ec14a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.7534
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c636d8a1fb335fa4a94133cad15ec14a, type: 3}
       propertyPath: m_LocalRotation.w
