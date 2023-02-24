@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2873.4531, g: 2532.877, b: 2250.793, a: 1}
+  m_IndirectSpecularColor: {r: 2876.4043, g: 2533.873, b: 2250.1387, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1018,10 +1018,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1457941314, guid: f5f1db0013f6fda4583d359494820461, type: 3}
-      propertyPath: myTransform
-      value: 
-      objectReference: {fileID: 647113565}
     - target: {fileID: 543923716448018536, guid: f5f1db0013f6fda4583d359494820461, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -1066,10 +1062,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 543923716448018538, guid: f5f1db0013f6fda4583d359494820461, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 543923716448018543, guid: f5f1db0013f6fda4583d359494820461, type: 3}
       propertyPath: m_Name
       value: Enemy (2)
@@ -1080,11 +1072,6 @@ PrefabInstance:
       objectReference: {fileID: 1123992830}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5f1db0013f6fda4583d359494820461, type: 3}
---- !u!4 &647113565 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 543923716448018536, guid: f5f1db0013f6fda4583d359494820461, type: 3}
-  m_PrefabInstance: {fileID: 647113564}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &812873079
 GameObject:
   m_ObjectHideFlags: 0
