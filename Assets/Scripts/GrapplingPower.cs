@@ -124,7 +124,7 @@ public class GrapplingPower : MonoBehaviour
         
         if (playerMovement.TestInputJump())
         {
-            float momentumExtraSpeed = 1f;
+            float momentumExtraSpeed = .2f;
             playerMovement.characterVelocityMomentum = hookshotDir * hookshotSpeed * momentumExtraSpeed;
             state = State.Normal;
         }

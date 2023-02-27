@@ -9,7 +9,8 @@ public class MovementPlayer : MonoBehaviour
     
     [Header("Player")]
     float speed = 12f;
-    [SerializeField]float speedMax = 12f;
+    [SerializeField]float walkingSpeed = 12f;
+    [SerializeField] float wallSpeed = 24f;
     [SerializeField] CharacterController ch;
     [SerializeField] float gravity = -9.81f;
     bool lockControls = false;
@@ -68,7 +69,7 @@ public class MovementPlayer : MonoBehaviour
 
     [Header("Sprint")]
     float sprintSpeed = 2f;
-    [SerializeField]float sprintSpeedMax = 24f;
+    
     bool canSprint = true;
     
     bool isSprinting => canSprint;
@@ -108,8 +109,8 @@ public class MovementPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = speedMax;
-        sprintSpeed = sprintSpeedMax;
+        speed = walkingSpeed;
+        sprintSpeed = wallSpeed;
     }
 
     private void OnDrawGizmos()
@@ -227,7 +228,7 @@ public class MovementPlayer : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
         move = transform.right * x + transform.forward * z;
-        move += characterVelocityMomentum * Time.deltaTime;
+        move += characterVelocityMomentum;
         //El sprint
         ch.Move(move * (isSprinting ? sprintSpeed : speed) * Time.deltaTime);
 
@@ -403,8 +404,8 @@ public class MovementPlayer : MonoBehaviour
             camTrans.localPosition = Vector3.Lerp(new Vector3(camTrans.localPosition.x, camTrans.localPosition.y, camTrans.localPosition.z), new Vector3(camTrans.localPosition.x, defaultYPos, camTrans.localPosition.z), 0.11f);
             ch.center = Vector3.zero;
             ch.height = 2f;
-            speed = speedMax;
-            sprintSpeed = sprintSpeedMax;
+            speed = walkingSpeed;
+            sprintSpeed = wallSpeed;
         }
     }
 
