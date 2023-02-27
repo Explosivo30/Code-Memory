@@ -12,13 +12,9 @@ public class HasBeenAttacked : MonoBehaviour
 
     private void Awake()
     {
-        
-    }
-
-    private void Start()
-    {
         parentTrans = GetComponentInParent<Transform>();
     }
+
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -26,6 +22,7 @@ public class HasBeenAttacked : MonoBehaviour
         if (collision.transform.tag == "Cuchillo")
         {
             EventForGame.instance.hitmarker.Invoke();
+            Debug.Log("Cuchillo desaparecido");
             Destroy(parentTrans.parent.gameObject);
         }
     }
