@@ -34,7 +34,7 @@ public class MovementPlayer : MonoBehaviour
     #endregion
 
     Vector3 move;
-
+    [SerializeField] float timeWallJumpAir = 1f;
     [SerializeField] Vector3 velocity;
 
     [Header("Ckecking Attributes")]
@@ -350,7 +350,7 @@ public class MovementPlayer : MonoBehaviour
     IEnumerator DelayTime()
     {
         //Debug.Log("Y ahora esperamos 0.5");
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(timeWallJumpAir);
         
         DelayResetVelocityX();
     }
