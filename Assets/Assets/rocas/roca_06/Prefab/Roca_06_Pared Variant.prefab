@@ -1,5 +1,50 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8371512311883113445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8848841797286056781}
+  - component: {fileID: 6402122437628165530}
+  m_Layer: 6
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8848841797286056781
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8371512311883113445}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.0000894701, y: 0, z: 348.99982}
+  m_LocalScale: {x: 1.0000255, y: 0.99998075, z: 0.99996275}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7443255279017819556}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6402122437628165530
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8371512311883113445}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 358.85754, y: 229.94495, z: 53.39316}
+  m_Center: {x: -102.39422, y: 2.202048, z: 26.197418}
 --- !u!1001 &6971985914433444431
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69,7 +114,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: f7c09b7f6fb6aa34ba44cdb27633d3eb, type: 2}
     - target: {fileID: 919132149155446097, guid: 050b971849f624c46b104425bae9dac8, type: 3}
       propertyPath: m_Name
-      value: Roca_06_Pared
+      value: Roca_06_Pared Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 050b971849f624c46b104425bae9dac8, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1285375617339900073, guid: 050b971849f624c46b104425bae9dac8, type: 3}
       propertyPath: m_LocalScale.x
@@ -95,5 +144,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 381.96
       objectReference: {fileID: 0}
+    - target: {fileID: 8943961097123428636, guid: 050b971849f624c46b104425bae9dac8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 050b971849f624c46b104425bae9dac8, type: 3}
+--- !u!4 &7443255279017819556 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 050b971849f624c46b104425bae9dac8, type: 3}
+  m_PrefabInstance: {fileID: 6971985914433444431}
+  m_PrefabAsset: {fileID: 0}
