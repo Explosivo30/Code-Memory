@@ -1,5 +1,50 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4472639176315958973
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1310889428893478098}
+  - component: {fileID: 2804649894691205298}
+  m_Layer: 0
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1310889428893478098
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4472639176315958973}
+  m_LocalRotation: {x: -0.4834118, y: -0.46904606, z: 0.4536669, w: 0.58351976}
+  m_LocalPosition: {x: -1.3175024, y: 26.784569, z: 2.552038}
+  m_LocalScale: {x: 0.6404558, y: 0.80676216, z: 0.6599017}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7398387869605672259}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -7.966, y: -84.634, z: 82.982}
+--- !u!65 &2804649894691205298
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4472639176315958973}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 15.234975, y: 11.331819, z: 32.767685}
+  m_Center: {x: -0.69906354, y: 5.5586395, z: -3.154907}
 --- !u!1001 &7000533277049803432
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -65,7 +110,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 45a0254be1eab6b44bb62a6ab93beaaf, type: 3}
       propertyPath: m_Name
-      value: roca_03
+      value: roca_03 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6746639863225581554, guid: 45a0254be1eab6b44bb62a6ab93beaaf, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -73,3 +118,8 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 54c07fbcc619b50439b8e557a7bbf32b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45a0254be1eab6b44bb62a6ab93beaaf, type: 3}
+--- !u!4 &7398387869605672259 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 45a0254be1eab6b44bb62a6ab93beaaf, type: 3}
+  m_PrefabInstance: {fileID: 7000533277049803432}
+  m_PrefabAsset: {fileID: 0}
