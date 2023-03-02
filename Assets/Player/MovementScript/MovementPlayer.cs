@@ -230,7 +230,7 @@ public class MovementPlayer : MonoBehaviour
         move = transform.right * x + transform.forward * z;
         move += characterVelocityMomentum;
         //El sprint
-        ch.Move(move * (isSprinting ? sprintSpeed : speed) * Time.deltaTime);
+        ch.Move(move * (speed) * Time.deltaTime);
 
 
         //Dampen o restar momentum
@@ -364,7 +364,6 @@ public class MovementPlayer : MonoBehaviour
 
     private void ResetCamera()
     {
-
         if (!isWallLeft || !isWallRight && camMove.rotateZ != 0f)
         {
             camMove.rotateZ = Mathf.Lerp(camMove.rotateZ, 0f, 4f* Time.deltaTime);
@@ -439,6 +438,8 @@ public class MovementPlayer : MonoBehaviour
     {
         velocity = velocityToSet;
     }
+
+
     /*
     public void JumpToPosition(Vector3 targetPosition, float trajectoryHeight)
     {
@@ -468,4 +469,6 @@ public class MovementPlayer : MonoBehaviour
 
     }
     */
+
+    //Saludos humano, pasa un buen dia <3
 }
