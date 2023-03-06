@@ -71,7 +71,7 @@ public class MovementPlayer : MonoBehaviour
     float sprintSpeed = 2f;
     
     bool canSprint = true;
-    
+     
     bool isSprinting => canSprint;
     bool isWallrunning => isWall;
 
@@ -137,13 +137,20 @@ public class MovementPlayer : MonoBehaviour
             //if I'm wall running im grounded
             if (isWallLeft || isWallRight) 
             {
+                if (isWall == false)
+                {
+                    speed += sumarVelocidad;
+                }
+               
                 canSprint = true;
                 timeBoostLeft = timerBoostTotal;
                 isGrounded = true;
                 isWall = true;
                 WallRunningMovement();
+                lockControls = true;
+                
             }
-            else { isWall = false; canSprint = false; }
+            else { isWall = false; lockControls = false; }
 
 
             if (Input.GetKeyDown(KeyCode.LeftShift))
@@ -165,7 +172,7 @@ public class MovementPlayer : MonoBehaviour
 
             if (isGrounded && velocity.y < 0)
             {
-                velocity.y = isWall ? -4f : 0f;
+                velocity.y = isWall ? -.2f : 0f;
                 //velocity.y = -1;
             }
             velocity.y += gravity * Time.deltaTime;
@@ -189,6 +196,7 @@ public class MovementPlayer : MonoBehaviour
 
         Vector3 wallFordward = Vector3.Cross(wallNormal, transform.up);
         //lockControls = true;
+        ch.Move(move * speed * Time.deltaTime);
 
         //TODO EMPUJAR POR LA NORMAL DE LA PARED NO TENGO ADDFORCE
 
@@ -253,7 +261,6 @@ public class MovementPlayer : MonoBehaviour
         if(isGrounded == false) { return; }
         if (Input.GetKeyDown(KeyCode.Space))
         {
-
             if (isWallLeft)
             {
                 JumpRight();
@@ -265,8 +272,6 @@ public class MovementPlayer : MonoBehaviour
             }
             isGrounded = false;
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-            
-
         }
     }
 
@@ -403,7 +408,7 @@ public class MovementPlayer : MonoBehaviour
             camTrans.localPosition = Vector3.Lerp(new Vector3(camTrans.localPosition.x, camTrans.localPosition.y, camTrans.localPosition.z), new Vector3(camTrans.localPosition.x, defaultYPos, camTrans.localPosition.z), 0.11f);
             ch.center = Vector3.zero;
             ch.height = 2f;
-            speed = walkingSpeed;
+            //speed = walkingSpeed;
             sprintSpeed = wallSpeed;
         }
     }
@@ -437,6 +442,12 @@ public class MovementPlayer : MonoBehaviour
     void SetVelocity()
     {
         velocity = velocityToSet;
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        ResetVelocity();
+        //Delay resetVelocity if goes weird
     }
 
 
