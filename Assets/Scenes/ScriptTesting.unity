@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2872.3652, g: 2531.2832, b: 2248.9414, a: 1}
+  m_IndirectSpecularColor: {r: 2868.3906, g: 2525.287, b: 2240.5762, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3421,6 +3421,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 349407473, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
+      propertyPath: m_Lens.m_SensorSize.x
+      value: 1.8661017
+      objectReference: {fileID: 0}
     - target: {fileID: 349407474, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
       propertyPath: sensitivityX
       value: 200
@@ -3430,8 +3434,16 @@ PrefabInstance:
       value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 3257320967774163232, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
+      propertyPath: maxSpeed
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3257320967774163232, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
       propertyPath: sumarVelocidad
-      value: 0.5
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3257320967774163232, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
+      propertyPath: cooldownBoostTotal
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3257320967774163234, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
       propertyPath: m_RootOrder

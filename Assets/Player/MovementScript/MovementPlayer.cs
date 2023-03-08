@@ -10,8 +10,10 @@ public class MovementPlayer : MonoBehaviour
     [Header("Player")]
     float speed = 12f;
     [SerializeField]float walkingSpeed = 12f;
-    [SerializeField] float wallSpeed = 24f;
+    [SerializeField] float maxSpeed = 40f;
     [SerializeField] CharacterController ch;
+    [SerializeField] float cooldownBoostTotal;
+    [SerializeField] float cooldownBoostTimer = 5f;
     [SerializeField] float gravity = -9.81f;
     bool lockControls = false;
 
@@ -110,7 +112,7 @@ public class MovementPlayer : MonoBehaviour
     void Start()
     {
         speed = walkingSpeed;
-        sprintSpeed = wallSpeed;
+        sprintSpeed = maxSpeed;
     }
 
     private void OnDrawGizmos()
@@ -137,9 +139,10 @@ public class MovementPlayer : MonoBehaviour
             //if I'm wall running im grounded
             if (isWallLeft || isWallRight) 
             {
-                if (isWall == false)
+                if (isWall == false && speed <= maxSpeed)
                 {
                     speed += sumarVelocidad;
+                    cooldownBoostTimer = cooldownBoostTotal;
                 }
                
                 canSprint = true;
@@ -152,6 +155,11 @@ public class MovementPlayer : MonoBehaviour
             }
             else { isWall = false; lockControls = false; }
 
+            cooldownBoostTimer -= Time.deltaTime;
+            if(cooldownBoostTimer <= 0f)
+            {
+                speed = walkingSpeed;
+            }
 
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
@@ -409,7 +417,7 @@ public class MovementPlayer : MonoBehaviour
             ch.center = Vector3.zero;
             ch.height = 2f;
             //speed = walkingSpeed;
-            sprintSpeed = wallSpeed;
+            sprintSpeed = maxSpeed;
         }
     }
 
