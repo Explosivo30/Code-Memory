@@ -158,7 +158,7 @@ public class MovementPlayer : MonoBehaviour
             cooldownBoostTimer -= Time.deltaTime;
             if(cooldownBoostTimer <= 0f)
             {
-                speed = walkingSpeed
+                speed = walkingSpeed;
             }
 
             if (Input.GetKeyDown(KeyCode.LeftShift))
