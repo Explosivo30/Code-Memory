@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -46,9 +47,20 @@ public class BossAgressive : EnemyState
         //fatherToRotate.LookAt(player);
         //LookAtPlayer();
         UpdateAgressive();
+        UpdateYPosition();
         return this;
             
         
+    }
+
+    private void UpdateYPosition()
+    {
+        float yPosDistance = transform.position.y - player.transform.position.y;
+        if ((yPosDistance) > 0.5f || (yPosDistance)<0.5f)
+        {
+            Debug.Log(transform.position.y - player.transform.position.y);
+            
+        }
     }
 
     private void LookAtPlayer()
