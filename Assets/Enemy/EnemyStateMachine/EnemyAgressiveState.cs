@@ -27,7 +27,7 @@ public class EnemyAgressiveState : EnemyState
     NavMeshAgent navMeshAgent;
 
     [SerializeField] EnemyAlertState alertState;
-
+    Vector3 lastPosPlayer;
     bool isInside = true;
     
     //MAKE IT FASTER
@@ -92,6 +92,7 @@ public class EnemyAgressiveState : EnemyState
         {
             fatherToRotate.LookAt(enemyFOV.GetPlayerTransform().position);
             navMeshAgent.SetDestination(transform.position);
+            lastPosPlayer = enemyFOV.GetPlayerTransform().position;
             timeToAttack -= Time.deltaTime;
             AttackPlayer();
         }
@@ -99,9 +100,17 @@ public class EnemyAgressiveState : EnemyState
         {
 
             timeToAttack = timeResetAttack;
-            
+
             //Last time we saw the player, Save Vector3;
-            //navMeshAgent.SetDestination()
+            if (Vector3.Distance(enemyFOV.transform.position, lastPosPlayer) < 5f)
+            {
+                navMeshAgent.SetDestination(lastPosPlayer);
+            }
+            else
+            {
+                SetIsInside(false);
+            }
+            
         }
     }
 

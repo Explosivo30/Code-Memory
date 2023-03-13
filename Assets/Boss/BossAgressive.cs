@@ -58,7 +58,7 @@ public class BossAgressive : EnemyState
         float yPosDistance = transform.position.y - player.transform.position.y;
         if ((yPosDistance) > 0.5f || (yPosDistance)<0.5f)
         {
-            Debug.Log(transform.position.y - player.transform.position.y);
+            //Debug.Log(transform.position.y - player.transform.position.y);
             
         }
     }

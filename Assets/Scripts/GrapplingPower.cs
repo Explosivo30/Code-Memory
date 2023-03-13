@@ -127,6 +127,7 @@ public class GrapplingPower : MonoBehaviour
             float momentumExtraSpeed = .2f;
             playerMovement.characterVelocityMomentum = hookshotDir * hookshotSpeed * momentumExtraSpeed;
             state = State.Normal;
+            DebugHitPointTransform.position = new Vector3(0f, 0f, 0f);
         }
         
     }

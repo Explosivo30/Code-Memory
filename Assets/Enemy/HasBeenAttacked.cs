@@ -23,7 +23,9 @@ public class HasBeenAttacked : MonoBehaviour
         {
             EventForGame.instance.hitmarker.Invoke();
             Debug.Log("Cuchillo desaparecido");
+            Destroy(collision.gameObject);
             Destroy(parentTrans.parent.gameObject);
+
         }
     }
 

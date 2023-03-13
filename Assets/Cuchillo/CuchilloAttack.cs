@@ -26,7 +26,10 @@ public class CuchilloAttack : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Destroy(this.gameObject);
+        if(collision.transform.CompareTag("Enemy"))
+        {
+            Destroy(this.gameObject);
+        }
     }
 
 

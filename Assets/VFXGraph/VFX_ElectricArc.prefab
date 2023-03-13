@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5935089622735844840}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.12, y: 1.832, z: 0.152}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -55,7 +55,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5935089623205902254}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.54, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -86,7 +86,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5935089623583401867}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.57, y: 1.469, z: -0.15}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -153,27 +153,27 @@ VisualEffect:
         m_Overridden: 1
       - m_Value: 2
         m_Name: NoiseSpeed
-        m_Overridden: 0
-      - m_Value: 2
+        m_Overridden: 1
+      - m_Value: 3
         m_Name: NoiseFrequency
         m_Overridden: 1
-      - m_Value: 0.05
+      - m_Value: 0.1
         m_Name: Thickness
         m_Overridden: 1
     m_Vector2f:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: -4.32, y: 0.77, z: 0.064}
+      - m_Value: {x: 13.1380005, y: 2.183, z: -30.740002}
         m_Name: Pos1
         m_Overridden: 1
-      - m_Value: {x: -2.57, y: 1.469, z: -0.15}
+      - m_Value: {x: 13.1380005, y: 2.183, z: -30.740002}
         m_Name: Pos2
         m_Overridden: 1
-      - m_Value: {x: -1.12, y: 1.832, z: 0.152}
+      - m_Value: {x: 13.1380005, y: 2.183, z: -30.740002}
         m_Name: Pos3
         m_Overridden: 1
-      - m_Value: {x: 0, y: 0.54, z: 0}
+      - m_Value: {x: 13.1380005, y: 2.183, z: -30.740002}
         m_Name: Pos4
         m_Overridden: 1
     m_Vector4f:
@@ -335,7 +335,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5935089624128781053}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.32, y: 0.77, z: 0.064}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -403,26 +403,26 @@ VisualEffect:
       - m_Value: 4
         m_Name: NoiseSpeed
         m_Overridden: 1
-      - m_Value: 2
+      - m_Value: 3
         m_Name: NoiseFrequency
         m_Overridden: 1
-      - m_Value: 0.05
+      - m_Value: 0.1
         m_Name: Thickness
         m_Overridden: 1
     m_Vector2f:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: -4.32, y: 0.77, z: 0.064}
+      - m_Value: {x: 13.1380005, y: 2.183, z: -30.740002}
         m_Name: Pos1
         m_Overridden: 1
-      - m_Value: {x: -2.57, y: 1.469, z: -0.15}
+      - m_Value: {x: 13.1380005, y: 2.183, z: -30.740002}
         m_Name: Pos2
         m_Overridden: 1
-      - m_Value: {x: -1.12, y: 1.832, z: 0.152}
+      - m_Value: {x: 13.1380005, y: 2.183, z: -30.740002}
         m_Name: Pos3
         m_Overridden: 1
-      - m_Value: {x: 0, y: 0.54, z: 0}
+      - m_Value: {x: 13.1380005, y: 2.183, z: -30.740002}
         m_Name: Pos4
         m_Overridden: 1
     m_Vector4f:
