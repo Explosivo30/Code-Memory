@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 11c6c3f3a6f71c34484c021dfa78cf1e, type: 3}
       propertyPath: m_Name
-      value: roca_01
+      value: roca_01 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4033475764284111717, guid: 11c6c3f3a6f71c34484c021dfa78cf1e, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -61,3 +61,22 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: b6669e96a69f96840b977f8bbd7ca30d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11c6c3f3a6f71c34484c021dfa78cf1e, type: 3}
+--- !u!1 &5957703726065741782 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8476054590368679988, guid: 11c6c3f3a6f71c34484c021dfa78cf1e, type: 3}
+  m_PrefabInstance: {fileID: 2814465289252890594}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &7788928410266829257
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5957703726065741782}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6278169245417203804, guid: 11c6c3f3a6f71c34484c021dfa78cf1e, type: 3}
