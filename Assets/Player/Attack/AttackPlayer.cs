@@ -77,7 +77,7 @@ public class AttackPlayer : MonoBehaviour
            
         }
 
-        if (Input.GetKey(KeyCode.LeftAlt))
+        if (Input.GetKey(KeyCode.LeftShift))
         {
             timeIsSlowed = true;
             Time.timeScale = slowedTimeScale;
