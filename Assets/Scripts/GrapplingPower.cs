@@ -15,7 +15,7 @@ public class GrapplingPower : MonoBehaviour
     [SerializeField] Transform hookshotTransform;
     MovementPlayer playerMovement;
     [SerializeField] float hookRange = 50f;
-
+    [SerializeField] float momentumGrapplingHookRange = 2f;
     
 
     public State state;
@@ -124,8 +124,7 @@ public class GrapplingPower : MonoBehaviour
         
         if (playerMovement.TestInputJump())
         {
-            float momentumExtraSpeed = .2f;
-            playerMovement.characterVelocityMomentum = hookshotDir * hookshotSpeed * momentumExtraSpeed;
+            playerMovement.characterVelocityMomentum = hookshotDir * hookshotSpeed * momentumGrapplingHookRange * Time.deltaTime;
             state = State.Normal;
             DebugHitPointTransform.position = new Vector3(0f, 0f, 0f);
         }
