@@ -8258,8 +8258,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3b80fa9c7f93e3439b0f19d12bf3cef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverPointStrength: 500
-  hoverPointDistance: 2
+  hoverPointStrength: 700
+  hoverPointDistance: 4
   hoverPoints:
   - {fileID: 159578495358320184}
   - {fileID: 159578494937970531}
@@ -8298,14 +8298,14 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 159578496069061712}
   serializedVersion: 2
-  m_Mass: 1000
+  m_Mass: 2000
   m_Drag: 20
-  m_AngularDrag: 2.91
+  m_AngularDrag: 2.9
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!65 &159578496069061715
 BoxCollider:
   m_ObjectHideFlags: 0
