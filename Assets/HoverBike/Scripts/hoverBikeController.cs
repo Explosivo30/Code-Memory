@@ -27,6 +27,7 @@ public class hoverBikeController : MonoBehaviour
     private void Start()
     {
         //Player = GameObject.FindWithTag("Player");
+        //rigidbody.centerOfMass
     }
     void OnTriggerEnter(Collider other)
     {
