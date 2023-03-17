@@ -8279,6 +8279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 159578496069061714}
+  centerOfMass: {x: 0, y: 0, z: 0}
   acceleration: 1000
   rotationRate: 200
   turnRotationAngle: 34
@@ -8538,7 +8539,7 @@ MonoBehaviour:
     FieldOfView: 60
     OrthographicSize: 5
     NearClipPlane: 0.3
-    FarClipPlane: 1000
+    FarClipPlane: 10000
     Dutch: 0
     ModeOverride: 0
     LensShift: {x: 0, y: 0}

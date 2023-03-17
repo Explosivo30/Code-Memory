@@ -58,7 +58,7 @@ MonoBehaviour:
     FieldOfView: 70
     OrthographicSize: 5
     NearClipPlane: 0.1
-    FarClipPlane: 5000
+    FarClipPlane: 10000
     Dutch: 0
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
@@ -536,6 +536,7 @@ MonoBehaviour:
     m_Bits: 8
   hookshotTransform: {fileID: 8725318023117464031}
   hookRange: 500
+  momentumGrapplingHookRange: 2
   state: 0
 --- !u!1 &3257320968186378691
 GameObject:
