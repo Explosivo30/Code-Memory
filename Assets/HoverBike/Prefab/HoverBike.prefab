@@ -8244,8 +8244,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.81, y: 1.52, z: 2.18}
-  m_Center: {x: 0, y: -0.09, z: 0}
+  m_Size: {x: 0.81, y: 1.09, z: 2.18}
+  m_Center: {x: 0, y: 0.18, z: 0}
 --- !u!114 &159578496069061724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8258,7 +8258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3b80fa9c7f93e3439b0f19d12bf3cef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverPointStrength: 700
+  hoverPointStrength: 1000
   hoverPointDistance: 4
   hoverPoints:
   - {fileID: 159578495358320184}
@@ -8279,8 +8279,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 159578496069061714}
-  centerOfMass: {x: 0, y: 0, z: 0}
-  acceleration: 1000
+  centerOfMass: {x: 0, y: -3, z: 0}
+  acceleration: 4000
   rotationRate: 200
   turnRotationAngle: 34
   turnRotationSeekSpeed: 0.6
@@ -8318,7 +8318,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.52, y: 0.93, z: 0.57}
+  m_Size: {x: 3.54, y: 2.13, z: 2.05}
   m_Center: {x: 0, y: 0.28, z: 0.6}
 --- !u!1 &159578496079996030
 GameObject:

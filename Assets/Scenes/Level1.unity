@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1864.709, g: 2036.7461, b: 2480.9336, a: 1}
+  m_IndirectSpecularColor: {r: 1769.5625, g: 1904.6328, b: 2266.5742, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -41131,38 +41131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HoverBike
       objectReference: {fileID: 0}
-    - target: {fileID: 159578496069061714, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
-      propertyPath: m_Constraints
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 159578496069061715, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
-      propertyPath: m_Size.x
-      value: 3.54
-      objectReference: {fileID: 0}
-    - target: {fileID: 159578496069061715, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
-      propertyPath: m_Size.y
-      value: 2.13
-      objectReference: {fileID: 0}
-    - target: {fileID: 159578496069061715, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
-      propertyPath: m_Size.z
-      value: 2.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 159578496069061724, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
-      propertyPath: hoverPointStrength
-      value: 1000
-      objectReference: {fileID: 0}
     - target: {fileID: 159578496069061725, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
       propertyPath: Player
       value: 
       objectReference: {fileID: 1648136318}
-    - target: {fileID: 159578496069061725, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
-      propertyPath: acceleration
-      value: 4000
-      objectReference: {fileID: 0}
-    - target: {fileID: 159578496069061725, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
-      propertyPath: centerOfMass.y
-      value: -3
-      objectReference: {fileID: 0}
     - target: {fileID: 159578496069061726, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -41206,14 +41178,6 @@ PrefabInstance:
     - target: {fileID: 159578496069061726, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 159578496069061727, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
-      propertyPath: m_Size.y
-      value: 1.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 159578496069061727, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
-      propertyPath: m_Center.y
-      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 159578496260476716, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
       propertyPath: m_LocalPosition.y
