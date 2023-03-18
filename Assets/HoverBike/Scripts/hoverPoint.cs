@@ -5,11 +5,71 @@ using UnityEngine;
 public class hoverPoint : MonoBehaviour
 {
     public float hoverPointStrength;
-    public float hoverPointDistance;
+    public float hoverPointDistanceYouWant;
+    private float hoverPointDistance;
+
+    public float alturaMinStartHoverBike = 2f;
+    public float alturaMaxhoverBike = 7f;
+
+    private float timeToWaitStartMovements = 30f;
+    private float cuerrentTimeToWait = 0f;
+
     public Transform[] hoverPoints;
     public Rigidbody rigidbody;
+    [SerializeField] hoverBikeController hoverBikeController;
 
+    private void Awake()
+    {
+        hoverBikeController = GetComponent<hoverBikeController>();
+
+    }
+    public void Start()
+    {
+        hoverPointDistance = alturaMinStartHoverBike;
+    }
+    public void Update()
+    {
+        ControlesEstablecerAltura();
+    }
     void FixedUpdate()
+    {
+        HoverPoints();
+        EstablecerAlturaHoverBikeRegulable();
+    }
+    public void EstablecerAlturaHoverBikeRegulable()
+    {
+        if (hoverBikeController.inBike == true)
+        {
+            cuerrentTimeToWait += 1;
+            if ((hoverPointDistance < hoverPointDistanceYouWant) && cuerrentTimeToWait == timeToWaitStartMovements)
+            {
+                hoverPointDistance += 0.5f;
+                cuerrentTimeToWait = 0;
+            }
+            if ((hoverPointDistance > hoverPointDistanceYouWant) && cuerrentTimeToWait == timeToWaitStartMovements)
+            {
+                hoverPointDistance -= 0.5f;
+                cuerrentTimeToWait = 0;
+            }
+        }
+        if (hoverBikeController.inBike == false)
+        {
+            hoverPointDistance = alturaMinStartHoverBike;
+            cuerrentTimeToWait = 0;
+        }
+    }
+    public void ControlesEstablecerAltura()
+    {
+        if (Input.GetKeyDown(KeyCode.P) && hoverPointDistance < alturaMaxhoverBike)
+        {
+            hoverPointDistance += 0.5f;
+        }
+        if (Input.GetKeyDown(KeyCode.O) && hoverPointDistance > alturaMinStartHoverBike)
+        {
+            hoverPointDistance -= 0.5f;
+        }
+    }
+    private void HoverPoints()
     {
         RaycastHit hit;
         foreach (Transform hoverPoint in hoverPoints)
@@ -17,7 +77,7 @@ public class hoverPoint : MonoBehaviour
             Vector3 downForce;
             float distancePercentage;
 
-            if (Physics.Raycast (hoverPoint.position, hoverPoint.up * -1, out hit, hoverPointDistance))
+            if (Physics.Raycast(hoverPoint.position, hoverPoint.up * -1, out hit, hoverPointDistance))
             {
                 //Distance hover Points to the ground
                 distancePercentage = 1 - (hit.distance / hoverPointDistance);
@@ -29,6 +89,8 @@ public class hoverPoint : MonoBehaviour
 
                 //Apply the force where the hover point is:
                 rigidbody.AddForceAtPosition(downForce, hoverPoint.position);
+
+                Debug.DrawRay(transform.position, Vector3.down, Color.green);
 
             }
         }

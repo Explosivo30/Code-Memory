@@ -8244,8 +8244,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.81, y: 1.09, z: 2.18}
-  m_Center: {x: 0, y: 0.18, z: 0}
+  m_Size: {x: 0.81, y: 1.41, z: 2.18}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &159578496069061724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8258,14 +8258,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3b80fa9c7f93e3439b0f19d12bf3cef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverPointStrength: 1000
-  hoverPointDistance: 4
+  hoverPointStrength: 2000
+  hoverPointDistanceYouWant: 4.5
+  alturaMinStartHoverBike: 2
+  alturaMaxhoverBike: 7
   hoverPoints:
   - {fileID: 159578495358320184}
   - {fileID: 159578494937970531}
   - {fileID: 159578494800924652}
   - {fileID: 159578496260476716}
   rigidbody: {fileID: 159578496069061714}
+  hoverBikeController: {fileID: 159578496069061725}
 --- !u!114 &159578496069061725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8278,12 +8281,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eefb74e0f5944314b9dae503d6e4f664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vcam: {fileID: 159578496121349051}
   rigidbody: {fileID: 159578496069061714}
   centerOfMass: {x: 0, y: -3, z: 0}
-  acceleration: 4000
+  acceleration: 1200
+  currrentTurboSpeed: 0
+  TurboSpeed: 4
   rotationRate: 200
   turnRotationAngle: 34
   turnRotationSeekSpeed: 0.6
+  anguloMaximoDeRotacion: 30
+  TimeToWaitStartMovements: 500
   camaraAActivar: {fileID: 159578496121349048}
   hoverBikePosition: {x: 0, y: 0, z: 0}
   Player: {fileID: 0}
