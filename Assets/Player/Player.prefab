@@ -461,15 +461,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkingSpeed: 18
-  maxSpeed: 40
+  maxSpeed: 50
   ch: {fileID: 3257320967774163235}
-  cooldownBoostTotal: 5
-  cooldownBoostTimer: 5
+  cooldownBoostTotal: 16
+  cooldownBoostTimer: 16
   gravity: -35
   timerBoostTotal: 0
-  sumarVelocidad: 1
+  sumarVelocidad: 4
   raycastLenght: 2
-  groundRaycastLenght: 1.2
+  groundRaycastLenght: 2.5
   onMovilityWallEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -486,7 +486,7 @@ MonoBehaviour:
     m_Bits: 32832
   jumpHeight: 3
   characterVelocityMomentum: {x: 0, y: 0, z: 0}
-  sideJump: 25
+  sideJump: 35
   camTrans: {fileID: 349407472}
   camMove: {fileID: 349407474}
   freeze: 0
@@ -508,7 +508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 670f613e0e7643a4ba8bc578fc78201f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldownAttack: 1
+  cooldownAttack: 0.1
   cuchillo: {fileID: 3546880316604530816, guid: 1d5f73914a730cc4aaec7798634fcdc2, type: 3}
   cameraPlayer: {fileID: 349407472}
   gunPoint: {fileID: 8725318023117464031}
@@ -535,8 +535,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   hookshotTransform: {fileID: 8725318023117464031}
-  hookRange: 500
-  momentumGrapplingHookRange: 2
+  hookRange: 75
+  momentumGrapplingHookRange: 6
   moveTowardsGrappedPoint: 25
   state: 0
 --- !u!1 &3257320968186378691
