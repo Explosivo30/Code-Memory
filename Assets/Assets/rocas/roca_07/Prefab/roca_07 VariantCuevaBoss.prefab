@@ -69,7 +69,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8abf3687ef11d1049b433148e9e4d1a3, type: 3}
       propertyPath: m_Name
-      value: roca_07
+      value: roca_07 VariantCuevaBoss
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8abf3687ef11d1049b433148e9e4d1a3, type: 3}
+--- !u!1 &8658567711851418875 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -6894500439852549686, guid: 8abf3687ef11d1049b433148e9e4d1a3, type: 3}
+  m_PrefabInstance: {fileID: 6375048774842215729}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &8912016820139009134
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8658567711851418875}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1742115685737817611, guid: 8abf3687ef11d1049b433148e9e4d1a3, type: 3}

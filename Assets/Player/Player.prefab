@@ -460,7 +460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c66e83bbed96d24282a35b8b5ebd917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkingSpeed: 12
+  walkingSpeed: 18
   maxSpeed: 40
   ch: {fileID: 3257320967774163235}
   cooldownBoostTotal: 5
@@ -537,6 +537,7 @@ MonoBehaviour:
   hookshotTransform: {fileID: 8725318023117464031}
   hookRange: 500
   momentumGrapplingHookRange: 2
+  moveTowardsGrappedPoint: 25
   state: 0
 --- !u!1 &3257320968186378691
 GameObject:

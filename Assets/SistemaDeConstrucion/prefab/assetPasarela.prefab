@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3669262063963803346}
   - component: {fileID: 8541840791662745235}
   - component: {fileID: 8540449061832390418}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TroncoLateral_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 2268201899045587981}
   - component: {fileID: 5013619540188400594}
   - component: {fileID: 887104910790041064}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Madera_18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 4709892812359241295}
   - component: {fileID: 7428730886404564929}
   - component: {fileID: 2916107969243699205}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Madera_19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,89 +249,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &858013929963965127
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5081137193751011820}
-  - component: {fileID: 7634030045790581936}
-  - component: {fileID: 5573801813865401136}
-  m_Layer: 0
-  m_Name: troncoPilar_05
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5081137193751011820
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 858013929963965127}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.270475, y: -0.020482268, z: -0.1853033}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 372119931083089621}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7634030045790581936
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 858013929963965127}
-  m_Mesh: {fileID: -2688410454438607267, guid: 3b7076f1da74f4044a60efa22edef96d, type: 3}
---- !u!23 &5573801813865401136
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 858013929963965127}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 257
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: fedd6c39df849db4c9f6a1c0275dd5b7, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1345223680542221338
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,7 +260,7 @@ GameObject:
   - component: {fileID: 5429421351807091297}
   - component: {fileID: 5104915495036525471}
   - component: {fileID: 7094985548492270973}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: troncoPilar_07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -363,7 +280,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 372119931083089621}
-  m_RootOrder: 13
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5104915495036525471
 MeshFilter:
@@ -426,7 +343,7 @@ GameObject:
   - component: {fileID: 1198309556638530404}
   - component: {fileID: 2188972007061048371}
   - component: {fileID: 8495556107430977792}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Madera_16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -507,7 +424,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 372119931083089621}
-  m_Layer: 0
+  - component: {fileID: 4863472638159756082}
+  m_Layer: 7
   m_Name: assetPasarela
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -537,13 +455,24 @@ Transform:
   - {fileID: 821496150300525488}
   - {fileID: 3669262063963803346}
   - {fileID: 139749670476380008}
-  - {fileID: 5081137193751011820}
-  - {fileID: 5579858854132545141}
   - {fileID: 5429421351807091297}
   - {fileID: 5377707395700944148}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4863472638159756082
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3200268415870257017}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.64, y: 0.07, z: 0.61}
+  m_Center: {x: 0, y: 0.265, z: 0}
 --- !u!1 &6372061548873369333
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,7 +484,7 @@ GameObject:
   - component: {fileID: 5377707395700944148}
   - component: {fileID: 4642255738729162389}
   - component: {fileID: 333554888627783426}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: troncoPilar_08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -575,7 +504,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 372119931083089621}
-  m_RootOrder: 14
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4642255738729162389
 MeshFilter:
@@ -638,7 +567,7 @@ GameObject:
   - component: {fileID: 2761969221411946217}
   - component: {fileID: 4686975977226331815}
   - component: {fileID: 7703992581049550775}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Madera_20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -721,7 +650,7 @@ GameObject:
   - component: {fileID: 821496150300525488}
   - component: {fileID: 4371996063903602280}
   - component: {fileID: 7271593455994116209}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TrocoSuperior_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -804,7 +733,7 @@ GameObject:
   - component: {fileID: 139749670476380008}
   - component: {fileID: 1061312808898325124}
   - component: {fileID: 6148172560102480451}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TroncoLateral_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -887,7 +816,7 @@ GameObject:
   - component: {fileID: 2541871422586348884}
   - component: {fileID: 9038322377076052865}
   - component: {fileID: 1652297179142234394}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TrocoSuperior_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -970,7 +899,7 @@ GameObject:
   - component: {fileID: 4219759545466559051}
   - component: {fileID: 8534436758033760474}
   - component: {fileID: 3986254531599813821}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Madera_17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1042,89 +971,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &7739901611655583094
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5579858854132545141}
-  - component: {fileID: 7717226385466988984}
-  - component: {fileID: 3974207429360450726}
-  m_Layer: 0
-  m_Name: troncoPilar_06
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5579858854132545141
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7739901611655583094}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.2434128, y: -0.020482268, z: -0.1853033}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 372119931083089621}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7717226385466988984
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7739901611655583094}
-  m_Mesh: {fileID: 5401130759777731268, guid: 3b7076f1da74f4044a60efa22edef96d, type: 3}
---- !u!23 &3974207429360450726
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7739901611655583094}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 257
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: fedd6c39df849db4c9f6a1c0275dd5b7, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &8781728739815655890
 GameObject:
   m_ObjectHideFlags: 0
@@ -1136,7 +982,7 @@ GameObject:
   - component: {fileID: 8990714012168095527}
   - component: {fileID: 926388436721038543}
   - component: {fileID: 4696008315663982707}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Madera_15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1219,7 +1065,7 @@ GameObject:
   - component: {fileID: 8728784717066685417}
   - component: {fileID: 7138593866202766871}
   - component: {fileID: 5780983987991247342}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Madera_21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
