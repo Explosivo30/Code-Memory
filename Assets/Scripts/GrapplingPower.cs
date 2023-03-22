@@ -49,8 +49,9 @@ public class GrapplingPower : MonoBehaviour
             {
                 default:
                 case State.Normal:
-                hookshotTransform.transform.position = hookshotTransform.parent.transform.position;
-                    hookshotTransform.gameObject.SetActive(false);
+                    hookshotTransform.transform.position = hookshotTransform.parent.transform.position;
+                DebugHitPointTransform.position = transform.position;
+                hookshotTransform.gameObject.SetActive(false);
                     
                     HandleHookshotStart();
                     isGrappling = false;
@@ -80,7 +81,8 @@ public class GrapplingPower : MonoBehaviour
                 hookShotPosition = raycastHit.point;
                 hookshotSize = 0f;
                 hookshotTransform.gameObject.SetActive(true);
-                hookshotTransform.localScale = Vector3.zero;
+                //hookshotTransform.localScale = Vector3.zero;
+                
                 state = State.HookshotThrown;
 
             }
@@ -89,11 +91,12 @@ public class GrapplingPower : MonoBehaviour
 
     void HandleHookshotThrow()
     {
-        hookshotTransform.LookAt(hookShotPosition);
+        //hookshotTransform.LookAt(hookShotPosition);
 
         float hookshotThrowSpeed = 140f;
         hookshotSize += hookshotThrowSpeed * Time.deltaTime;
-        hookshotTransform.localScale = new Vector3(1, 1, hookshotSize);
+        //hookshotTransform.localScale = new Vector3(1, 1, hookshotSize);
+
         if(hookshotSize >= Vector3.Distance(transform.position, hookShotPosition))
         {
 
@@ -103,7 +106,7 @@ public class GrapplingPower : MonoBehaviour
 
     void HandleHookshotMovement()
     {
-        hookshotTransform.LookAt(hookShotPosition);
+        //hookshotTransform.LookAt(hookShotPosition);
 
         Vector3 hookshotDir = (hookShotPosition - transform.position).normalized;
 
@@ -127,7 +130,7 @@ public class GrapplingPower : MonoBehaviour
         {
             playerMovement.characterVelocityMomentum = hookshotDir * moveTowardsGrappedPoint * momentumGrapplingHookRange * Time.deltaTime;
             state = State.Normal;
-            DebugHitPointTransform.position = new Vector3(0f, 0f, 0f);
+            DebugHitPointTransform.position = transform.position;
         }
         
     }
