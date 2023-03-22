@@ -16,6 +16,7 @@ public class GrapplingPower : MonoBehaviour
     MovementPlayer playerMovement;
     [SerializeField] float hookRange = 50f;
     [SerializeField] float momentumGrapplingHookRange = 2f;
+    [SerializeField] float moveTowardsGrappedPoint = 25f;
     
 
     public State state;
@@ -106,9 +107,9 @@ public class GrapplingPower : MonoBehaviour
 
         Vector3 hookshotDir = (hookShotPosition - transform.position).normalized;
 
-        float hookshotSpeed = 25f;
+        
         //Move CharacterController
-        cc.Move(hookshotDir * hookshotSpeed * Time.deltaTime);
+        cc.Move(hookshotDir * moveTowardsGrappedPoint * Time.deltaTime);
         if (Vector3.Distance(transform.position, hookShotPosition) < 2f)
         {
             hookshotTransform.gameObject.SetActive(false);
@@ -124,7 +125,7 @@ public class GrapplingPower : MonoBehaviour
         
         if (playerMovement.TestInputJump())
         {
-            playerMovement.characterVelocityMomentum = hookshotDir * hookshotSpeed * momentumGrapplingHookRange * Time.deltaTime;
+            playerMovement.characterVelocityMomentum = hookshotDir * moveTowardsGrappedPoint * momentumGrapplingHookRange * Time.deltaTime;
             state = State.Normal;
             DebugHitPointTransform.position = new Vector3(0f, 0f, 0f);
         }
