@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2870.8027, g: 2529.3535, b: 2246.3613, a: 1}
+  m_IndirectSpecularColor: {r: 2868.3906, g: 2525.291, b: 2240.6074, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1807,7 +1807,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1093586366
 MonoBehaviour:
@@ -3618,6 +3618,30 @@ PrefabInstance:
     - target: {fileID: 159578496069061726, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 962258739889475739, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -67.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 962258739889475739, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 962258739889475739, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.26196647
+      objectReference: {fileID: 0}
+    - target: {fileID: 962258739889475739, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 962258739889475739, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.96507704
+      objectReference: {fileID: 0}
+    - target: {fileID: 962258739889475739, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 149.626
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
