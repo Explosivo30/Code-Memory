@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2869.6074, g: 2527.8652, b: 2244.3223, a: 1}
+  m_IndirectSpecularColor: {r: 2868.3184, g: 2525.1113, b: 2240.5684, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -319,6 +319,83 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 45
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &237059019
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1340101978}
+    m_Modifications:
+    - target: {fileID: 4755022877565420340, guid: 637d6ca55f4e2ea4e9214129e6faccc6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755022877565420341, guid: 637d6ca55f4e2ea4e9214129e6faccc6, type: 3}
+      propertyPath: m_Name
+      value: HeatDistortion
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755022877565420341, guid: 637d6ca55f4e2ea4e9214129e6faccc6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755022877565420346, guid: 637d6ca55f4e2ea4e9214129e6faccc6, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755022877565420346, guid: 637d6ca55f4e2ea4e9214129e6faccc6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755022877565420346, guid: 637d6ca55f4e2ea4e9214129e6faccc6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755022877565420346, guid: 637d6ca55f4e2ea4e9214129e6faccc6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755022877565420346, guid: 637d6ca55f4e2ea4e9214129e6faccc6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.016
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755022877565420346, guid: 637d6ca55f4e2ea4e9214129e6faccc6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.6599998
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755022877565420346, guid: 637d6ca55f4e2ea4e9214129e6faccc6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.2239978
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755022877565420346, guid: 637d6ca55f4e2ea4e9214129e6faccc6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755022877565420346, guid: 637d6ca55f4e2ea4e9214129e6faccc6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755022877565420346, guid: 637d6ca55f4e2ea4e9214129e6faccc6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755022877565420346, guid: 637d6ca55f4e2ea4e9214129e6faccc6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755022877565420346, guid: 637d6ca55f4e2ea4e9214129e6faccc6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755022877565420346, guid: 637d6ca55f4e2ea4e9214129e6faccc6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755022877565420346, guid: 637d6ca55f4e2ea4e9214129e6faccc6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 637d6ca55f4e2ea4e9214129e6faccc6, type: 3}
 --- !u!1 &270235627
 GameObject:
   m_ObjectHideFlags: 0
@@ -1583,7 +1660,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.1
-  far clip plane: 5000
+  far clip plane: 10000
   field of view: 70
   orthographic: 0
   orthographic size: 5
@@ -3025,6 +3102,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 543923716448018536, guid: f5f1db0013f6fda4583d359494820461, type: 3}
   m_PrefabInstance: {fileID: 1254106023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1340101978 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 349407472, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
+  m_PrefabInstance: {fileID: 1520807116}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1444533148
 GameObject:
