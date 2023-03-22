@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.050405674, g: 0.071257606, b: 0.108303, a: 1}
+  m_IndirectSpecularColor: {r: 0.050390765, g: 0.07123693, b: 0.10826382, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -823,25 +823,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b313c121ba05cfc4694738ebf9ae82fe, type: 3}
   m_PrefabInstance: {fileID: 917125596}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &209844594 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 858013929963965127, guid: 3916f9cdba8340044a2da735e6f301b3, type: 3}
-  m_PrefabInstance: {fileID: 1000919422}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &209844598
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 209844594}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2688410454438607267, guid: 3b7076f1da74f4044a60efa22edef96d, type: 3}
 --- !u!1 &222283301
 GameObject:
   m_ObjectHideFlags: 0
@@ -1951,25 +1932,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!1 &413545351 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7739901611655583094, guid: 3916f9cdba8340044a2da735e6f301b3, type: 3}
-  m_PrefabInstance: {fileID: 1000919422}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &413545355
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 413545351}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 5401130759777731268, guid: 3b7076f1da74f4044a60efa22edef96d, type: 3}
 --- !u!1001 &414503542
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14807,53 +14769,13 @@ PrefabInstance:
       propertyPath: sensitivityY
       value: 200
       objectReference: {fileID: 0}
-    - target: {fileID: 1520807120, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
-      propertyPath: hookRange
-      value: 75
-      objectReference: {fileID: 0}
-    - target: {fileID: 1520807120, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
-      propertyPath: moveTowardsGrappedPoint
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1520807120, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
-      propertyPath: momentumGrapplingHookRange
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3257320967774163232, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
-      propertyPath: maxSpeed
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 3257320967774163232, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
-      propertyPath: sideJump
-      value: 35
-      objectReference: {fileID: 0}
     - target: {fileID: 3257320967774163232, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
       propertyPath: speedMax
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3257320967774163232, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
-      propertyPath: walkingSpeed
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 3257320967774163232, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
       propertyPath: sprintSpeedMax
       value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 3257320967774163232, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
-      propertyPath: sumarVelocidad
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3257320967774163232, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
-      propertyPath: cooldownBoostTimer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 3257320967774163232, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
-      propertyPath: cooldownBoostTotal
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 3257320967774163232, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
-      propertyPath: groundRaycastLenght
-      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 3257320967774163234, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
       propertyPath: m_RootOrder
@@ -14902,10 +14824,6 @@ PrefabInstance:
     - target: {fileID: 3257320967774163237, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4846051448659224292, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
-      propertyPath: cooldownAttack
-      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5935089622816434675, guid: 9b16825ad90c6c84bbee032f10027494, type: 3}
       propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[0].m_Value.x
