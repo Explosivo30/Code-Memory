@@ -34,7 +34,7 @@ public class CameraMove : MonoBehaviour
 
         xRotation -= rotationY;
 
-        xRotation = Mathf.Clamp(xRotation, -60, 90);
+        xRotation = Mathf.Clamp(xRotation, -70, 90);
 
         //TODO: only let it rotate  if you are not wall running with a boolean
 
