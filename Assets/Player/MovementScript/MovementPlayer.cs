@@ -455,6 +455,7 @@ public class MovementPlayer : MonoBehaviour
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         ResetVelocity();
+
         //Delay resetVelocity if goes weird
     }
 
