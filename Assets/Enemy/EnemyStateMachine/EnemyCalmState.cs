@@ -18,7 +18,8 @@ public class EnemyCalmState : EnemyState
 
     [SerializeField] Transform pathPoints;
     int pathCount = 0;
-    
+
+    [SerializeField] Sprite visualizer;
 
     private void Awake()
     {

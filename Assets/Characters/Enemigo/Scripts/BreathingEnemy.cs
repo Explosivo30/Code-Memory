@@ -30,13 +30,13 @@ public class BreathingEnemy : MonoBehaviour
     void Update()
     {
 
-        //intensity = Mathf.Sin(Time.time * defaultIntensity) * Time.deltaTime;
+        intensity = Mathf.Sin(Time.time * defaultIntensity);
         //mat.SetColor("_EmissionColor", Color.blue * intensity);     // No barrufa
         //mat.SetFloat("_EmissiveIntensity", intensity);            // No barrufa
         //mat.SetColor("_EmissiveColorLDR", Color.blue * intensity);            // No barrufa
 
         //mat.SetFloat("_EmissiveExposureWeight", intensity);         // Hace algo
 
-        mat.SetColor("_EmissiveColor", Color.blue * intensity);
+        mat.SetColor("_EmissiveColor", Color.green * intensity);
     }
 }
