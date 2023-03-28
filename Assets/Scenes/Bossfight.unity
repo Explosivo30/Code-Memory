@@ -4839,6 +4839,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HoverBike
       objectReference: {fileID: 0}
+    - target: {fileID: 372109874398990781, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5913106125495767206, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -10898,7 +10902,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.1392157, y: 1}
+    m_SensorSize: {x: 2.042654, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -19066,6 +19070,10 @@ PrefabInstance:
     - target: {fileID: 1777411649820549379, guid: a38df9f6fd8c46748b620be810dd65a5, type: 3}
       propertyPath: m_Name
       value: rocaRezan
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777411649820549379, guid: a38df9f6fd8c46748b620be810dd65a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a38df9f6fd8c46748b620be810dd65a5, type: 3}

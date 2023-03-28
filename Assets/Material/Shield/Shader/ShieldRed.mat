@@ -86,7 +86,7 @@ Material:
     - _DstBlend: 1
     - _EnableBlendModePreserveSpecularLighting: 1
     - _EnableFogOnTransparent: 1
-    - _IntensityEmiss: 0.01
+    - _IntensityEmiss: 0.005
     - _OpaqueCullMode: 2
     - _RayTracing: 0
     - _ReceivesSSR: 1
@@ -124,5 +124,5 @@ Material:
     - _ColorForEmission: {r: 1, g: 0, b: 0.4445591, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _MainTexTiling: {r: 2, g: 25, b: 0, a: 0}
+    - _MainTexTiling: {r: 2, g: 21.73, b: 0, a: 0}
   m_BuildTextureStacks: []
