@@ -6,17 +6,36 @@ public class EnemyAlertState : EnemyState
 {
     [SerializeField] EnemyCalmState enemyCalm;
     [SerializeField] EnemyAgressiveState enemyAgressive;
-    [SerializeField] bool playerFound = false;
+    [SerializeField] EnemyFOV enemyFOV;
+    [SerializeField] float maxTimeAlertState = 5f;
+    float counterLeftAlertState;
+    bool deadBody = false;
     public override EnemyState RunCurrentState()
     {
-        if(playerFound == true)
+        if (enemyFOV.GetPlayerInside() == true)
         {
-            playerFound = false;
+            counterLeftAlertState = maxTimeAlertState;
             return enemyAgressive;
+        }
+        else if(deadBody == true)
+        {
+            counterLeftAlertState = maxTimeAlertState;
+            return this;
         }
         else
         {
-            return this;
+            counterLeftAlertState -= Time.deltaTime;
+            if (counterLeftAlertState < 0)
+            {
+                return enemyCalm;
+            }
+            else
+            {
+                return this;
+            }
+            
+            //¡¡¡Mucho animo teton!!! (Lo siento no puedo ayudar no hablo virgen)
+
         }
 
         

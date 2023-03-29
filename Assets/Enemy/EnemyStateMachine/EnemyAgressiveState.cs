@@ -45,7 +45,7 @@ public class EnemyAgressiveState : EnemyState
 
     public override EnemyState RunCurrentState()
     {
-        if (isInside == false)
+        if (enemyFOV.GetPlayerInside() == false)
         {
             return alertState;
         }

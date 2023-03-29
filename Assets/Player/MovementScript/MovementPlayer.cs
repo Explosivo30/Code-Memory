@@ -161,11 +161,6 @@ public class MovementPlayer : MonoBehaviour
                 speed = walkingSpeed;
             }
 
-            if (Input.GetKeyDown(KeyCode.LeftShift))
-            {
-                DashMoment();
-            }
-
             Slide();
 
             ResetCamera();
@@ -313,8 +308,8 @@ public class MovementPlayer : MonoBehaviour
 
     IEnumerator DashMoment()
     {
-        float startTime = 0;
-        float dashTime = 23f;
+        float startTime = 2f;
+        float dashTime = 24f;
         while (Time.time < startTime + dashTime)
         {
             ch.Move(transform.forward * _dashSpeed * Time.deltaTime);
