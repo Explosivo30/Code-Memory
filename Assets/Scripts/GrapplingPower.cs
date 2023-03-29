@@ -17,7 +17,8 @@ public class GrapplingPower : MonoBehaviour
     [SerializeField] float hookRange = 50f;
     [SerializeField] float momentumGrapplingHookRange = 2f;
     [SerializeField] float moveTowardsGrappedPoint = 25f;
-    
+    [SerializeField] float hookshotThrowSpeed = 500f;
+
 
     public State state;
     public enum State
@@ -93,7 +94,7 @@ public class GrapplingPower : MonoBehaviour
     {
         //hookshotTransform.LookAt(hookShotPosition);
 
-        float hookshotThrowSpeed = 140f;
+        
         hookshotSize += hookshotThrowSpeed * Time.deltaTime;
         //hookshotTransform.localScale = new Vector3(1, 1, hookshotSize);
 
