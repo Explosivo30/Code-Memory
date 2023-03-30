@@ -328,11 +328,7 @@ public class MovementPlayer : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Space))
         {
-
-            velocity = -transform.right * sideJump;
-
-            
-
+            velocity = (-transform.right + camTrans.forward) * sideJump;
             isWallRight = false;
         }
 
@@ -348,7 +344,7 @@ public class MovementPlayer : MonoBehaviour
         //Debug.Log("esWallLeft");
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            velocity = transform.right * sideJump; //Mathf.Sqrt(100f);
+            velocity = (transform.right + camTrans.forward) * sideJump; //Mathf.Sqrt(100f);
             isWallLeft = false;
         }
 
