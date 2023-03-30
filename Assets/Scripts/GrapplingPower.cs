@@ -34,12 +34,13 @@ public class GrapplingPower : MonoBehaviour
         cc = GetComponent<CharacterController>();
         hookshotTransform.gameObject.SetActive(false);
         playerMovement = GetComponent<MovementPlayer>();
+        
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        EventForGame.instance.deadWhip.AddListener(ResetGrapplingDeath);
     }
 
     // Update is called once per frame
@@ -141,6 +142,11 @@ public class GrapplingPower : MonoBehaviour
         return Input.GetMouseButtonDown(1);
     }
 
+
+    void ResetGrapplingDeath()
+    {
+        state = State.Normal;
+    }
     
     
 }

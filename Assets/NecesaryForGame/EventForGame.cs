@@ -21,15 +21,8 @@ public class EventForGame: MonoBehaviour
 
     public UnityEvent hitmarker;
 
+    public UnityEvent deadWhip = new UnityEvent();
 
-    private void Update()
-    {
-        if (Input.GetKey(KeyCode.LeftControl))
-        {
-            if (Input.GetKey(KeyCode.H))
-            {
-                SceneManager.LoadScene("Level2");
-            }
-        }
-    }
+
+    
 }

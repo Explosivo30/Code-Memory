@@ -9,6 +9,7 @@ public class CheckPoint : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        EventForGame.instance.deadWhip.Invoke();
         other.transform.position = teleportCheckPoint.transform.position;
     }
 }
