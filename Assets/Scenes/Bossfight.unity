@@ -553,18 +553,6 @@ PrefabInstance:
       value: 76
       objectReference: {fileID: 0}
     - target: {fileID: 5147679057649060600, guid: 0c4c597376badd14d8027c5ec41836be, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 674.3944
-      objectReference: {fileID: 0}
-    - target: {fileID: 5147679057649060600, guid: 0c4c597376badd14d8027c5ec41836be, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 674.3944
-      objectReference: {fileID: 0}
-    - target: {fileID: 5147679057649060600, guid: 0c4c597376badd14d8027c5ec41836be, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 674.3944
-      objectReference: {fileID: 0}
-    - target: {fileID: 5147679057649060600, guid: 0c4c597376badd14d8027c5ec41836be, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.5
       objectReference: {fileID: 0}
@@ -608,10 +596,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PIEDRA_GANCHO_FINAL_BOSS (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 6285641932785594775, guid: 0c4c597376badd14d8027c5ec41836be, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 1d1d4ff71c183b247aed53118b500d66, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c4c597376badd14d8027c5ec41836be, type: 3}
 --- !u!4 &116137488
@@ -10877,7 +10861,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.1683168, y: 1}
+    m_SensorSize: {x: 1.8915254, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -21266,6 +21250,7 @@ MonoBehaviour:
   cooldownBoostTotal: 8
   cooldownBoostTimer: 8
   gravity: -35
+  playerTouchingSomething: 0
   timerBoostTotal: 0
   sumarVelocidad: 3
   raycastLenght: 2
