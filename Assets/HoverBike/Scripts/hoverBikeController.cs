@@ -19,7 +19,7 @@ public class hoverBikeController : MonoBehaviour
     public float turnRotationSeekSpeed;
 
     private float rotationVelocity;
-    public float anguloMaximoDeRotacion = 30f;
+    public float anguloMaximoDeRotacion = 10f;
 
     public float TimeToWaitStartMovements = 500f;
     //private float groundAngleVelocity;
@@ -28,13 +28,17 @@ public class hoverBikeController : MonoBehaviour
     [SerializeField] Vector3 hoverBikePosition;
     [SerializeField] GameObject Player;
     [SerializeField] GameObject PlayerInBike;
-
+    [SerializeField] float maxRotation = 1f;
+ 
     public bool inBike = false;
     public bool playerInisde = false;
     public bool activarAnimacion = false;
+    public float extraGravity = 500f;
     private bool YaPuedeBajarDeHoverBike = false;
     private bool IsGorund = true;
     private float curretTimeToWait = 0f;
+    public float basicExtraForce = 1000f;
+
 
     private void Start()
     {
@@ -67,7 +71,7 @@ public class hoverBikeController : MonoBehaviour
         {
             curretTimeToWait += 1;
         }
-
+        GirarMoto();
         if ((inBike == true) && (Input.GetKeyDown(KeyCode.E)) && (YaPuedeBajarDeHoverBike == true) && IsGorund == true)
         {
             activarAnimacion = false;
@@ -102,22 +106,57 @@ public class hoverBikeController : MonoBehaviour
         //para dar tiempo a la cama a colocarse en el sitio crrespondiente.
     }
     //Movimineto de la HoverBike
+    void GirarMoto()
+    {
+        if (Time.deltaTime < Time.fixedDeltaTime)
+        {
+            return;
+        }
+        if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit Hit, 30f))
+        {
+            Vector3 GroundForward = Vector3.Cross(Hit.normal, -transform.right);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(GroundForward), maxRotation);
+        }
+    }
+    Vector3 DirecionMoto()
+    {
+        Vector3 Direction = transform.forward;
+        if (Physics.Raycast(transform.position,Vector3.down, out RaycastHit Hit, 30f))
+        {
+            Vector3 GroundForward = Vector3.Cross(Hit.normal, -transform.right); 
+            if (Hit.distance > 2f)
+            {
+                Direction = GroundForward;
+            }            
+            if (Time.deltaTime < Time.fixedDeltaTime)
+            {
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(GroundForward), maxRotation);
+            }
+            Debug.DrawRay(Hit.point, GroundForward, Color.red);
+        }
+        return Direction;
+    }
     public void MovimientoHoverBike()
     {
         if (Physics.Raycast(transform.position, transform.up * -1, 5f))
         {
             rigidbody.drag = 0.7f;
-            Vector3 forwardForce = transform.forward * acceleration * currrentTurboSpeed * Input.GetAxis("Vertical");
+            Vector3 forwardForce = DirecionMoto() * acceleration * currrentTurboSpeed * Input.GetAxis("Vertical");
             forwardForce = forwardForce * Time.deltaTime * rigidbody.mass;
             rigidbody.AddForce(forwardForce);
             IsGorund = true;
+            rigidbody.AddForce(-transform.up * basicExtraForce);
         }
         else
         {
+            Vector3 automaticTurnForce;
             rigidbody.drag = 0;
             IsGorund = false;
-            float turn = Input.GetAxis("Horizontal");
-            rigidbody.AddTorque(transform.up * 1f * turn);
+            float turn = Input.GetAxis("Vertical");
+            automaticTurnForce = transform.right * Time.deltaTime * rigidbody.mass * turn * 100f;
+            rigidbody.AddTorque(automaticTurnForce);
+            //Extra Gravity
+            rigidbody.AddForce(-Vector3.up * extraGravity);
         }
         Vector3 turnTorque = Vector3.up * rotationRate * Input.GetAxis("Horizontal");
         turnTorque = turnTorque * Time.deltaTime * rigidbody.mass;
@@ -152,10 +191,10 @@ public class hoverBikeController : MonoBehaviour
     private void ConstraintXZRotation()
     {
         Vector3 eulerRotation = transform.rotation.eulerAngles;
-
+     
         if (eulerRotation.x > 180f) { eulerRotation.x -= 360f; }
         if (eulerRotation.x < -180f) { eulerRotation.x += 360f; }
-
+     
         eulerRotation.x = Mathf.Clamp(eulerRotation.x, -anguloMaximoDeRotacion, anguloMaximoDeRotacion);
         //eulerRotation.z = Mathf.Clamp(eulerRotation.z, -30f, 30f);
         transform.rotation = Quaternion.Euler(eulerRotation);

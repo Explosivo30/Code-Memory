@@ -390,7 +390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3b80fa9c7f93e3439b0f19d12bf3cef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverPointStrength: 700
+  hoverPointStrength: 900
   hoverPointDistanceYouWant: 4.5
   alturaMinStartHoverBike: 2
   alturaMaxhoverBike: 6
@@ -422,7 +422,7 @@ MonoBehaviour:
   rotationRate: 200
   turnRotationAngle: 34
   turnRotationSeekSpeed: 0.6
-  anguloMaximoDeRotacion: 30
+  anguloMaximoDeRotacion: 40
   TimeToWaitStartMovements: 500
   camaraAActivar: {fileID: 3697793425587855176}
   hoverBikePosition: {x: 0, y: 0, z: 0}
@@ -431,6 +431,7 @@ MonoBehaviour:
   inBike: 0
   playerInisde: 0
   activarAnimacion: 0
+  extraGravity: 1000
 --- !u!54 &6755500954856645028
 Rigidbody:
   m_ObjectHideFlags: 0
