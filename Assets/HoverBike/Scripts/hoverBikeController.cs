@@ -72,8 +72,8 @@ public class hoverBikeController : MonoBehaviour
         {
             activarAnimacion = false;
             inBike = false;
-            Invoke("SpawnearPlayer", 1.4f);
-            Invoke("DesactivarCam", 1.5f);
+            Invoke("SpawnearPlayer", 0.9f);
+            Invoke("DesactivarCam", 0.9f);
             YaPuedeBajarDeHoverBike = false;
             rigidbody.drag = 4f;
         }
