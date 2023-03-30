@@ -16,6 +16,7 @@ public class MovementPlayer : MonoBehaviour
     [SerializeField] float cooldownBoostTimer = 5f;
     [SerializeField] float gravity = -9.81f;
     bool lockControls = false;
+    [SerializeField]bool playerTouchingSomething;
 
     #region SprintWallRunning
     float timeBoostLeft;
@@ -173,12 +174,15 @@ public class MovementPlayer : MonoBehaviour
             IsWallRunning();
             Jump();
 
-            if (isGrounded && velocity.y < 0)
+            if (isGrounded && velocity.y < 0f)
             {
-                velocity.y = isWall ? -.2f : 0f;
+                velocity.y = isWall ? -.2f : -10f;
                 //velocity.y = -1;
             }
-            velocity.y += gravity * Time.deltaTime;
+            
+                velocity.y += gravity * Time.deltaTime;
+            
+           
 
             ch.Move(velocity * Time.deltaTime);
 
@@ -447,11 +451,16 @@ public class MovementPlayer : MonoBehaviour
         velocity = velocityToSet;
     }
 
+    //private void OnControllerColliderHit(ControllerColliderHit hit)
+    //{
+    //    ResetVelocity();
+
+    //    //Delay resetVelocity if goes weird
+    //}
+
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         ResetVelocity();
-
-        //Delay resetVelocity if goes weird
     }
 
 
