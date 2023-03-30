@@ -390,7 +390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3b80fa9c7f93e3439b0f19d12bf3cef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverPointStrength: 1400
+  hoverPointStrength: 700
   hoverPointDistanceYouWant: 4.5
   alturaMinStartHoverBike: 2
   alturaMaxhoverBike: 6
@@ -418,7 +418,7 @@ MonoBehaviour:
   centerOfMass: {x: 0, y: -3, z: 0}
   acceleration: 1600
   currrentTurboSpeed: 0
-  TurboSpeed: 3
+  TurboSpeed: 2
   rotationRate: 200
   turnRotationAngle: 34
   turnRotationSeekSpeed: 0.6
@@ -1509,7 +1509,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1798305440878221546}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -2603,7 +2603,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2875870794675260193}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3104,7 +3104,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3176466241817322798}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -4175,7 +4175,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3948360661520048516}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
