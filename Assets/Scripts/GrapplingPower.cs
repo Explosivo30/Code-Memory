@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GrapplingPower : MonoBehaviour
 {
-
+    [SerializeField] AudioSource soundGancho;
     [SerializeField] Transform cameraTransform;
     [SerializeField] Transform DebugHitPointTransform;
     [HideInInspector] public bool isGrappling = false;
@@ -54,6 +54,7 @@ public class GrapplingPower : MonoBehaviour
                     hookshotTransform.transform.position = hookshotTransform.parent.transform.position;
                 DebugHitPointTransform.position = transform.position;
                 hookshotTransform.gameObject.SetActive(false);
+                
                     
                     HandleHookshotStart();
                     isGrappling = false;
@@ -95,7 +96,7 @@ public class GrapplingPower : MonoBehaviour
     {
         //hookshotTransform.LookAt(hookShotPosition);
 
-        
+        soundGancho.Play();
         hookshotSize += hookshotThrowSpeed * Time.deltaTime;
         //hookshotTransform.localScale = new Vector3(1, 1, hookshotSize);
 

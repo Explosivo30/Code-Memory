@@ -29,6 +29,10 @@ public class BossAgressive : EnemyState
 
     bool isInside = true;
 
+    [SerializeField] float ySpeed;
+    Vector3 followUpPlayer;
+    float startingYPlayer;
+
     //MAKE IT FASTER
 
     //RANGE
@@ -40,6 +44,7 @@ public class BossAgressive : EnemyState
         //navMeshAgent = GetComponentInParent<NavMeshAgent>();
         enemyFOV = GetComponentInParent<EnemyFOV>();
         timeToAttack = timeResetAttack;
+        startingYPlayer = player.position.y;
     }
 
     public override EnemyState RunCurrentState()
@@ -49,19 +54,29 @@ public class BossAgressive : EnemyState
         UpdateAgressive();
         UpdateYPosition();
         return this;
-            
-        
     }
 
     private void UpdateYPosition()
     {
+        followUpPlayer.y = ySpeed;
         float yPosDistance = transform.position.y - player.transform.position.y;
-        if ((yPosDistance) > 0.5f || (yPosDistance)<0.5f)
+        Debug.Log(yPosDistance);
+        if ((yPosDistance) > 0.5f)
         {
             //Debug.Log(transform.position.y - player.transform.position.y);
-            
+            enemyFOV.transform.position -= followUpPlayer;
+
         }
+        else if((yPosDistance) < -0.5f)
+        {
+            enemyFOV.transform.position += followUpPlayer;
+        }
+
+
+        
     }
+
+    
 
     private void LookAtPlayer()
     {
@@ -122,6 +137,7 @@ public class BossAgressive : EnemyState
             timeToAttack = timeResetAttack;
         }
     }
+
 
     void SetIsInside(bool isInside)
     {
