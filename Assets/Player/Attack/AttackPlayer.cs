@@ -10,7 +10,7 @@ public class AttackPlayer : MonoBehaviour
 {
     bool isAiming = false;
 
-
+    [SerializeField] AudioSource knifeShoot;
     #region Disparar Cuchillo
     [Tooltip("Cooldown entre cuchillo y cuchillo")]
     [SerializeField] float cooldownAttack = 2f;
@@ -72,6 +72,7 @@ public class AttackPlayer : MonoBehaviour
             if (currentCooldownAttack <= 0f)
             {
                 ShootKnife();
+                knifeShoot.Play();
                 currentCooldownAttack = cooldownAttack;
             }
            

@@ -62,9 +62,9 @@ Material:
     - _CullMode: 2
     - _CullModeForward: 2
     - _DepthOffsetEnable: 0
-    - _DisolveEmissiveMaximum: 800000
+    - _DisolveEmissiveMaximum: 400000
     - _DisolveWidth: 0.02
-    - _Disolve_Amount: 0.472
+    - _Disolve_Amount: 0.375
     - _DissolveScale: 800
     - _DoubleSidedEnable: 0
     - _DoubleSidedGIMode: 0
@@ -72,8 +72,8 @@ Material:
     - _DstBlend: 0
     - _EnableBlendModePreserveSpecularLighting: 1
     - _EnableFogOnTransparent: 1
-    - _Metalic: 0.524
-    - _NormalStrength: 0
+    - _Metalic: 0.531
+    - _NormalStrength: 0.309
     - _OpaqueCullMode: 2
     - _RayTracing: 0
     - _ReceivesSSR: 1
