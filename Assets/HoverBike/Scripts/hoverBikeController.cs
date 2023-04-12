@@ -19,7 +19,8 @@ public class hoverBikeController : MonoBehaviour
     public float turnRotationSeekSpeed;
 
     private float rotationVelocity;
-    public float anguloMaximoDeRotacion = 10f;
+    public float anguloMaximoDeRotacionFrontal = 30f;
+    public float anguloMaximoDeRotacionlateral = 30f;
 
     public float TimeToWaitStartMovements = 500f;
     //private float groundAngleVelocity;
@@ -33,11 +34,11 @@ public class hoverBikeController : MonoBehaviour
     public bool inBike = false;
     public bool playerInisde = false;
     public bool activarAnimacion = false;
-    public float extraGravity = 500f;
+    [SerializeField] float extraGravity = 500f;
     private bool YaPuedeBajarDeHoverBike = false;
     private bool IsGorund = true;
     private float curretTimeToWait = 0f;
-    public float basicExtraForce = 1000f;
+    [SerializeField] float basicExtraForce = 1000f;
 
 
     private void Start()
@@ -71,7 +72,7 @@ public class hoverBikeController : MonoBehaviour
         {
             curretTimeToWait += 1;
         }
-        GirarMoto();
+        //GirarMoto();
         if ((inBike == true) && (Input.GetKeyDown(KeyCode.E)) && (YaPuedeBajarDeHoverBike == true) && IsGorund == true)
         {
             activarAnimacion = false;
@@ -106,18 +107,18 @@ public class hoverBikeController : MonoBehaviour
         //para dar tiempo a la cama a colocarse en el sitio crrespondiente.
     }
     //Movimineto de la HoverBike
-    void GirarMoto()
-    {
-        if (Time.deltaTime < Time.fixedDeltaTime)
-        {
-            return;
-        }
-        if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit Hit, 30f))
-        {
-            Vector3 GroundForward = Vector3.Cross(Hit.normal, -transform.right);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(GroundForward), maxRotation);
-        }
-    }
+    //void GirarMoto()
+    //{
+    //    if (Time.deltaTime < Time.fixedDeltaTime)
+    //    {
+    //        return;
+    //    }
+    //    if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit Hit, 30f))
+    //    {
+    //        Vector3 GroundForward = Vector3.Cross(Hit.normal, -transform.right);
+    //        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(GroundForward), maxRotation);
+    //    }
+    //}
     Vector3 DirecionMoto()
     {
         Vector3 Direction = transform.forward;
@@ -188,16 +189,62 @@ public class hoverBikeController : MonoBehaviour
     {
         camaraAActivar.SetActive(false);
     }
+    //private void ConstraintXZRotation()
+    //{
+    //    Vector3 eulerRotation = transform.rotation.eulerAngles;
+     
+    //    if (eulerRotation.x > 180f) { eulerRotation.x -= 360f; }
+    //    if (eulerRotation.x < -180f) { eulerRotation.x += 360f; }
+     
+    //    eulerRotation.x = Mathf.Clamp(eulerRotation.x, -anguloMaximoDeRotacion, anguloMaximoDeRotacion);
+    //    //eulerRotation.z = Mathf.Clamp(eulerRotation.z, -30f, 30f);
+    //    transform.rotation = Quaternion.Euler(eulerRotation);
+    //}
+
     private void ConstraintXZRotation()
     {
-        Vector3 eulerRotation = transform.rotation.eulerAngles;
-     
-        if (eulerRotation.x > 180f) { eulerRotation.x -= 360f; }
-        if (eulerRotation.x < -180f) { eulerRotation.x += 360f; }
-     
-        eulerRotation.x = Mathf.Clamp(eulerRotation.x, -anguloMaximoDeRotacion, anguloMaximoDeRotacion);
-        //eulerRotation.z = Mathf.Clamp(eulerRotation.z, -30f, 30f);
-        transform.rotation = Quaternion.Euler(eulerRotation);
+        //Vector3 localUpToWorld = transform.TransformDirection(Vector3.up);
+
+        //Quaternion localUpWorldToWorldUp = Quaternion.FromToRotation(localUpToWorld, Vector3.up);
+
+
+        {
+            Vector3 right = transform.right;
+            Vector3 onPlaneRight = -Vector3.Cross(transform.forward, Vector3.up);
+            //Debug.DrawRay(transform.position, onPlaneRight, Color.cyan);
+
+            float zAngle = Vector3.SignedAngle(right, onPlaneRight, transform.forward);
+            float zDesiredAngle =
+                zAngle > anguloMaximoDeRotacionlateral ? anguloMaximoDeRotacionlateral :
+                zAngle < -anguloMaximoDeRotacionlateral ? -anguloMaximoDeRotacionlateral :
+                zAngle;
+            float angleToApply = zAngle - zDesiredAngle;
+
+            //Debug.Log($"zAngle - {zAngle} ; zDesiredAngle - {zDesiredAngle} ; angleToApply - {angleToApply}");
+            Quaternion zCorrect = Quaternion.AngleAxis(angleToApply, transform.forward);
+            transform.rotation = zCorrect * transform.rotation;
+        }
+
+
+        {
+            Vector3 forward = transform.forward;
+            Vector3 onPlaneForward = Vector3.Cross(transform.right, Vector3.up);
+            //Debug.DrawRay(transform.position, onPlaneForward, Color.magenta);
+
+            float xAngle = Vector3.SignedAngle(forward, onPlaneForward, transform.right);
+            float xDesiredAngle =
+                xAngle > anguloMaximoDeRotacionFrontal ? anguloMaximoDeRotacionFrontal :
+                xAngle < -anguloMaximoDeRotacionFrontal ? -anguloMaximoDeRotacionFrontal :
+                xAngle;
+            float angleToApply = xAngle - xDesiredAngle;
+
+            //Debug.Log($"xAngle - {xAngle} ; xDesiredAngle - {xDesiredAngle} ; angleToApply - {angleToApply}");
+            Quaternion xCorrect = Quaternion.AngleAxis(angleToApply, transform.right);
+            transform.rotation = xCorrect * transform.rotation;
+        }
+
+
+        //transform.rotation = localUpWorldToWorldUp * transform.rotation;
     }
 
 }
