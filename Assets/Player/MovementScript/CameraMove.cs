@@ -6,8 +6,8 @@ public class CameraMove : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    [SerializeField]float sensitivityX = 5f;
-    [SerializeField]float sensitivityY = 5f;
+    public float sensitivityX = 5f;
+    public float sensitivityY = 5f;
     public float rotateZ = 0f;
     [SerializeField] Transform playerBody;
     public bool isWallRunning = false;

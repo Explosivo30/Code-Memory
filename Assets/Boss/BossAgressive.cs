@@ -17,15 +17,12 @@ public class BossAgressive : EnemyState
     [SerializeField] Transform fatherToRotate;
     [SerializeField] Transform player;
     [SerializeField] GameObject bullet;
+    [SerializeField] Transform attackPoint;
 
     float timeToAttack;
     float timeResetAttack = 3f;
 
     #endregion
-
-    //NavMeshAgent navMeshAgent;
-
-    [SerializeField] EnemyAlertState alertState;
 
     bool isInside = true;
 
@@ -132,7 +129,7 @@ public class BossAgressive : EnemyState
         if (timeToAttack < 0)
         {
             //playerAttack
-            //Instantiate(bullet, fatherToRotate.position, fatherToRotate.rotation);
+            Instantiate(bullet, attackPoint.position, fatherToRotate.rotation);
             Debug.Log("Atacamos");
             timeToAttack = timeResetAttack;
         }
