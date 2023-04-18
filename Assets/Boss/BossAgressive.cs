@@ -57,7 +57,7 @@ public class BossAgressive : EnemyState
     {
         followUpPlayer.y = ySpeed;
         float yPosDistance = transform.position.y - player.transform.position.y;
-        Debug.Log(yPosDistance);
+        
         if ((yPosDistance) > 0.5f)
         {
             //Debug.Log(transform.position.y - player.transform.position.y);
