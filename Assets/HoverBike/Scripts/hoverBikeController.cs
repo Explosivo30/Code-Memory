@@ -84,7 +84,7 @@ public class hoverBikeController : MonoBehaviour
         }
         if (inBike == false)
         {
-            rigidbody.drag = 7f;
+            rigidbody.drag = 20f;
             curretTimeToWait += 0;
         }
         if (Input.GetKeyDown("space"))
