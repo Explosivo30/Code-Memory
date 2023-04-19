@@ -10,10 +10,13 @@ public class AldeanoWalker : MonoBehaviour
     int count = 0;
     [SerializeField]float threshold = .5f;
 
+    AldeanoLookPlayer aldeano;
+
     private void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         ResetPath();
+        aldeano = GetComponent<AldeanoLookPlayer>();
     }
 
     private void FixedUpdate()
@@ -23,6 +26,7 @@ public class AldeanoWalker : MonoBehaviour
 
     public void MoveToPoints()
     {
+       
         //navMeshAgent.isStopped = false;
         //Debug.Log("He empezado el MovetoPoints");
         if (Vector3.Distance(transform.position, points.GetChild(count).transform.position) < threshold)
