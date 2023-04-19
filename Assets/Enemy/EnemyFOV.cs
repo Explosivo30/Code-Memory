@@ -34,6 +34,10 @@ public class EnemyFOV : MonoBehaviour
 
     private void LookForPlayer()
     {
+        // HACK: Edgar arregla esto
+        if (!playerSeen) { return; }
+
+
         Vector3 enemyPos = transform.position;
         Vector3 toPlayer = playerSeen.transform.position - enemyPos;
         toPlayer.y = 0;
