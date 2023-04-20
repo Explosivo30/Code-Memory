@@ -418,15 +418,15 @@ MonoBehaviour:
   vcam: {fileID: 8695830790694880842}
   rigidbody: {fileID: 6755500954856645028}
   centerOfMass: {x: 0, y: 2, z: 0}
-  acceleration: 1600
+  acceleration: 3000
   currrentTurboSpeed: 0
-  TurboSpeed: 2
+  TurboSpeed: 4
   rotationRate: 200
   turnRotationAngle: 34
   turnRotationSeekSpeed: 0.6
   anguloMaximoDeRotacionFrontal: 35
   anguloMaximoDeRotacionlateral: 35
-  TimeToWaitStartMovements: 500
+  TimeToWaitStartMovements: 200
   camaraAActivar: {fileID: 3697793425587855176}
   hoverBikePosition: {x: 0, y: 0, z: 0}
   Player: {fileID: 0}
