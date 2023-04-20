@@ -986,6 +986,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1581456608400788397}
+  - component: {fileID: 2703677897263900123}
   m_Layer: 0
   m_Name: casa 4 mercaderes comida i recursos Variant
   m_TagString: Untagged
@@ -1013,6 +1014,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!205 &2703677897263900123
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3919371798261196673}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -24.024864, y: -2.3194475, z: 15.403072}
+  m_Size: 47.678734
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.25934374
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 9142648180735980619}
+    - renderer: {fileID: 8729894279480421726}
+    - renderer: {fileID: 5702933304672295868}
+    - renderer: {fileID: 516664634448108998}
+    - renderer: {fileID: 4864503839336645043}
+    - renderer: {fileID: 8711472002774843423}
+    - renderer: {fileID: 3164411190711704971}
+    - renderer: {fileID: 146267705383720998}
+    - renderer: {fileID: 5035808479307588000}
+    - renderer: {fileID: 8382171902256759856}
+    - renderer: {fileID: 2327687776900661362}
+    - renderer: {fileID: 7030035523107666855}
+    - renderer: {fileID: 7234195723173224574}
+    - renderer: {fileID: 4942769190292817725}
+    - renderer: {fileID: 7613943196595516066}
+    - renderer: {fileID: 1842634883419934504}
+    - renderer: {fileID: 2789897850160479562}
+    - renderer: {fileID: 8781588610735851652}
+    - renderer: {fileID: 1764639981131571738}
+    - renderer: {fileID: 8444484988422487051}
+    - renderer: {fileID: 35482055153205675}
+  - screenRelativeHeight: 0.04921432
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 9142648180735980619}
+  m_Enabled: 1
 --- !u!1 &3968537393436818540
 GameObject:
   m_ObjectHideFlags: 0

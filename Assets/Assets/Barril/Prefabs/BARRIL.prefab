@@ -9,12 +9,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4391780065167091473}
+  - component: {fileID: 3503671519942313621}
   m_Layer: 0
   m_Name: BARRIL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4391780065167091473
 Transform:
@@ -32,6 +33,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!205 &3503671519942313621
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4015359426421423531}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0.81467056, y: -10.842073, z: 3.256999}
+  m_Size: 25.098461
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.0038952227
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 368635168665058814}
+  m_Enabled: 1
 --- !u!1 &4557774177730686817
 GameObject:
   m_ObjectHideFlags: 0
@@ -49,7 +69,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4499736684297091357
 Transform:

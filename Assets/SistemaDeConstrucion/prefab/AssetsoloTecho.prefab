@@ -1382,6 +1382,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2488165285285814530}
+  - component: {fileID: 5400187287235359809}
   m_Layer: 7
   m_Name: AssetsoloTecho
   m_TagString: Untagged
@@ -1422,6 +1423,41 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!205 &5400187287235359809
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8417005621483685334}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.0000038146973, y: 0.000000044703484, z: 0.000030517578}
+  m_Size: 0.60611355
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.011088484
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 4715730912190754865}
+    - renderer: {fileID: 4683486708425846143}
+    - renderer: {fileID: 2692276968527641337}
+    - renderer: {fileID: 3651123165995824747}
+    - renderer: {fileID: 3678293741635204937}
+    - renderer: {fileID: 4216021827710782408}
+    - renderer: {fileID: 1989029134938315517}
+    - renderer: {fileID: 6554142267775369820}
+    - renderer: {fileID: 7492454625482354759}
+    - renderer: {fileID: 5365760455162064926}
+    - renderer: {fileID: 4540700765548635107}
+    - renderer: {fileID: 6515121334765086007}
+    - renderer: {fileID: 3675581311372732343}
+    - renderer: {fileID: 1379173342880281187}
+    - renderer: {fileID: 2573915714874792712}
+    - renderer: {fileID: 570863464517356975}
+    - renderer: {fileID: 1970561699625033448}
+  m_Enabled: 1
 --- !u!1 &9137578311859514278
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,10 +21,10 @@ MonoBehaviour:
     m_Value: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.2
+    m_Value: 0.163
   scatter:
     m_OverrideState: 1
-    m_Value: 0.65
+    m_Value: 0.405
   tint:
     m_OverrideState: 0
     m_Value: {r: 1, g: 1, b: 1, a: 1}
@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e17fad69ea181b4483974138b566975, type: 3}
   m_Name: ScreenSpaceRefraction
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   screenFadeDistance:
     m_OverrideState: 1
     m_Value: 0.001
@@ -80,7 +80,7 @@ MonoBehaviour:
     m_Value: 1
   cloudType:
     m_OverrideState: 0
-    m_Value: 0
+    m_Value: 1
   skyAmbientMode:
     m_OverrideState: 1
     m_Value: 1
@@ -154,7 +154,7 @@ MonoBehaviour:
   active: 1
   mode:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 3
   toeStrength:
     m_OverrideState: 0
     m_Value: 0
@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a6b00fcf518bb94a90b408492e07b44, type: 3}
   m_Name: FilmGrain
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   type:
     m_OverrideState: 1
     m_Value: 0
@@ -408,7 +408,7 @@ MonoBehaviour:
     m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   tint:
     m_OverrideState: 1
-    m_Value: {r: 0.6415094, g: 0.3338115, b: 0.2208971, a: 1}
+    m_Value: {r: 0.4716981, g: 0.26825565, b: 0.19357423, a: 1}
   maxFogDistance:
     m_OverrideState: 0
     m_Value: 5000
@@ -426,10 +426,10 @@ MonoBehaviour:
     m_Value: 0
   maximumHeight:
     m_OverrideState: 1
-    m_Value: 700
+    m_Value: 650.5
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 20
+    m_Value: 82.59
   enableVolumetricFog:
     m_OverrideState: 1
     m_Value: 1
@@ -539,7 +539,7 @@ MonoBehaviour:
     m_Value: 0
   exposure:
     m_OverrideState: 1
-    m_Value: 13.5
+    m_Value: 14.28
   multiplier:
     m_OverrideState: 0
     m_Value: 1
@@ -699,7 +699,7 @@ MonoBehaviour:
     m_Value: 0
   cloudPreset:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0
   cumulusMap:
     m_OverrideState: 0
     m_Value: {fileID: 0}
@@ -887,7 +887,7 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 1
   ambientLightProbeDimmer:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   sunLightDimmer:
     m_OverrideState: 0
@@ -1022,7 +1022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9008a067f4d626c4d8bc4bc48f04bb89, type: 3}
   m_Name: AmbientOcclusion
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   quality:
     m_OverrideState: 1
     m_Value: 2

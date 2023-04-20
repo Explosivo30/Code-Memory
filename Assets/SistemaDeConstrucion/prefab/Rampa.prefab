@@ -92,6 +92,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6567255076705774164}
+  - component: {fileID: 4376275884819863779}
   m_Layer: 7
   m_Name: Rampa
   m_TagString: Untagged
@@ -125,6 +126,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!205 &4376275884819863779
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355676056072021759}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.0000016242266, y: 0.00000018626451, z: -0.000038012862}
+  m_Size: 0.59196675
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.01186819
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 1640394518700405292}
+    - renderer: {fileID: 7684819225617286122}
+    - renderer: {fileID: 4561216461038702599}
+    - renderer: {fileID: 3857489644080870057}
+    - renderer: {fileID: 8814117557639987615}
+    - renderer: {fileID: 1286229647383649851}
+    - renderer: {fileID: 2510722859718252822}
+    - renderer: {fileID: 8986606705050925686}
+    - renderer: {fileID: 5993049010939543536}
+    - renderer: {fileID: 4527390295229937163}
+  m_Enabled: 1
 --- !u!1 &520390093183205752
 GameObject:
   m_ObjectHideFlags: 0

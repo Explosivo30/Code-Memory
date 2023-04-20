@@ -590,6 +590,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3391400334136096656}
+  - component: {fileID: 2158041217680407011}
   m_Layer: 0
   m_Name: PlachaDeMadera
   m_TagString: Untagged
@@ -620,6 +621,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!205 &2158041217680407011
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8914410597266538749}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0.0000021457672, y: 0.000000099651515, z: -0.000007659197}
+  m_Size: 0.6060771
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.016265782
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 526449397521028925}
+    - renderer: {fileID: 8838705530086301429}
+    - renderer: {fileID: 1317809828548372987}
+    - renderer: {fileID: 1475946645965075971}
+    - renderer: {fileID: 5241015040765427092}
+    - renderer: {fileID: 6198635451748412873}
+    - renderer: {fileID: 8240629902182314913}
+    - renderer: {fileID: 2064113183290818571}
+  m_Enabled: 1
 --- !u!1 &8916917526665065344
 GameObject:
   m_ObjectHideFlags: 0

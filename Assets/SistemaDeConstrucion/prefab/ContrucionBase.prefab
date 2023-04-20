@@ -507,6 +507,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7420461257056457309}
+  - component: {fileID: 5887073193644356408}
   m_Layer: 0
   m_Name: ContrucionBase
   m_TagString: Untagged
@@ -537,6 +538,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!205 &5887073193644356408
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7459946660406888427}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0.000017419457, y: -0.00000032782555, z: -0.00000062584877}
+  m_Size: 0.66018474
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.009136984
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 9185528896613385553}
+    - renderer: {fileID: 8743738093141860566}
+    - renderer: {fileID: 2145745730396732946}
+    - renderer: {fileID: 3454032693547443268}
+    - renderer: {fileID: 6670526540892813520}
+    - renderer: {fileID: 9030555263491058544}
+    - renderer: {fileID: 207356794542495425}
+    - renderer: {fileID: 6365581455770753899}
+  m_Enabled: 1
 --- !u!1 &8553283582057826139
 GameObject:
   m_ObjectHideFlags: 0

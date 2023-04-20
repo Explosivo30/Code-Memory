@@ -8679,6 +8679,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1821689883008864442}
+  - component: {fileID: 635635052365380533}
   m_Layer: 0
   m_Name: casa 3
   m_TagString: Untagged
@@ -8717,6 +8718,72 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!205 &635635052365380533
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8539866908510969711}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.077744484, y: -0.23588133, z: -3.5525322}
+  m_Size: 18.75653
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.096522965
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 4254096399191145636}
+    - renderer: {fileID: 5558902870771819650}
+    - renderer: {fileID: 4362667517583477112}
+    - renderer: {fileID: 5333922356463469703}
+    - renderer: {fileID: 9059241098180969377}
+    - renderer: {fileID: 666845440047869518}
+    - renderer: {fileID: 8252561810939192802}
+    - renderer: {fileID: 6788996852170017031}
+    - renderer: {fileID: 5810929865442847148}
+    - renderer: {fileID: 2713073420946383359}
+    - renderer: {fileID: 8373376144417728845}
+    - renderer: {fileID: 7664208044848419644}
+    - renderer: {fileID: 8245034111236443530}
+    - renderer: {fileID: 4681057596845537611}
+    - renderer: {fileID: 3492764996617376430}
+    - renderer: {fileID: 7078055158431944632}
+    - renderer: {fileID: 7735307371023482429}
+    - renderer: {fileID: 3336243176792671594}
+    - renderer: {fileID: 8092320561254717316}
+    - renderer: {fileID: 7366811823950588535}
+    - renderer: {fileID: 7305312734401233992}
+    - renderer: {fileID: 8931127196786962930}
+    - renderer: {fileID: 2112880052852906210}
+    - renderer: {fileID: 8627188022677869837}
+    - renderer: {fileID: 8467933778158703149}
+    - renderer: {fileID: 5094027063450688491}
+    - renderer: {fileID: 934806935077402190}
+    - renderer: {fileID: 1705827603460368409}
+    - renderer: {fileID: 1137815607323789482}
+    - renderer: {fileID: 269300269379393425}
+    - renderer: {fileID: 3016199579238498461}
+    - renderer: {fileID: 7787576130796035655}
+    - renderer: {fileID: 7556911801189558863}
+    - renderer: {fileID: 2480059003785262552}
+    - renderer: {fileID: 5500868052778235667}
+    - renderer: {fileID: 46686856655424836}
+    - renderer: {fileID: 1640771018484937235}
+    - renderer: {fileID: 5472191548495201771}
+    - renderer: {fileID: 5244339413745147079}
+    - renderer: {fileID: 5194444729221264212}
+    - renderer: {fileID: 7757637887058235129}
+    - renderer: {fileID: 7526063279829644884}
+    - renderer: {fileID: 1629521629684291754}
+    - renderer: {fileID: 5318396837847763181}
+  - screenRelativeHeight: 0.022066664
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 4254096399191145636}
+  m_Enabled: 1
 --- !u!1 &8553549309685764889
 GameObject:
   m_ObjectHideFlags: 0
