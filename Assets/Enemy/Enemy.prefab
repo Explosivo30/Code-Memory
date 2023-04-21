@@ -144,6 +144,7 @@ GameObject:
   - component: {fileID: 7898674702016508529}
   - component: {fileID: 4957272973245498788}
   - component: {fileID: 2322415510784971670}
+  - component: {fileID: 8878698938002068978}
   m_Layer: 0
   m_Name: Macara
   m_TagString: Untagged
@@ -216,6 +217,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8878698938002068978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172404492823529066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2786409c900a3c42a593a31357a24db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mat: {fileID: 2100000, guid: 742fb5e83a89ecb4681bc433609619ff, type: 2}
+  rendererEnemy: {fileID: 2322415510784971670}
+  maxIntensity: 4
+  minIntensity: -0.51
+  extraTime: 3
+  intensity: 0
 --- !u!1 &195388478322392614
 GameObject:
   m_ObjectHideFlags: 0
