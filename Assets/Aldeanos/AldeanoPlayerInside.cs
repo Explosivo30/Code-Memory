@@ -27,5 +27,10 @@ public class AldeanoPlayerInside : MonoBehaviour
     }
 
 
+    public bool GetIsInsidePlayer()
+    {
+        return isPlayerInside;
+    }
+
 
 }

@@ -6,8 +6,11 @@ public class BreathingEnemy : MonoBehaviour
 {
     [SerializeField] Material mat;
     [SerializeField] Renderer rendererEnemy;
-    [SerializeField] float defaultIntensity;
+    [SerializeField] float maxIntensity;
+    [SerializeField] float minIntensity;
+    [SerializeField] float extraTime = 0.5f;
     [SerializeField] float intensity;
+    bool isPositive = true;
 
     //float intensity;
 
@@ -29,14 +32,42 @@ public class BreathingEnemy : MonoBehaviour
     //    _EmissiveIntensity("Emissive Intensity", Float) = 1
     void Update()
     {
+        //intensity = Mathf.Sin(Time.time * extraTime * defaultIntensity);
+        //intensity = Mathf.Lerp(intensity, maxIntensity, extraTime * Time.deltaTime);
 
-        intensity = Mathf.Sin(Time.time * defaultIntensity);
+
+
+        Debug.Log(intensity);
+        
+        if (isPositive)
+        {
+            Debug.Log("Sumar");
+            intensity = Mathf.Lerp(intensity, maxIntensity, extraTime * Time.deltaTime);
+            if(intensity >= maxIntensity - 1f)
+            {
+                isPositive = false;
+            }
+        }
+
+        if (!isPositive)
+        {
+            Debug.Log("Restar");
+            intensity = Mathf.Lerp(intensity, minIntensity, extraTime * Time.deltaTime);
+
+            if (intensity <= minIntensity + 1f)
+            {
+                isPositive = true;
+            }
+
+        }
+
+        
         //mat.SetColor("_EmissionColor", Color.blue * intensity);     // No barrufa
         //mat.SetFloat("_EmissiveIntensity", intensity);            // No barrufa
         //mat.SetColor("_EmissiveColorLDR", Color.blue * intensity);            // No barrufa
 
         //mat.SetFloat("_EmissiveExposureWeight", intensity);         // Hace algo
 
-        mat.SetColor("_EmissiveColor", Color.green * intensity);
+        mat.SetColor("_EmissiveColor", new Color(255, 153, 153) * intensity);
     }
 }
