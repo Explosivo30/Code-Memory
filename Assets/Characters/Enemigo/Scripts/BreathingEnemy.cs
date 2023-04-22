@@ -37,11 +37,11 @@ public class BreathingEnemy : MonoBehaviour
 
 
 
-        Debug.Log(intensity);
+        
         
         if (isPositive)
         {
-            Debug.Log("Sumar");
+            
             intensity = Mathf.Lerp(intensity, maxIntensity, extraTime * Time.deltaTime);
             if(intensity >= maxIntensity - 1f)
             {
@@ -51,7 +51,7 @@ public class BreathingEnemy : MonoBehaviour
 
         if (!isPositive)
         {
-            Debug.Log("Restar");
+            
             intensity = Mathf.Lerp(intensity, minIntensity, extraTime * Time.deltaTime);
 
             if (intensity <= minIntensity + 1f)
