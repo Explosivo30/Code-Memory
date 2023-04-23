@@ -44,14 +44,14 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
   type:
-    m_OverrideState: 0
-    m_Value: 1
+    m_OverrideState: 1
+    m_Value: 0
   sphericalMode:
     m_OverrideState: 0
     m_Value: 1
   seaLevel:
     m_OverrideState: 0
-    m_Value: 0
+    m_Value: 12.88
   planetaryRadius:
     m_OverrideState: 0
     m_Value: 6378100
@@ -90,7 +90,7 @@ MonoBehaviour:
     m_Value: 3
   groundTint:
     m_OverrideState: 1
-    m_Value: {r: 0.122641504, g: 0.1043775, b: 0.09313812, a: 1}
+    m_Value: {r: 0.8962264, g: 0.48797235, b: 0.18178178, a: 1}
   groundColorTexture:
     m_OverrideState: 0
     m_Value: {fileID: 0}
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953beb541740ddc499d005ee80c9ff29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   quality:
     m_OverrideState: 0
     m_Value: 1
@@ -176,13 +176,13 @@ MonoBehaviour:
     m_Value: 1000
   baseHeight:
     m_OverrideState: 0
-    m_Value: 0
+    m_Value: 366
   maximumHeight:
     m_OverrideState: 0
-    m_Value: 50
+    m_Value: 1609.5
   meanFreePath:
     m_OverrideState: 0
-    m_Value: 400
+    m_Value: 1
   enableVolumetricFog:
     m_OverrideState: 1
     m_Value: 1
@@ -215,10 +215,10 @@ MonoBehaviour:
     m_Value: 64
   m_VolumetricFogBudget:
     m_OverrideState: 0
-    m_Value: 0.33
+    m_Value: 0.333
   m_ResolutionDepthRatio:
     m_OverrideState: 0
-    m_Value: 0.666
+    m_Value: 0.5
   directionalLightsOnly:
     m_OverrideState: 0
     m_Value: 0
@@ -254,12 +254,12 @@ MonoBehaviour:
   active: 1
   skyType:
     m_OverrideState: 1
-    m_Value: 4
+    m_Value: 3
   cloudType:
     m_OverrideState: 0
     m_Value: 0
   skyAmbientMode:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0
   windOrientation:
     m_OverrideState: 0
@@ -296,14 +296,14 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
   compensation:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 1.02
   limitMin:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 5.9849753
   limitMax:
     m_OverrideState: 1
-    m_Value: 14
+    m_Value: 10.440734
   curveMap:
     m_OverrideState: 0
     m_Value:
@@ -384,13 +384,13 @@ MonoBehaviour:
       m_RotationOrder: 4
   adaptationMode:
     m_OverrideState: 0
-    m_Value: 1
+    m_Value: 0
   adaptationSpeedDarkToLight:
-    m_OverrideState: 0
-    m_Value: 3
+    m_OverrideState: 1
+    m_Value: 1.43
   adaptationSpeedLightToDark:
-    m_OverrideState: 0
-    m_Value: 1
+    m_OverrideState: 1
+    m_Value: 6.5
   weightTextureMask:
     m_OverrideState: 0
     m_Value: {fileID: 0}
