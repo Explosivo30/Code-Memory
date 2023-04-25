@@ -10,6 +10,7 @@ public class BossAgressive : EnemyState
     EnemyFOV enemyFOV;
     [SerializeField] float speedToRotate = 1f;
     Coroutine lookCoroutine;
+    public bool desactivarScript = false;
 
     bool chasePlayer = false;
 
@@ -48,13 +49,18 @@ public class BossAgressive : EnemyState
     {
         //fatherToRotate.LookAt(player);
         //LookAtPlayer();
-        UpdateAgressive();
-        UpdateYPosition();
+        if (desactivarScript == false)
+        {
+            UpdateAgressive();
+       
+            UpdateYPosition();
+        }
         return this;
     }
 
     private void UpdateYPosition()
     {
+
         followUpPlayer.y = ySpeed;
         float yPosDistance = transform.position.y - player.transform.position.y;
         
