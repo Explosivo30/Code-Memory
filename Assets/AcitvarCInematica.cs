@@ -5,6 +5,7 @@ using UnityEngine;
 public class AcitvarCInematica : MonoBehaviour
 {
     public GameObject cinematica;
+    public BossAgressive bossAgressive;
 
     void Start()
     {
@@ -15,6 +16,7 @@ public class AcitvarCInematica : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
+            bossAgressive.desactivarScript = true;
             cinematica.SetActive(true);
         }
     }
