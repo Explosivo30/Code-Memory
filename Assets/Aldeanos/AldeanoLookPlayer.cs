@@ -55,7 +55,7 @@ public class AldeanoLookPlayer : MonoBehaviour
 
     void ResetTrackPlayer()
     {
-        headAimTracker.position = posHeadAldeano;
+        headAimTracker.position = headAimTracker.parent.position;
     }
 
 
