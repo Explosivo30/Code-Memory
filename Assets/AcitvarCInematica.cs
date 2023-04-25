@@ -18,6 +18,7 @@ public class AcitvarCInematica : MonoBehaviour
         {
             bossAgressive.desactivarScript = true;
             cinematica.SetActive(true);
+         
         }
     }
 }
