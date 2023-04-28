@@ -8,6 +8,7 @@ using System;
 
 public class AttackPlayer : MonoBehaviour
 {
+    [SerializeField] Animator anim;
     bool isAiming = false;
 
     [SerializeField] AudioSource knifeShoot;
