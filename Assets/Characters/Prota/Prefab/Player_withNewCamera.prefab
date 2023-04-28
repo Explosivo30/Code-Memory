@@ -628,7 +628,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.2359736, y: 1}
+    m_SensorSize: {x: 1.9382504, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -662,6 +662,7 @@ MonoBehaviour:
   playerBody: {fileID: 2597572298259349614}
   isWallRunning: 0
   xRotation: 0
+  desactivarMovimiento: 0
 --- !u!82 &664344818505947583
 AudioSource:
   m_ObjectHideFlags: 0

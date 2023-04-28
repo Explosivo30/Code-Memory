@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class MovementPlayer : MonoBehaviour
 {
-    
+    [SerializeField] Animator anim;
     [Header("Player")]
     float speed = 12f;
     [SerializeField]float walkingSpeed = 12f;
@@ -242,10 +242,19 @@ public class MovementPlayer : MonoBehaviour
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
+        if (x == 0f || z == 0f)
+        {
+            anim.SetBool("moving", false);
+        }
+        else
+        {
+            anim.SetBool("moving", true);
+        }
         move = transform.right * x + transform.forward * z;
         move += characterVelocityMomentum;
         //El sprint
         ch.Move(move * (speed) * Time.deltaTime);
+        
 
 
         //Dampen o restar momentum
