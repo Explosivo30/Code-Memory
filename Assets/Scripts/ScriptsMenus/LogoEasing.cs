@@ -24,7 +24,7 @@ public class LogoEasing : MonoBehaviour
         DOTween.Init();
         DOTween.SetTweensCapacity(500, 500);
 
-        FadeIn(5f);
+        FadeIn(2.5f);
         
     }
 
