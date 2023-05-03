@@ -11,8 +11,8 @@ public class hoverBikeController : MonoBehaviour
     public Rigidbody rigidbody;
     public Vector3 centerOfMass;
     public float acceleration;
-    public float currrentTurboSpeed = 1f;
-    public float TurboSpeed = 2f;
+    //public float currrentTurboSpeed = 1f;
+    //public float TurboSpeed = 2f;
     public float rotationRate;
 
     public float turnRotationAngle;
@@ -39,11 +39,12 @@ public class hoverBikeController : MonoBehaviour
     private bool IsGorund = true;
     private float curretTimeToWait = 0f;
     [SerializeField] float basicExtraForce = 1000f;
+    public int DragInBike = 4;
 
 
     private void Start()
     {
-        currrentTurboSpeed = 1f;
+        //currrentTurboSpeed = 1f;
         //Player = GameObject.FindWithTag("Player");
         rigidbody = GetComponent<Rigidbody>();
         rigidbody.centerOfMass = centerOfMass;
@@ -87,7 +88,7 @@ public class hoverBikeController : MonoBehaviour
             rigidbody.drag = 20f;
             curretTimeToWait += 0;
         }
-        if (Input.GetKeyDown("space"))
+        /*if (Input.GetKeyDown("space"))
         {
             currrentTurboSpeed = TurboSpeed;            
         }
@@ -95,13 +96,14 @@ public class hoverBikeController : MonoBehaviour
         {
             currrentTurboSpeed = 1f;
         }
+        */
+        ConstraintXZRotation();
     }
     private void FixedUpdate()
     {
         if (inBike && curretTimeToWait >= TimeToWaitStartMovements)
         {
-            MovimientoHoverBike();
-            ConstraintXZRotation();
+            MovimientoHoverBike();    
         }
         //Cunado el Player se hacerque y pulse E se Avtivara la funcion movimient oque es la que permitira mover la hoverBike, y tardara 8un par de segundos
         //para dar tiempo a la cama a colocarse en el sitio crrespondiente.
@@ -141,8 +143,8 @@ public class hoverBikeController : MonoBehaviour
     {
         if (Physics.Raycast(transform.position, transform.up * -1, 5f))
         {
-            rigidbody.drag = 0.7f;
-            Vector3 forwardForce = DirecionMoto() * acceleration * currrentTurboSpeed * Input.GetAxis("Vertical");
+            rigidbody.drag = DragInBike;
+            Vector3 forwardForce = DirecionMoto() * acceleration * Input.GetAxis("Vertical");
             forwardForce = forwardForce * Time.deltaTime * rigidbody.mass;
             rigidbody.AddForce(forwardForce);
             IsGorund = true;
@@ -151,7 +153,7 @@ public class hoverBikeController : MonoBehaviour
         else
         {
             Vector3 automaticTurnForce;
-            rigidbody.drag = 0;
+            rigidbody.drag = 0.5f;
             IsGorund = false;
             float turn = Input.GetAxis("Vertical");
             automaticTurnForce = transform.right * Time.deltaTime * rigidbody.mass * turn * 100f;

@@ -27,14 +27,15 @@ public class hoverPoint : MonoBehaviour
     {
         hoverPointDistance = alturaMinStartHoverBike;
     }
-    public void Update()
+    /*public void Update()
     {
         ControlesEstablecerAltura();
-    }
+    }*/
     void FixedUpdate()
     {
         HoverPoints();
-        EstablecerAlturaHoverBikeRegulable();
+        //EstablecerAlturaHoverBikeRegulable();
+        Debug.DrawRay(transform.position, Vector3.down, Color.green);
     }
     public void EstablecerAlturaHoverBikeRegulable()
     {
@@ -58,6 +59,7 @@ public class hoverPoint : MonoBehaviour
             cuerrentTimeToWait = 0;
         }
     }
+    
     public void ControlesEstablecerAltura()
     {
         if (Input.GetKeyDown(KeyCode.P) && hoverPointDistance < alturaMaxhoverBike)
@@ -90,7 +92,7 @@ public class hoverPoint : MonoBehaviour
                 //Apply the force where the hover point is:
                 rigidbody.AddForceAtPosition(downForce, hoverPoint.position);
 
-                Debug.DrawRay(transform.position, Vector3.down, Color.green);
+                //Debug.DrawRay(transform.position, Vector3.down, Color.green);
 
             }
         }
