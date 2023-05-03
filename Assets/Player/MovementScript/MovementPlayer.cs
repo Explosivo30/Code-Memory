@@ -181,8 +181,18 @@ public class MovementPlayer : MonoBehaviour
             }
             
                 velocity.y += gravity * Time.deltaTime;
-            
-           
+
+            switch (isGrounded)
+            {
+                case false:
+                    anim.SetBool("hasJumped", true);
+                    break;
+
+                case true:
+                    anim.SetBool("hasJumped", false);
+                    anim.SetBool("returnedToGround", true);
+                    break;
+            }
 
             ch.Move(velocity * Time.deltaTime);
 
@@ -242,7 +252,7 @@ public class MovementPlayer : MonoBehaviour
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
-        if (x == 0f || z == 0f)
+        if (x == 0f && z == 0f)
         {
             anim.SetBool("moving", false);
         }
