@@ -1,0 +1,218 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93760c4d873707f4097bac1200685602, type: 3}
+  m_Name: 1stInteractionAi'kaNebu
+  m_EditorClassIdentifier: 
+  nodes:
+  - uniqueID: 
+    dialogo: "\xBFUn caminante de estrellas? Gracias al Supervisor, llevo meses esperando
+      a alguien."
+    respuestas:
+    - fcc31b28-e414-4876-82b0-17ef3ddcaa17
+    rect:
+      serializedVersion: 2
+      x: 36
+      y: 153
+      width: 200
+      height: 100
+  - uniqueID: fcc31b28-e414-4876-82b0-17ef3ddcaa17
+    dialogo: "\xBFQu\xE9? \xBFQu\xE9 est\xE1s haciendo? Esto es totalmente antinatural."
+    respuestas:
+    - 7cc31753-33a6-4904-81a2-c679a54bcdf9
+    rect:
+      serializedVersion: 2
+      x: 293
+      y: 159
+      width: 200
+      height: 100
+  - uniqueID: 7cc31753-33a6-4904-81a2-c679a54bcdf9
+    dialogo: "Oh, s\xED, al parecer mi planeta natal es el \xFAnico que prefiere
+      no hacer uso de sus cuerdas vocales para no influir en la creaci\xF3n del Supervisor
+      con nuestros ruidos. Tonter\xEDas, pero he descubierto que viene muy bien para
+      que otros no sepan qu\xE9 digo."
+    respuestas:
+    - 12c067b0-ff49-4a8a-a912-5a21aaef708a
+    rect:
+      serializedVersion: 2
+      x: 577
+      y: 159
+      width: 200
+      height: 100
+  - uniqueID: 12c067b0-ff49-4a8a-a912-5a21aaef708a
+    dialogo: "\xBFEres la \xFAnica extranjera de este lugar?\xBFSabes si hay alguien
+      m\xE1s que haya sobrevivido a un accidente?"
+    respuestas:
+    - 6a1eba23-246d-4865-934b-53d2b77a96a6
+    rect:
+      serializedVersion: 2
+      x: 832
+      y: 160
+      width: 200
+      height: 100
+  - uniqueID: 6a1eba23-246d-4865-934b-53d2b77a96a6
+    dialogo: "En el tiempo que llevo aqu\xED he visto que las naves estrelladas sin
+      supervivientes son el fen\xF3meno meteorol\xF3gico m\xE1s com\xFAn, aparte
+      de las tormentas de arena."
+    respuestas:
+    - 5c0add7b-b140-4cfd-9725-58795c4a5f06
+    rect:
+      serializedVersion: 2
+      x: 36
+      y: 308
+      width: 200
+      height: 100
+  - uniqueID: 5c0add7b-b140-4cfd-9725-58795c4a5f06
+    dialogo: "\xBFSin supervivientes? \xBFNinguno?..."
+    respuestas:
+    - 0e740b82-887d-4c63-9a5e-4e2631afb9b4
+    rect:
+      serializedVersion: 2
+      x: 317
+      y: 313
+      width: 200
+      height: 100
+  - uniqueID: 0e740b82-887d-4c63-9a5e-4e2631afb9b4
+    dialogo: "Oh\u2026 has venido buscando a alguien, verdad?..."
+    respuestas:
+    - 73e78d57-fc87-4dbb-bbf9-9e404c622220
+    rect:
+      serializedVersion: 2
+      x: 588
+      y: 321
+      width: 200
+      height: 100
+  - uniqueID: 73e78d57-fc87-4dbb-bbf9-9e404c622220
+    dialogo: "Algo as\xED\u2026 De todos modos, el planeta es grande, podr\xEDan
+      estar en cualquier parte, muriendo\u2026 He de darme prisa."
+    respuestas:
+    - 25e40d44-58b9-4c0f-af7d-07fb5e5d92df
+    rect:
+      serializedVersion: 2
+      x: 846
+      y: 326
+      width: 200
+      height: 100
+  - uniqueID: 25e40d44-58b9-4c0f-af7d-07fb5e5d92df
+    dialogo: "\xA1Espera! \xBFD\xF3nde ir\xE1s? \xBFA dar vueltas por el desierto
+      hasta que te quedes sin provisiones y mueras junto a quienquiera que buscas?"
+    respuestas:
+    - 22b870e9-ed6d-46c4-a64e-9eb299624f1d
+    rect:
+      serializedVersion: 2
+      x: 40
+      y: 457
+      width: 200
+      height: 100
+  - uniqueID: 22b870e9-ed6d-46c4-a64e-9eb299624f1d
+    dialogo: "Si no voy a buscarlos no va a hacerlo nadie, pero supongo que tienes
+      raz\xF3n. \xBFQu\xE9 propones?"
+    respuestas:
+    - e5bdba7c-90a9-431e-b6ea-bf986a42018f
+    rect:
+      serializedVersion: 2
+      x: 336
+      y: 471
+      width: 200
+      height: 100
+  - uniqueID: e5bdba7c-90a9-431e-b6ea-bf986a42018f
+    dialogo: "En el tiempo que llevo en este basurero he descubierto que la Conjunci\xF3n
+      mand\xF3 aqu\xED a su S\xE9quito buscando algo concreto. No s\xE9 el qu\xE9,
+      pero debe ser importante. A causa de ello los aldeanos de este poblado est\xE1n
+      esclavizados desde hace decenas de generaciones. Yo puedo ayudarte a buscar
+      a quien quieras si primero tratamos de liberar a esta gente."
+    respuestas:
+    - 7aefc078-75c4-47b3-a21a-77e606baae8e
+    rect:
+      serializedVersion: 2
+      x: 589
+      y: 467
+      width: 200
+      height: 100
+  - uniqueID: 7aefc078-75c4-47b3-a21a-77e606baae8e
+    dialogo: "No parec\xEDan muy dispuestos a recibir ayuda."
+    respuestas:
+    - 2e3fe91b-857e-4aa6-9477-a12e0c239b83
+    rect:
+      serializedVersion: 2
+      x: 859
+      y: 462
+      width: 200
+      height: 100
+  - uniqueID: 2e3fe91b-857e-4aa6-9477-a12e0c239b83
+    dialogo: "T\xFA tampoco lo estar\xEDas si los extranjeros fueran los que te han
+      esclavizado."
+    respuestas:
+    - 2de28494-0cf0-4d86-b93b-58def38714b0
+    rect:
+      serializedVersion: 2
+      x: 50
+      y: 597
+      width: 200
+      height: 100
+  - uniqueID: 2de28494-0cf0-4d86-b93b-58def38714b0
+    dialogo: "\xBFQu\xE9 hay que hacer?"
+    respuestas:
+    - f1bfc2f7-01b0-4731-93f3-bfb0285a88ba
+    rect:
+      serializedVersion: 2
+      x: 342
+      y: 603
+      width: 200
+      height: 100
+  - uniqueID: f1bfc2f7-01b0-4731-93f3-bfb0285a88ba
+    dialogo: "Vi c\xF3mo los soldados se dirig\xEDan a la parte trasera de la monta\xF1a,
+      por el paso cerca de los tres pilares. Si nos acercamos all\xED, podr\xEDamos
+      averiguar qu\xE9 traman y quiz\xE1 podamos desbaratarlos. Pareces en buena
+      forma, nos vendr\xE1 bien."
+    respuestas:
+    - 77d960a8-f07e-4dd0-a389-8fded3e0fad5
+    rect:
+      serializedVersion: 2
+      x: 601
+      y: 595
+      width: 200
+      height: 100
+  - uniqueID: 77d960a8-f07e-4dd0-a389-8fded3e0fad5
+    dialogo: "\xBFBuena forma? Lo \xFAnico que he hecho en mi vida ha sido desarrollar
+      mi cuerpo, espero estar m\xE1s que a la altura. De acuerdo, vamos. Sin embargo,
+      no dudar\xE9 en dar media vuelta si veo que es una p\xE9rdida de tiempo."
+    respuestas:
+    - 9b80295b-acbb-4b32-b927-ab51001fe09a
+    rect:
+      serializedVersion: 2
+      x: 865
+      y: 602
+      width: 200
+      height: 100
+  - uniqueID: 9b80295b-acbb-4b32-b927-ab51001fe09a
+    dialogo: "Si, claro, como quieras, pero toma esto, te har\xE1 falta. Es rudimentario,
+      pero dada la baja equipaci\xF3n de los soldados ser\xE1 \xFAtil, es lo bueno
+      de la Secta, es el nivel militar m\xE1s bajo."
+    respuestas:
+    - 1fc87d83-4fc3-47d5-bdca-915aa464a6bf
+    rect:
+      serializedVersion: 2
+      x: 45
+      y: 717
+      width: 200
+      height: 100
+  - uniqueID: 1fc87d83-4fc3-47d5-bdca-915aa464a6bf
+    dialogo: "Hay una cosa m\xE1s que tendr\xE9 que darte y ense\xF1arte, pero ser\xE1
+      mejor hacerlo una vez all\xED. Ve. Yo he de preparar unas cosas. Nos vemos
+      despu\xE9s del paso lateral de la monta\xF1a."
+    respuestas: []
+    rect:
+      serializedVersion: 2
+      x: 341
+      y: 721
+      width: 200
+      height: 100
