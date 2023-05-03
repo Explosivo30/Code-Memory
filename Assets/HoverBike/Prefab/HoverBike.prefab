@@ -479,6 +479,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rb: {fileID: 6755500954856645028}
   addSpeed: 5000000
+  cam: {fileID: 8695830790694880842}
+  fovToChange: 84
+  currentFov: 60
 --- !u!114 &1243134964528817642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -501,7 +504,7 @@ MonoBehaviour:
   - {fileID: 9029348745176796506}
   - {fileID: 5067705613981679088}
   rigidbody: {fileID: 6755500954856645028}
-  hoverBikeController: {fileID: 0}
+  hoverBikeController: {fileID: 6281505725516691288}
 --- !u!1 &422220448532034432
 GameObject:
   m_ObjectHideFlags: 0
