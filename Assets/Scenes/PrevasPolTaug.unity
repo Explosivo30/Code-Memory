@@ -1292,7 +1292,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.4348786, y: 1}
+    m_SensorSize: {x: 1.9171975, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -1315,14 +1315,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1053782812}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.008, y: 0.834, z: 0.126}
+  m_LocalRotation: {x: 0.008802043, y: 0.008649743, z: 0.008649744, w: 0.99988645}
+  m_LocalPosition: {x: -0.03409815, y: -0.0064789504, z: 0.22803777}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 395640422}
-  m_Father: {fileID: 3257320968409885393}
-  m_RootOrder: 5
+  m_Father: {fileID: 1286869478}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1053782812
 GameObject:
@@ -1498,6 +1498,11 @@ Transform:
   m_Father: {fileID: 458186897}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1286869478 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6157286570158620180, guid: 5daab2f6e6c3ab1438d406a98db2a425, type: 3}
+  m_PrefabInstance: {fileID: 2266418208723288471}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1295011423 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3697793425587855176, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
@@ -2487,7 +2492,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257320968409885393}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2266418208723288471
 PrefabInstance:
@@ -2542,6 +2547,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1799564253125792359, guid: 5daab2f6e6c3ab1438d406a98db2a425, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8229114308206364754, guid: 5daab2f6e6c3ab1438d406a98db2a425, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2623,7 +2632,6 @@ Transform:
   - {fileID: 1845226875}
   - {fileID: 7036515077265110323}
   - {fileID: 4007285066596803719}
-  - {fileID: 1053782787}
   - {fileID: 8725318022814944211}
   - {fileID: 1350347273196179711}
   - {fileID: 2084237464}
@@ -3922,5 +3930,5 @@ Transform:
   - {fileID: 8725318022478567980}
   - {fileID: 5935089624050161798}
   m_Father: {fileID: 3257320968409885393}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: -6.24, z: 0}

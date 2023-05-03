@@ -186,6 +186,7 @@ public class MovementPlayer : MonoBehaviour
             {
                 case false:
                     anim.SetBool("hasJumped", true);
+                    anim.SetBool("returnedToGround", false);
                     break;
 
                 case true:
