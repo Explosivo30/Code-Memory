@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2868.3105, g: 2525.1113, b: 2240.5723, a: 1}
+  m_IndirectSpecularColor: {r: 2870.252, g: 2527.0664, b: 2242.3945, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -147,6 +147,7 @@ MonoBehaviour:
   momentumGrapplingHookRange: 2
   moveTowardsGrappedPoint: 200
   hookshotThrowSpeed: 500
+  anim: {fileID: 0}
   state: 0
 --- !u!1 &20996987
 GameObject:
@@ -2670,7 +2671,7 @@ MonoBehaviour:
   player: {fileID: 3257320969210559982}
   bullet: {fileID: 2568181938658600540, guid: 0ad9cfd30910ccb4f88c667a39bb5bb6, type: 3}
   attackPoint: {fileID: 681795313}
-  ySpeed: 0.5
+  ySpeed: 1.34
 --- !u!1 &1546806358
 GameObject:
   m_ObjectHideFlags: 0
@@ -6278,6 +6279,7 @@ MonoBehaviour:
   momentumGrapplingHookRange: 2
   moveTowardsGrappedPoint: 200
   hookshotThrowSpeed: 500
+  anim: {fileID: 4832639084452036691}
   state: 0
 --- !u!114 &664344819023856352
 MonoBehaviour:
@@ -6420,7 +6422,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.5928571, y: 1}
+    m_SensorSize: {x: 1.7771084, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16

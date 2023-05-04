@@ -18,7 +18,7 @@ public class GrapplingPower : MonoBehaviour
     [SerializeField] float momentumGrapplingHookRange = 2f;
     [SerializeField] float moveTowardsGrappedPoint = 25f;
     [SerializeField] float hookshotThrowSpeed = 500f;
-
+    [SerializeField] Animator anim;
 
     public State state;
     public enum State
@@ -85,7 +85,7 @@ public class GrapplingPower : MonoBehaviour
                 hookshotSize = 0f;
                 hookshotTransform.gameObject.SetActive(true);
                 //hookshotTransform.localScale = Vector3.zero;
-                
+                anim.SetBool("usingGancho", true);
                 state = State.HookshotThrown;
 
             }
@@ -118,6 +118,7 @@ public class GrapplingPower : MonoBehaviour
         cc.Move(hookshotDir * moveTowardsGrappedPoint * Time.deltaTime);
         if (Vector3.Distance(transform.position, hookShotPosition) < 2f)
         {
+            anim.SetBool("usingGancho", false);
             hookshotTransform.gameObject.SetActive(false);
             state = State.Normal;
         }
@@ -125,6 +126,7 @@ public class GrapplingPower : MonoBehaviour
         if (TestInputDownHookshot())
         {
             //Cancel Hookshot
+            anim.SetBool("usingGancho", false);
             state = State.Normal;
         }
         
@@ -132,6 +134,7 @@ public class GrapplingPower : MonoBehaviour
         if (playerMovement.TestInputJump())
         {
             playerMovement.characterVelocityMomentum = hookshotDir * moveTowardsGrappedPoint * momentumGrapplingHookRange * Time.deltaTime;
+            anim.SetBool("usingGancho", false);
             state = State.Normal;
             DebugHitPointTransform.position = transform.position;
         }

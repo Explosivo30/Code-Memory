@@ -136,7 +136,6 @@ public class BossAgressive : EnemyState
         {
             //playerAttack
             Instantiate(bullet, attackPoint.position, fatherToRotate.rotation);
-            Debug.Log("Atacamos");
             timeToAttack = timeResetAttack;
         }
     }

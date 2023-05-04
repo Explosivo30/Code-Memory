@@ -70,8 +70,10 @@ public class AttackPlayer : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
+            
             if (currentCooldownAttack <= 0f)
             {
+                anim.SetTrigger("shoot");
                 ShootKnife();
                 knifeShoot.Play();
                 currentCooldownAttack = cooldownAttack;

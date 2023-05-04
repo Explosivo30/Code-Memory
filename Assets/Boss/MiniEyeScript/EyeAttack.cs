@@ -36,7 +36,6 @@ public class EyeAttack : MonoBehaviour
         {
             //playerAttack
             //Instantiate(bullet, fatherToRotate.position, fatherToRotate.rotation);
-            Debug.Log("Atacamos, mini eye");
             DecideTimeAttack();
             timeToAttack = timeResetAttack;
         }

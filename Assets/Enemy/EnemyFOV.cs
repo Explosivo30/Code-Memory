@@ -21,12 +21,6 @@ public class EnemyFOV : MonoBehaviour
 
         sphereCollider.radius = chaseRadious;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void FixedUpdate()
     {
         LookForPlayer();
