@@ -19,14 +19,15 @@ public class hoverBikeController : MonoBehaviour
     public float turnRotationSeekSpeed;
 
     private float rotationVelocity;
-    public float anguloMaximoDeRotacionFrontal = 30f;
-    public float anguloMaximoDeRotacionlateral = 30f;
+    [SerializeField] float anguloMaximoDeRotacionFrontal = 30f;
+    [SerializeField] float anguloMaximoDeRotacionlateral = 30f;
 
-    public float TimeToWaitStartMovements = 500f;
+    [SerializeField] float TimeToWaitStartMovements = 500f;
     //private float groundAngleVelocity;
 
     [SerializeField] GameObject camaraAActivar;
     [SerializeField] Vector3 hoverBikePosition;
+    private float rotacionHoverBike;
     [SerializeField] GameObject Player;
     [SerializeField] GameObject PlayerInBike;
     [SerializeField] float maxRotation = 1f;
@@ -39,7 +40,7 @@ public class hoverBikeController : MonoBehaviour
     private bool IsGorund = true;
     private float curretTimeToWait = 0f;
     [SerializeField] float basicExtraForce = 1000f;
-    public int DragInBike = 4;
+    [SerializeField] int DragInBike = 4;
 
 
     private void Start()
@@ -183,7 +184,9 @@ public class hoverBikeController : MonoBehaviour
     public void SpawnearPlayer()
     {
         hoverBikePosition = rigidbody.transform.position;
-        Player.transform.position = hoverBikePosition;
+        rotacionHoverBike = rigidbody.transform.eulerAngles.y;
+        Player.transform.position = new Vector3((hoverBikePosition.x), hoverBikePosition.y, (hoverBikePosition.z ));
+        Player.transform.rotation = Quaternion.AngleAxis(rotacionHoverBike, Vector3.up);
         PlayerInBike.SetActive(false);
         Player.SetActive(true);
     }
