@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2786.004, g: 2492.879, b: 2405.754, a: 1}
+  m_IndirectSpecularColor: {r: 2747.5918, g: 2445.9492, b: 2348.3828, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -447,16 +447,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Pol Taugourdeau
-
-    Edgar Novas
-
-    Pol Perez
-
-    Joel Yudisi
-
-    Lidia
-    Castellon'
+  m_text: "Pol Taugourdeau \nEdgar Novas\nPol P\xE9rez\nJoel Yudisi\nLidia Castell\xF3n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ea7d56f0a4ed12f46b1a2c2f2e9cd831, type: 2}
   m_sharedMaterial: {fileID: -7446278217425696799, guid: ea7d56f0a4ed12f46b1a2c2f2e9cd831, type: 2}
@@ -519,7 +510,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -265.63208, y: 0, z: -248.51105, w: -275.68842}
+  m_margin: {x: -265.63208, y: 0, z: -201.64679, w: -275.68842}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

@@ -9,6 +9,7 @@ public class AldeanoLookPlayer : MonoBehaviour
     [SerializeField] Transform player;
     [SerializeField] Transform headAldeano;
     [SerializeField] Transform headAimTracker;
+    [SerializeField] Transform headAim;
 
     Vector3 posHeadAldeano;
 
@@ -55,7 +56,7 @@ public class AldeanoLookPlayer : MonoBehaviour
 
     void ResetTrackPlayer()
     {
-        headAimTracker.position = headAimTracker.parent.position;
+        headAimTracker.position = headAim.position;
     }
 
 
