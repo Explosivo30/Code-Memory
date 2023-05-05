@@ -8,7 +8,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Disparar
-  m_Speed: 1
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -1426570343800937211}
@@ -22,7 +22,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -6100115919326464490, guid: 2775f084c6060134b860f1835baaf843, type: 3}
+  m_Motion: {fileID: -6100115919326464490, guid: d9b9d4f0571c83640b968e14c253ec6e, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -325,7 +325,7 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0.06417328
   m_TransitionOffset: 0
   m_ExitTime: 0.75
   m_HasExitTime: 0
@@ -347,7 +347,7 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0.0154691
   m_TransitionOffset: 0
   m_ExitTime: 0.45454544
   m_HasExitTime: 1
@@ -425,31 +425,31 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: hasJumped
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: returnedToGround
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: usingGancho
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: shoot
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -480,9 +480,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.43621063
-  m_TransitionOffset: 0
-  m_ExitTime: 0.9620907
+  m_TransitionDuration: 0.011140823
+  m_TransitionOffset: 0.050618295
+  m_ExitTime: 0.95790315
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -683,7 +683,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Gancho
-  m_Speed: 1
+  m_Speed: 3
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -4051897003634404459}
@@ -697,7 +697,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 8983301049366901296, guid: 88b161838da60b14584a746aecd19eb7, type: 3}
+  m_Motion: {fileID: 8983301049366901296, guid: c73989f0a2cea9d4eaa5d5278591a3fe, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -739,7 +739,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Apuntar
-  m_Speed: 1
+  m_Speed: 12
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -862669938541313808}
@@ -752,7 +752,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 6691525600556079187, guid: 017021f4c84374843a9585c7dbd6bb5b, type: 3}
+  m_Motion: {fileID: 6691525600556079187, guid: f931cdf85d8e1784aa2b8949d66a41bd, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -816,7 +816,7 @@ AnimatorStateMachine:
     m_Position: {x: 90, y: 0, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7015415555314579392}
-    m_Position: {x: 230, y: 540, z: 0}
+    m_Position: {x: 240, y: 540, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8918881888063093827}
     m_Position: {x: 190, y: 320, z: 0}
