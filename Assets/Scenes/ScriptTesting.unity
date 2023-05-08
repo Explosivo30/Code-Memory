@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2873.2031, g: 2529.957, b: 2245.2578, a: 1}
+  m_IndirectSpecularColor: {r: 2868.3105, g: 2525.1113, b: 2240.5723, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -342,7 +342,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 142604526}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a5d9e39117c74474e83523ad11a5e77a, type: 3}
   m_Name: 
@@ -915,10 +915,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2597572299471033946}
-    - target: {fileID: 958503627, guid: 60a64a063e6f7d44dad9a4ae5b5ed3e8, type: 3}
-      propertyPath: headAim
-      value: 
-      objectReference: {fileID: 2048059489}
     - target: {fileID: 1757723330768207192, guid: 60a64a063e6f7d44dad9a4ae5b5ed3e8, type: 3}
       propertyPath: m_RootOrder
       value: 28
@@ -3935,11 +3931,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &2048059489 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 437356333, guid: 60a64a063e6f7d44dad9a4ae5b5ed3e8, type: 3}
-  m_PrefabInstance: {fileID: 547397332}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2065551047
 GameObject:
   m_ObjectHideFlags: 0
@@ -5342,7 +5333,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7771084, y: 1}
+    m_SensorSize: {x: 0.8767442, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
