@@ -25,11 +25,15 @@ public class AldeanoLookPlayer : MonoBehaviour
         //if(player is inside)
         //dirToPlayer = (player.position - headAldeano.position).normalized;
         //Debug.DrawRay(transform.position, dirToPlayer);
-
+        //Debug.Log(player.position - headAldeano.forward);
+        
         if (aldeanoPlayer.GetIsInsidePlayer())
         {
-            Debug.Log(player.position.z - headAldeano.position.z);
-            if (player.position.z - headAldeano.position.z >= 0f)
+            //Debug.Log(player.position.z - headAldeano.position.z);
+            Vector3 positions = player.position - headAim.position;
+            float direction = Vector3.Dot(positions, headAim.forward);
+            Debug.Log(direction);
+            if (direction > -0.5f)
             {
                 TrackPlayer();
             }
@@ -42,7 +46,7 @@ public class AldeanoLookPlayer : MonoBehaviour
         {
             ResetTrackPlayer();
         }
-
+        
         
         
     }

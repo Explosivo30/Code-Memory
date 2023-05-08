@@ -12,6 +12,9 @@ public class EnemyFOV : MonoBehaviour
     public bool playerInside = false;
     SphereCollider sphereCollider;
 
+    [SerializeField] Animator anim;
+    [SerializeField] bool isBoss = true;
+
     bool playerInChaseRange = false;
 
 
@@ -44,16 +47,43 @@ public class EnemyFOV : MonoBehaviour
             {
                 //Debug.Log("Player detected inside");
                 playerInside = true;
+                switch (isBoss)
+                {
+                    case false:
+                        anim.SetBool("isAnimPlayerInside", true);
+                        break;
+                        default:
+                        break;
+                }
+                
+
             }
             else
             {
                 playerInside = false;
+                switch (isBoss)
+                {
+                    case false:
+                        anim.SetBool("isAnimPlayerInside", false);
+                        break;
+                    default:
+                        break;
+                }
+                
                 //ia.MoveToPoints();
                 //Debug.Log("Esta fuera de rango");
             }
         }else
         {
             playerInside = false;
+            switch (isBoss)
+            {
+                case false:
+                    anim.SetBool("isAnimPlayerInside", false);
+                    break;
+                default:
+                    break;
+            }
             //ia.MoveToPoints();
             //Debug.Log("Ya no lo veo");
         }

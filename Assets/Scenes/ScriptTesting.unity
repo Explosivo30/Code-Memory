@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2869.5898, g: 2526.287, b: 2241.5547, a: 1}
+  m_IndirectSpecularColor: {r: 2869.461, g: 2526.3555, b: 2241.7188, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -267,7 +267,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &105471014
 Transform:
   m_ObjectHideFlags: 0
@@ -313,8 +313,10 @@ MonoBehaviour:
   detectionRadious: 70
   detectionAngle: 360
   chaseRadious: 50
-  playerSeen: {fileID: 0}
+  playerSeen: {fileID: 2597572299471033946}
   playerInside: 1
+  anim: {fileID: 0}
+  isBoss: 1
 --- !u!135 &105471017
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1094,9 +1096,13 @@ PrefabInstance:
       value: Enemy (2)
       objectReference: {fileID: 0}
     - target: {fileID: 543923716448018550, guid: f5f1db0013f6fda4583d359494820461, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 754806783}
+    - target: {fileID: 543923716448018550, guid: f5f1db0013f6fda4583d359494820461, type: 3}
       propertyPath: playerSeen
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2597572299471033946}
     - target: {fileID: 2983049995851654514, guid: f5f1db0013f6fda4583d359494820461, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1142,6 +1148,11 @@ Transform:
   m_Father: {fileID: 528348315}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &754806783 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1303365630532139823, guid: f5f1db0013f6fda4583d359494820461, type: 3}
+  m_PrefabInstance: {fileID: 647113564}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &812873079
 GameObject:
   m_ObjectHideFlags: 0
@@ -5211,7 +5222,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.1021898, y: 1}
+    m_SensorSize: {x: 1.7771084, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
