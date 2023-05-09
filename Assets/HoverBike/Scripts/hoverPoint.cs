@@ -6,16 +6,16 @@ public class hoverPoint : MonoBehaviour
 {
     public float hoverPointStrength;
     public float hoverPointDistanceYouWant;
-    public float hoverPointDistance;
+    private float hoverPointDistance;
 
-    public float alturaMinStartHoverBike = 2f;
-    public float alturaMaxhoverBike = 7f;
+    [SerializeField] float alturaMinStartHoverBike = 2f;
+    [SerializeField] float alturaMaxhoverBike = 7f;
 
     private float timeToWaitStartMovements = 30f;
     private float cuerrentTimeToWait = 0f;
 
-    public Transform[] hoverPoints;
-    public Rigidbody rigidbody;
+    [SerializeField] Transform[] hoverPoints;
+    [SerializeField] Rigidbody rigidbody;
     [SerializeField] hoverBikeController hoverBikeController;
 
     private void Awake()

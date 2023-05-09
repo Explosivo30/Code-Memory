@@ -8,17 +8,17 @@ using Cinemachine;
 public class hoverBikeController : MonoBehaviour
 {
     [SerializeField] CinemachineVirtualCamera vcam;
-    public Rigidbody rigidbody;
+    [SerializeField] Rigidbody rigidbody;
     [SerializeField] GameObject playerPosicionBajada;
     [SerializeField] GameObject Canvas;
-    public Vector3 centerOfMass;
+    [SerializeField] Vector3 centerOfMass;
     public float acceleration;
     //public float currrentTurboSpeed = 1f;
     //public float TurboSpeed = 2f;
-    public float rotationRate;
+    [SerializeField] float rotationRate;
 
-    public float turnRotationAngle;
-    public float turnRotationSeekSpeed;
+    [SerializeField] float turnRotationAngle;
+    [SerializeField] float turnRotationSeekSpeed;
 
     private float rotationVelocity;
     [SerializeField] float anguloMaximoDeRotacionFrontal = 30f;
