@@ -9,7 +9,7 @@ public class hoverBikeController : MonoBehaviour
 {
     [SerializeField] CinemachineVirtualCamera vcam;
     public Rigidbody rigidbody;
-    [SerializeField] GameObject playerBajada;
+    [SerializeField] GameObject playerPosicionBajada;
     [SerializeField] GameObject Canvas;
     public Vector3 centerOfMass;
     public float acceleration;
@@ -202,9 +202,9 @@ public class hoverBikeController : MonoBehaviour
     //Esta funcion hara que una vez el player puse e para bajar spawnee el player al lado para hacer ver que ha vajado
     public void SpawnearPlayer()
     {
-        playerBajarPosition = playerBajada.transform.position;
-        rotacionPlayerBajadaHoverBike = playerBajada.transform.eulerAngles.y;
-        Player.transform.position = new Vector3((playerBajarPosition.x - 1f), playerBajarPosition.y + 1f, playerBajarPosition.z - 0.5f);
+        playerBajarPosition = playerPosicionBajada.transform.position;
+        rotacionPlayerBajadaHoverBike = playerPosicionBajada.transform.eulerAngles.y;
+        Player.transform.position = new Vector3(playerBajarPosition.x /*(transform.right.x - 2f))*/, playerBajarPosition.y, playerBajarPosition.z);
         Player.transform.rotation = Quaternion.AngleAxis(rotacionPlayerBajadaHoverBike, Vector3.up);
         PlayerInBike.SetActive(false);
         Player.SetActive(true);
