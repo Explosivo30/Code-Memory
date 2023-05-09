@@ -8197,18 +8197,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: HoverBike
       objectReference: {fileID: 0}
-    - target: {fileID: 1517607320193306076, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4039010941069726850, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5540161158579044842, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5913106125495767206, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -8257,18 +8245,6 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 8709533155582706156}
-    - target: {fileID: 6370534984033980297, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.729
-      objectReference: {fileID: 0}
-    - target: {fileID: 7191266907544018777, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.729
-      objectReference: {fileID: 0}
-    - target: {fileID: 8314503598327050436, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
 --- !u!1 &4900583064091027710
@@ -9509,7 +9485,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3059034, y: 1}
+    m_SensorSize: {x: 1.549505, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
