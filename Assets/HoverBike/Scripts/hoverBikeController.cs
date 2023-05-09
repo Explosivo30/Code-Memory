@@ -9,6 +9,8 @@ public class hoverBikeController : MonoBehaviour
 {
     [SerializeField] CinemachineVirtualCamera vcam;
     public Rigidbody rigidbody;
+    [SerializeField] GameObject playerBajada;
+    [SerializeField] GameObject Canvas;
     public Vector3 centerOfMass;
     public float acceleration;
     //public float currrentTurboSpeed = 1f;
@@ -22,12 +24,12 @@ public class hoverBikeController : MonoBehaviour
     [SerializeField] float anguloMaximoDeRotacionFrontal = 30f;
     [SerializeField] float anguloMaximoDeRotacionlateral = 30f;
 
-    [SerializeField] float TimeToWaitStartMovements = 500f;
+    [SerializeField] float TimeToWaitStartMovements = 4f;
     //private float groundAngleVelocity;
 
     [SerializeField] GameObject camaraAActivar;
-    [SerializeField] Vector3 hoverBikePosition;
-    private float rotacionHoverBike;
+    [SerializeField] Vector3 playerBajarPosition;
+    private float rotacionPlayerBajadaHoverBike;
     [SerializeField] GameObject Player;
     [SerializeField] GameObject PlayerInBike;
     [SerializeField] float maxRotation = 1f;
@@ -39,6 +41,7 @@ public class hoverBikeController : MonoBehaviour
     private bool YaPuedeBajarDeHoverBike = false;
     private bool IsGorund = true;
     private float curretTimeToWait = 0f;
+    private float curretTimeToWaitStartMovement = 0f;
     [SerializeField] float basicExtraForce = 1000f;
     [SerializeField] int DragInBike = 4;
 
@@ -49,16 +52,23 @@ public class hoverBikeController : MonoBehaviour
         //Player = GameObject.FindWithTag("Player");
         rigidbody = GetComponent<Rigidbody>();
         rigidbody.centerOfMass = centerOfMass;
+        Canvas.SetActive(false);
     }
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
-        { playerInisde = true; }
+        { 
+            playerInisde = true;
+            Canvas.SetActive(true);
+        }
     }
     void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
-        { playerInisde = false; }
+        { 
+            playerInisde = false;
+            Canvas.SetActive(false);
+        }
     }
     private void Update()
     {
@@ -79,8 +89,8 @@ public class hoverBikeController : MonoBehaviour
         {
             activarAnimacion = false;
             inBike = false;
-            Invoke("SpawnearPlayer", 0.9f);
-            Invoke("DesactivarCam", 0.9f);
+            Invoke("SpawnearPlayer", 3f);
+            Invoke("DesactivarCam", 3f);
             YaPuedeBajarDeHoverBike = false;
             rigidbody.drag = 4f;
         }
@@ -102,9 +112,18 @@ public class hoverBikeController : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (inBike && curretTimeToWait >= TimeToWaitStartMovements)
+        if (inBike)
         {
-            MovimientoHoverBike();    
+            if (curretTimeToWaitStartMovement >= TimeToWaitStartMovements)
+            {
+                MovimientoHoverBike();
+                //Invoke("MovimientoHoverBike", 2.2f);
+            }
+            curretTimeToWaitStartMovement += 1f;
+        }
+        if (!inBike)
+        {
+            curretTimeToWaitStartMovement = 0;
         }
         //Cunado el Player se hacerque y pulse E se Avtivara la funcion movimient oque es la que permitira mover la hoverBike, y tardara 8un par de segundos
         //para dar tiempo a la cama a colocarse en el sitio crrespondiente.
@@ -183,10 +202,10 @@ public class hoverBikeController : MonoBehaviour
     //Esta funcion hara que una vez el player puse e para bajar spawnee el player al lado para hacer ver que ha vajado
     public void SpawnearPlayer()
     {
-        hoverBikePosition = rigidbody.transform.position;
-        rotacionHoverBike = rigidbody.transform.eulerAngles.y;
-        Player.transform.position = new Vector3((hoverBikePosition.x), hoverBikePosition.y, (hoverBikePosition.z ));
-        Player.transform.rotation = Quaternion.AngleAxis(rotacionHoverBike, Vector3.up);
+        playerBajarPosition = playerBajada.transform.position;
+        rotacionPlayerBajadaHoverBike = playerBajada.transform.eulerAngles.y;
+        Player.transform.position = new Vector3((playerBajarPosition.x - 1f), playerBajarPosition.y + 1f, playerBajarPosition.z - 0.5f);
+        Player.transform.rotation = Quaternion.AngleAxis(rotacionPlayerBajadaHoverBike, Vector3.up);
         PlayerInBike.SetActive(false);
         Player.SetActive(true);
     }

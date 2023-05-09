@@ -6,7 +6,7 @@ public class hoverPoint : MonoBehaviour
 {
     public float hoverPointStrength;
     public float hoverPointDistanceYouWant;
-    private float hoverPointDistance;
+    public float hoverPointDistance;
 
     public float alturaMinStartHoverBike = 2f;
     public float alturaMaxhoverBike = 7f;
@@ -34,28 +34,32 @@ public class hoverPoint : MonoBehaviour
     void FixedUpdate()
     {
         HoverPoints();
-        //EstablecerAlturaHoverBikeRegulable();
+        EstablecerAlturaHoverBikeRegulable();
         Debug.DrawRay(transform.position, Vector3.down, Color.green);
     }
     public void EstablecerAlturaHoverBikeRegulable()
     {
         if (hoverBikeController.inBike == true)
         {
-            cuerrentTimeToWait += 1;
-            if ((hoverPointDistance < hoverPointDistanceYouWant) && cuerrentTimeToWait == timeToWaitStartMovements)
+            cuerrentTimeToWait += 1f;
+            if (cuerrentTimeToWait >= timeToWaitStartMovements)
             {
-                hoverPointDistance += 0.5f;
-                cuerrentTimeToWait = 0;
-            }
-            if ((hoverPointDistance > hoverPointDistanceYouWant) && cuerrentTimeToWait == timeToWaitStartMovements)
-            {
-                hoverPointDistance -= 0.5f;
-                cuerrentTimeToWait = 0;
+                if (hoverPointDistance < hoverPointDistanceYouWant)
+                {
+                    hoverPointDistance += 0.02f;
+                    //cuerrentTimeToWait = 0;
+                }
+                if (hoverPointDistance > hoverPointDistanceYouWant)
+                {
+                    hoverPointDistance -= 0.08f;
+                    //cuerrentTimeToWait = 0;
+                }
             }
         }
         if (hoverBikeController.inBike == false)
         {
             hoverPointDistance = alturaMinStartHoverBike;
+            rigidbody.drag = 6f;
             cuerrentTimeToWait = 0;
         }
     }

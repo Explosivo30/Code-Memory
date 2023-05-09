@@ -11,6 +11,8 @@ public class CameraMoveHoverBike : MonoBehaviour
 
     [SerializeField] float clampDerecha = -20f;
     [SerializeField] float clampIzquierda = 40f;
+    [SerializeField] float clampAbajo = -20f;
+    [SerializeField] float clampArriba = 40f;
 
     // Update is called once per frame
     void Update()
@@ -21,7 +23,7 @@ public class CameraMoveHoverBike : MonoBehaviour
 
         xRotation -= rotationY;
         yRotation += rotationX;
-        xRotation = Mathf.Clamp(xRotation, -60, 90);
+        xRotation = Mathf.Clamp(xRotation, clampAbajo, clampArriba);
         yRotation = Mathf.Clamp(yRotation, clampDerecha, clampIzquierda);
 
         transform.localRotation = Quaternion.Euler(xRotation, yRotation,0f);
