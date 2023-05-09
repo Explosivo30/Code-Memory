@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Dis_Zapatos
+  m_Name: Dis_EyeLash
   m_Shader: {fileID: -6465566751694194690, guid: e43d4aa412e02db40ad64a7c25f96131, type: 3}
   m_ValidKeywords:
   - _ALPHATEST_ON
@@ -30,11 +30,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Albedo:
-        m_Texture: {fileID: 2800000, guid: 097ce4c15024f024bb6a8c5ee10aacde, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1eb7d309c6f98df49a1aeaadc8465582, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: fb1f6dc99d599a042b05b438563295ea, type: 3}
+        m_Texture: {fileID: 2800000, guid: 245b57d04cc9e814dbd45eb5b461b35f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -64,7 +64,7 @@ Material:
     - _DepthOffsetEnable: 0
     - _DisolveEmissiveMaximum: 400000
     - _DisolveWidth: 0.02
-    - _Disolve_Amount: 1.0008063
+    - _Disolve_Amount: 0
     - _DissolveScale: 800
     - _DoubleSidedEnable: 0
     - _DoubleSidedGIMode: 0
@@ -72,8 +72,8 @@ Material:
     - _DstBlend: 0
     - _EnableBlendModePreserveSpecularLighting: 1
     - _EnableFogOnTransparent: 1
-    - _Metalic: 0.314
-    - _NormalStrength: 0.713
+    - _Metalic: 0.531
+    - _NormalStrength: 0.309
     - _OpaqueCullMode: 2
     - _RayTracing: 0
     - _ReceivesSSR: 1
@@ -81,7 +81,7 @@ Material:
     - _RefractionModel: 0
     - _RenderQueueType: 1
     - _RequireSplitLighting: 0
-    - _Smothness: 0.104
+    - _Smothness: 0.5
     - _SrcBlend: 1
     - _StencilRef: 0
     - _StencilRefDepth: 8
