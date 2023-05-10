@@ -7,11 +7,15 @@ using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCou
 public class AikaDisapear : MonoBehaviour
 {
     [SerializeField] List<Renderer> meshies;
-    [SerializeField] bool startDisapear;
-    float disappear = 0;
-    float appear = 1;
-    bool disapearDone = false;
-    bool appearDone = false;
+    [SerializeField] bool dissolve;
+    [SerializeField] float progressVelocity = 1f;
+
+    float progress = 1f;
+    float nonDissolvedProgress = 0f;
+    float dissolvedProgress = 1f;
+
+    bool isRunning;
+
     IEnumerator coroutine;
     void Start()
     {
@@ -21,63 +25,77 @@ public class AikaDisapear : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (startDisapear == true && disapearDone == false)
+        if (!isRunning)
         {
-            disapearDone = true;
-            foreach (Renderer meshes in meshies)
+            if ((dissolve == true) && (progress <= nonDissolvedProgress ))
             {
-                Material mat = meshes.sharedMaterial;
-                //mat.SetFloat("_Disolve_Amount", disappear);
-                Debug.Log("Disappear");
-                coroutine = WaitToDisappear(disappear, mat);
+                coroutine = DissolveTo(dissolvedProgress);
                 StartCoroutine(coroutine);
             }
-            appearDone=false;
-        }
-        else if(startDisapear == false && appearDone == false)
-        {
-            appearDone = true;
-            foreach (Renderer meshes in meshies)
+            else if ((dissolve == false) && (progress >= dissolvedProgress))
             {
-                Material mat = meshes.sharedMaterial;
-                //mat.SetFloat("_Disolve_Amount", appear);
-                Debug.Log("Appear");
-                coroutine = WaitToAppear(appear, mat);
+                coroutine = DissolveTo(nonDissolvedProgress);
                 StartCoroutine(coroutine);
             }
-            disapearDone=false;
         }
     }
+
+    IEnumerator DissolveTo(float destination)
+    {
+        isRunning = true;
+
+        Debug.Log("DissolveTo");
+        //coroutine = WaitToDisappear(nonDissolvedProgress, mat);
+
+
+        while (progress != destination)
+        {
+            float direction = destination - progress;
+            float absDirection = Mathf.Abs(direction);
+            float deltaToApply = progressVelocity * Time.deltaTime;
+            progress += Mathf.Min(absDirection, deltaToApply) * Mathf.Sign(direction);
+
+            ApplyProgressToAllMeshes(progress);
+
+            yield return new WaitForEndOfFrame();
+            Debug.Log($"...... {progress} - {destination}");
+        }
+
+        Debug.Log("... finished");
+
+        isRunning = false;
+    }
+
+    void ApplyProgressToAllMeshes(float progress)
+    {
+        foreach (Renderer r in meshies)
+        {
+            Material mat = r.sharedMaterial;
+            mat.SetFloat("_Disolve_Amount", progress);
+        }
+    }
+
 
     IEnumerator WaitToDisappear(float origin, Material mat)
     {
         float counter = 1f;
-        Debug.Log("disdeb");
         while(origin < 1f)
         {
             origin += counter * Time.deltaTime;
-            Debug.Log(origin + " es el origin");
             mat.SetFloat("_Disolve_Amount", origin);
-            Debug.Log("Disapear");
-            yield return new WaitForSeconds(0.07f);
+            yield return new WaitForEndOfFrame();
         }
-        
-        
-
     }
 
     IEnumerator WaitToAppear(float origin, Material mat)
     {
         float counter = 1f;
-        Debug.Log("apdeb");
         while (counter > 0.1f)
         {
             origin -= counter * Time.deltaTime;
             mat.SetFloat("_Disolve_Amount", origin);
-            yield return new WaitForSeconds(0.07f);
+            yield return new WaitForEndOfFrame();
         }
-
-        
     }
 
 }
