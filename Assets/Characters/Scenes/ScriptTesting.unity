@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2873.4102, g: 2530.043, b: 2245.418, a: 1}
+  m_IndirectSpecularColor: {r: 2868.3027, g: 2525.1348, b: 2240.5723, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -606,10 +606,34 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: afd376c72160cd74c9b9db7afdc5b1d9, type: 2}
+    - target: {fileID: 3038475842505762723, guid: 0572aa85b0cd5954db1952444909652d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7c73f0e2a69df1b4fb695480240464eb, type: 2}
+    - target: {fileID: 3038475842777423900, guid: 0572aa85b0cd5954db1952444909652d, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3038475842777423900, guid: 0572aa85b0cd5954db1952444909652d, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7509467c3a755e847a39c5da17b0d560, type: 2}
     - target: {fileID: 3038475843046991281, guid: 0572aa85b0cd5954db1952444909652d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 3dac8f016ac41444b9c5689e553f8495, type: 2}
+    - target: {fileID: 3038475843134154845, guid: 0572aa85b0cd5954db1952444909652d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7c73f0e2a69df1b4fb695480240464eb, type: 2}
+    - target: {fileID: 3038475843753771925, guid: 0572aa85b0cd5954db1952444909652d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7c73f0e2a69df1b4fb695480240464eb, type: 2}
+    - target: {fileID: 3038475843780002254, guid: 0572aa85b0cd5954db1952444909652d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7c73f0e2a69df1b4fb695480240464eb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0572aa85b0cd5954db1952444909652d, type: 3}
 --- !u!1 &501974596
@@ -5343,7 +5367,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7771084, y: 1}
+    m_SensorSize: {x: 0.9511628, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16

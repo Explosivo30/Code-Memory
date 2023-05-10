@@ -8,7 +8,6 @@ public class AikaDisapear : MonoBehaviour
 {
     [SerializeField] List<Renderer> meshies;
     [SerializeField] bool startDisapear;
-    float origin = 0;
     float disappear = 0;
     float appear = 1;
     bool disapearDone = false;
@@ -45,7 +44,6 @@ public class AikaDisapear : MonoBehaviour
                 Debug.Log("Appear");
                 coroutine = WaitToAppear(appear, mat);
                 StartCoroutine(coroutine);
-
             }
             disapearDone=false;
         }

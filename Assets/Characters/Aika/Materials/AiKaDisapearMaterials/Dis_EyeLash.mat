@@ -30,7 +30,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Albedo:
-        m_Texture: {fileID: 2800000, guid: 1eb7d309c6f98df49a1aeaadc8465582, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
@@ -64,7 +64,7 @@ Material:
     - _DepthOffsetEnable: 0
     - _DisolveEmissiveMaximum: 400000
     - _DisolveWidth: 0.02
-    - _Disolve_Amount: 0
+    - _Disolve_Amount: 1.0009879
     - _DissolveScale: 800
     - _DoubleSidedEnable: 0
     - _DoubleSidedGIMode: 0
@@ -108,7 +108,7 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
-    - _Base_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Base_Color: {r: 0, g: 0.92889374, b: 0.9811321, a: 1}
     - _DisolveColor: {r: 14.407814, g: 0, b: 37.697155, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
