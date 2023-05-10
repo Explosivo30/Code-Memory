@@ -11067,6 +11067,7 @@ GameObject:
   - component: {fileID: 958503627}
   - component: {fileID: 6782523972030590806}
   - component: {fileID: 1811077743}
+  - component: {fileID: 5633767610846834942}
   m_Layer: 0
   m_Name: NPC_export_OK
   m_TagString: Untagged
@@ -11120,7 +11121,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1757723330768207205}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2d8418b0b9634b1892b0268dd9c2743, type: 3}
   m_Name: 
@@ -11269,6 +11270,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: {fileID: 0}
   threshold: 1
+--- !u!205 &5633767610846834942
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757723330768207205}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.000018537045, y: 0.8383095, z: -0.03386855}
+  m_Size: 1.8672547
+  m_FadeMode: 1
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.044541217
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 1757723329698178438}
+    - renderer: {fileID: 1757723328887281675}
+    - renderer: {fileID: 1757723330190935054}
+    - renderer: {fileID: 1757723329851625632}
+    - renderer: {fileID: 1757723330794976877}
+    - renderer: {fileID: 1757723330306061796}
+    - renderer: {fileID: 1757723329052097601}
+    - renderer: {fileID: 1757723330549182830}
+    - renderer: {fileID: 1757723329743273134}
+  - screenRelativeHeight: 0.010574269
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 1757723329698178438}
+    - renderer: {fileID: 1757723329052097601}
+    - renderer: {fileID: 1757723330549182830}
+  m_Enabled: 1
 --- !u!1 &1757723330774667213
 GameObject:
   m_ObjectHideFlags: 0

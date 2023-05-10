@@ -634,7 +634,7 @@ Transform:
   m_GameObject: {fileID: 543923716448018543}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -20.5, y: 1.2, z: 10.7}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 543923714880108770}
@@ -710,6 +710,8 @@ MonoBehaviour:
   chaseRadious: 30
   playerSeen: {fileID: 0}
   playerInside: 0
+  anim: {fileID: 0}
+  isBoss: 1
 --- !u!114 &1457941314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -769,11 +771,11 @@ LODGroup:
   serializedVersion: 2
   m_LocalReferencePoint: {x: 0.2102204, y: -0.06355935, z: 0}
   m_Size: 2.127121
-  m_FadeMode: 0
+  m_FadeMode: 1
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.01947946
+  - screenRelativeHeight: 0.026484612
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 0}
@@ -2233,7 +2235,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2903208896888162095}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2d8418b0b9634b1892b0268dd9c2743, type: 3}
   m_Name: 
