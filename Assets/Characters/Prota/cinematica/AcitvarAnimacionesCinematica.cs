@@ -15,4 +15,13 @@ public class AcitvarAnimacionesCinematica : MonoBehaviour
         animator.SetBool("activarCinematica", false);
     }
 
+    public void ActivarCinematicaLanzador()
+    {
+        animator.SetBool("colacarLanzador", true);
+    }
+    public void DeactivarCinematicaLanzador()
+    {
+        animator.SetBool("colacarLanzador", false);
+    }
+
 }

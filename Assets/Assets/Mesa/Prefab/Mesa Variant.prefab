@@ -77,7 +77,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 5c4458c6768109e42bcb538d7e1fc6a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 8275195e9836f9b4c832e72a71509c52, type: 3}
       propertyPath: m_Name
-      value: Mesa Variant (1)
+      value: Mesa Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6754502410651939299, guid: 8275195e9836f9b4c832e72a71509c52, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -121,6 +121,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 175.95695, y: 2.8897476, z: 89.53151}
   m_Center: {x: 0.116100304, y: 71.34622, z: -0.13012312}
+--- !u!23 &4425660064461090678 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6754502410651939299, guid: 8275195e9836f9b4c832e72a71509c52, type: 3}
+  m_PrefabInstance: {fileID: 6978268552645598869}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &5021962175411518087 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -6528427551962848238, guid: 8275195e9836f9b4c832e72a71509c52, type: 3}
+  m_PrefabInstance: {fileID: 6978268552645598869}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6012005652548410357 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5496321123732585120, guid: 8275195e9836f9b4c832e72a71509c52, type: 3}
@@ -139,3 +149,34 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 168.56194, y: 6.4242096, z: 81.532906}
   m_Center: {x: 0.14261244, y: 68.33223, z: -0.13012312}
+--- !u!23 &6163804528325036964 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -5377876533942004431, guid: 8275195e9836f9b4c832e72a71509c52, type: 3}
+  m_PrefabInstance: {fileID: 6978268552645598869}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7788592475990746052 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8275195e9836f9b4c832e72a71509c52, type: 3}
+  m_PrefabInstance: {fileID: 6978268552645598869}
+  m_PrefabAsset: {fileID: 0}
+--- !u!205 &904076933069922836
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7788592475990746052}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0.1160965, y: 35.498566, z: -0.13012314}
+  m_Size: 175.95691
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.053176578
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 6163804528325036964}
+    - renderer: {fileID: 5021962175411518087}
+    - renderer: {fileID: 4425660064461090678}
+  m_Enabled: 1
