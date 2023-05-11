@@ -8,6 +8,7 @@ using DG.Tweening;
 public class boostspeed : MonoBehaviour
 {
     [SerializeField] Rigidbody Rb;
+    [SerializeField] GameObject particulas;
     public float addSpeed = 10000f;
     [SerializeField] CinemachineVirtualCamera cam;
     [SerializeField] float fovToChange = 90;
@@ -26,6 +27,8 @@ public class boostspeed : MonoBehaviour
         {
             Rb.AddForce(transform.forward * addSpeed);
             ChangeFovValues(fovToChange);
+
+            particulas.SetActive(true);
         }
     }
     void OnTriggerExit(Collider other)
@@ -39,6 +42,8 @@ public class boostspeed : MonoBehaviour
     void TimeToWaitFov()
     {
         ChangeFovValues(startFov);
+
+        particulas.SetActive(false);
     }
 
     void ChangeFovValues(float desiredFov)
