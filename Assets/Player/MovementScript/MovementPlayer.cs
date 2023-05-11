@@ -170,11 +170,8 @@ public class MovementPlayer : MonoBehaviour
             HandleHeadbob();
 
             //Si lockear los controles es falso  sigues caminando
-            //if (lockControls == false || bikeLockControls == false) { PlayerMovement(); }
-            if(bikeLockControls == false)
-            {
-                PlayerMovement();
-            }
+            if (lockControls == false && bikeLockControls == false) { PlayerMovement(); }
+            
 
 
 
