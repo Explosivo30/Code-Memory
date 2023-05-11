@@ -65,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2b8ae15018b211049925fb421fe39b1d, type: 3}
       propertyPath: m_Name
-      value: roca_05_low
+      value: roca_05_low Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6859200518998199075, guid: 2b8ae15018b211049925fb421fe39b1d, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -73,3 +73,32 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 78e0296e44b9c584fbd2689beb4c299e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b8ae15018b211049925fb421fe39b1d, type: 3}
+--- !u!23 &2351509210149028436 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6859200518998199075, guid: 2b8ae15018b211049925fb421fe39b1d, type: 3}
+  m_PrefabInstance: {fileID: 9192686510920305015}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8310146802374620198 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2b8ae15018b211049925fb421fe39b1d, type: 3}
+  m_PrefabInstance: {fileID: 9192686510920305015}
+  m_PrefabAsset: {fileID: 0}
+--- !u!205 &3569021723341249911
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8310146802374620198}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 2.1026802, y: 66.98373, z: 7.794693}
+  m_Size: 146.56265
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.09526283
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 2351509210149028436}
+  m_Enabled: 1

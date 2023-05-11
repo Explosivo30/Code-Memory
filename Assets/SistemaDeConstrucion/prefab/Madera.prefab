@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6529876520852879082}
+  - component: {fileID: 7540811804233741886}
   m_Layer: 0
   m_Name: Madera
   m_TagString: Untagged
@@ -32,6 +33,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!205 &7540811804233741886
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672576521436547940}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -5.446007, y: 0.028113741, z: 0.37801224}
+  m_Size: 0.5711851
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.07875394
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 8223548104948970950}
+  m_Enabled: 1
 --- !u!1 &4808358265436323084
 GameObject:
   m_ObjectHideFlags: 0
