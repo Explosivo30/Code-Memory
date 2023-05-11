@@ -11,6 +11,7 @@ public class hoverBikeController : MonoBehaviour
     [SerializeField] Rigidbody rigidbody;
     [SerializeField] GameObject playerPosicionBajada;
     [SerializeField] GameObject Canvas;
+    [SerializeField] MovementPlayer movementPlayer; 
     [SerializeField] Vector3 centerOfMass;
     public float acceleration;
     //public float currrentTurboSpeed = 1f;
@@ -89,7 +90,7 @@ public class hoverBikeController : MonoBehaviour
         {
             activarAnimacion = false;
             inBike = false;
-            Invoke("SpawnearPlayer", 3f);
+            Invoke("SpawnearPlayer", 2.7f);
             Invoke("DesactivarCam", 3f);
             YaPuedeBajarDeHoverBike = false;
             rigidbody.drag = 4f;
@@ -208,6 +209,16 @@ public class hoverBikeController : MonoBehaviour
         Player.transform.rotation = Quaternion.AngleAxis(rotacionPlayerBajadaHoverBike, Vector3.up);
         PlayerInBike.SetActive(false);
         Player.SetActive(true);
+        Invoke("DescativarFrezeControles", 0.01f);
+    }
+    void DescativarFrezeControles()
+    {
+        movementPlayer.SetBikeLockControls(true);
+        Invoke("FreezePlayer", 2f);
+    }
+    public void FreezePlayer()
+    {
+        movementPlayer.SetBikeLockControls(false);
     }
     public void DesactivarCam()
     {

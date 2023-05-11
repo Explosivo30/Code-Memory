@@ -15,7 +15,8 @@ public class MovementPlayer : MonoBehaviour
     [SerializeField] float cooldownBoostTotal;
     [SerializeField] float cooldownBoostTimer = 5f;
     [SerializeField] float gravity = -9.81f;
-    bool lockControls = false;
+    public bool lockControls = false;
+    [SerializeField]bool bikeLockControls = false; 
     [SerializeField]bool playerTouchingSomething;
 
     #region SprintWallRunning
@@ -169,7 +170,13 @@ public class MovementPlayer : MonoBehaviour
             HandleHeadbob();
 
             //Si lockear los controles es falso  sigues caminando
-            if (lockControls == false) { PlayerMovement(); }
+            //if (lockControls == false || bikeLockControls == false) { PlayerMovement(); }
+            if(bikeLockControls == false)
+            {
+                PlayerMovement();
+            }
+
+
 
             IsWallRunning();
             Jump();
@@ -213,7 +220,6 @@ public class MovementPlayer : MonoBehaviour
 
 
         Vector3 wallFordward = Vector3.Cross(wallNormal, transform.up);
-        //lockControls = true;
         ch.Move(move * speed * Time.deltaTime);
 
         //TODO EMPUJAR POR LA NORMAL DE LA PARED NO TENGO ADDFORCE
@@ -250,7 +256,8 @@ public class MovementPlayer : MonoBehaviour
     }
     void PlayerMovement()
     {
-
+        Debug.Log("moviendome");
+        Debug.Log(bikeLockControls);
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
         if (x == 0f && z == 0f)
@@ -478,6 +485,14 @@ public class MovementPlayer : MonoBehaviour
     {
         ResetVelocity();
     }
+
+    public void SetBikeLockControls(bool put)
+    {
+        bikeLockControls = put;
+    }
+
+
+
 
 
     /*
