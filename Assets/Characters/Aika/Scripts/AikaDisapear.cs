@@ -45,8 +45,6 @@ public class AikaDisapear : MonoBehaviour
         isRunning = true;
 
         Debug.Log("DissolveTo");
-        //coroutine = WaitToDisappear(nonDissolvedProgress, mat);
-
 
         while (progress != destination)
         {
@@ -75,27 +73,5 @@ public class AikaDisapear : MonoBehaviour
         }
     }
 
-
-    IEnumerator WaitToDisappear(float origin, Material mat)
-    {
-        float counter = 1f;
-        while(origin < 1f)
-        {
-            origin += counter * Time.deltaTime;
-            mat.SetFloat("_Disolve_Amount", origin);
-            yield return new WaitForEndOfFrame();
-        }
-    }
-
-    IEnumerator WaitToAppear(float origin, Material mat)
-    {
-        float counter = 1f;
-        while (counter > 0.1f)
-        {
-            origin -= counter * Time.deltaTime;
-            mat.SetFloat("_Disolve_Amount", origin);
-            yield return new WaitForEndOfFrame();
-        }
-    }
 
 }

@@ -11,7 +11,7 @@ public class EnemyAgressiveState : EnemyState
     EnemyFOV enemyFOV;
     [SerializeField] float speedToRotate = 1f;
     Coroutine lookCoroutine;
-
+    [SerializeField] Animator anim;
     bool chasePlayer = false;
 
     #region AttackPlayer
@@ -47,6 +47,7 @@ public class EnemyAgressiveState : EnemyState
     {
         if (enemyFOV.GetPlayerInside() == false)
         {
+            anim.SetBool("isAnimPlayerInside", false);
             return alertState;
         }
         else
@@ -64,6 +65,7 @@ public class EnemyAgressiveState : EnemyState
         {
             StopCoroutine(lookCoroutine);
         }
+        anim.SetBool("isAnimPlayerInside", true);
 
         lookCoroutine = StartCoroutine(LookAt());
     }
