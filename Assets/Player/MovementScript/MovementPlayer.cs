@@ -95,6 +95,8 @@ public class MovementPlayer : MonoBehaviour
     [SerializeField] float cameraSlideDown = -0.5f;
     bool isSliding = false;
 
+    [SerializeField] AudioSource audioSalto;
+
 
     private void OnEnable()
     {
@@ -303,6 +305,8 @@ public class MovementPlayer : MonoBehaviour
             }
             isGrounded = false;
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            audioSalto.Play();
+            Debug.Log("Salto saltado con audio");
         }
     }
 
