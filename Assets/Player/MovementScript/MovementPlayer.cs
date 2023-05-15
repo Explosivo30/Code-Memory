@@ -253,8 +253,8 @@ public class MovementPlayer : MonoBehaviour
     }
     void PlayerMovement()
     {
-        Debug.Log("moviendome");
-        Debug.Log(bikeLockControls);
+        //Debug.Log("moviendome");
+        //Debug.Log(bikeLockControls);
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
         if (x == 0f && z == 0f)

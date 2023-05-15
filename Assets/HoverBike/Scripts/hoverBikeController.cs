@@ -33,6 +33,7 @@ public class hoverBikeController : MonoBehaviour
     private float rotacionPlayerBajadaHoverBike;
     [SerializeField] GameObject Player;
     [SerializeField] GameObject PlayerInBike;
+    [SerializeField] GameObject sonido;
     [SerializeField] float maxRotation = 1f;
  
     public bool inBike = false;
@@ -80,6 +81,7 @@ public class hoverBikeController : MonoBehaviour
             Invoke("OcultarPlayer", 0f);
             Invoke("TiempoDeEsperaParaBajar", 0.3f);
             playerInisde = false;
+            sonido.SetActive(true);
         }
         if (inBike == true)
         {
@@ -94,6 +96,7 @@ public class hoverBikeController : MonoBehaviour
             Invoke("DesactivarCam", 3f);
             YaPuedeBajarDeHoverBike = false;
             rigidbody.drag = 4f;
+            sonido.SetActive(false);
         }
         if (inBike == false)
         {
