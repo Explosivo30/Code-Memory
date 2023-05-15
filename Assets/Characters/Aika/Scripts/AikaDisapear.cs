@@ -56,10 +56,10 @@ public class AikaDisapear : MonoBehaviour
             ApplyProgressToAllMeshes(progress);
 
             yield return new WaitForEndOfFrame();
-            Debug.Log($"...... {progress} - {destination}");
+            //Debug.Log($"...... {progress} - {destination}");
         }
 
-        Debug.Log("... finished");
+        //Debug.Log("... finished");
 
         isRunning = false;
     }
