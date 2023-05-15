@@ -8,6 +8,8 @@ using UnityEngine.Animations;
 
 public class EnemyAgressiveState : EnemyState
 {
+    [SerializeField] ParticleSystem disparo;
+    [SerializeField] ParticleSystem carga;
     EnemyFOV enemyFOV;
     [SerializeField] float speedToRotate = 1f;
     Coroutine lookCoroutine;
@@ -20,7 +22,7 @@ public class EnemyAgressiveState : EnemyState
     [SerializeField] GameObject bullet;
 
     float timeToAttack;
-    float timeResetAttack = 3f;
+    float timeResetAttack = 0.2f;
 
     #endregion
 
@@ -123,7 +125,9 @@ public class EnemyAgressiveState : EnemyState
         if (timeToAttack < 0)
         {
             //playerAttack
-            Instantiate(bullet,fatherToRotate.position, fatherToRotate.rotation);
+            //Instantiate(bullet,fatherToRotate.position, fatherToRotate.rotation);
+            carga.Play();
+            disparo.Play();
             Debug.Log("Atacamos");
             timeToAttack = timeResetAttack;
         }

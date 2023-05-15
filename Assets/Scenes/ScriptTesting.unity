@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2873.248, g: 2529.914, b: 2245.3125, a: 1}
+  m_IndirectSpecularColor: {r: 2873.2305, g: 2530.0527, b: 2245.4336, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1346,6 +1346,14 @@ PrefabInstance:
       propertyPath: anim
       value: 
       objectReference: {fileID: 754806783}
+    - target: {fileID: 543923715874660211, guid: f5f1db0013f6fda4583d359494820461, type: 3}
+      propertyPath: carga
+      value: 
+      objectReference: {fileID: 3498721439398888168}
+    - target: {fileID: 543923715874660211, guid: f5f1db0013f6fda4583d359494820461, type: 3}
+      propertyPath: disparo
+      value: 
+      objectReference: {fileID: 6437769791052571050}
     - target: {fileID: 543923716448018536, guid: f5f1db0013f6fda4583d359494820461, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -1402,6 +1410,10 @@ PrefabInstance:
       propertyPath: playerSeen
       value: 
       objectReference: {fileID: 2597572299471033946}
+    - target: {fileID: 1431738347630789373, guid: f5f1db0013f6fda4583d359494820461, type: 3}
+      propertyPath: m_LODs.Array.data[0].screenRelativeHeight
+      value: 0.04944468
+      objectReference: {fileID: 0}
     - target: {fileID: 2983049995851654514, guid: f5f1db0013f6fda4583d359494820461, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -8503,6 +8515,11 @@ Transform:
   m_Father: {fileID: 5449346960064444670}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!198 &3498721439398888168 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5788587776951976377, guid: f5f1db0013f6fda4583d359494820461, type: 3}
+  m_PrefabInstance: {fileID: 647113564}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3499409668101855088
 GameObject:
   m_ObjectHideFlags: 0
@@ -11709,6 +11726,11 @@ Transform:
   m_Father: {fileID: 1851018835317218642}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!198 &6437769791052571050 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8428582472761510202, guid: f5f1db0013f6fda4583d359494820461, type: 3}
+  m_PrefabInstance: {fileID: 647113564}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6440222786655721675
 Transform:
   m_ObjectHideFlags: 0
