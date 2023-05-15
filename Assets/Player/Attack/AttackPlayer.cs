@@ -10,7 +10,7 @@ public class AttackPlayer : MonoBehaviour
 {
     [SerializeField] Animator anim;
     bool isAiming = false;
-
+    
     [SerializeField] AudioSource knifeShoot;
     #region Disparar Cuchillo
     [Tooltip("Cooldown entre cuchillo y cuchillo")]
@@ -24,7 +24,8 @@ public class AttackPlayer : MonoBehaviour
     [Tooltip("LayerMask que tienen los enemigos")]
     [SerializeField] LayerMask enemies;
     [SerializeField] float rangeBackKill = 3.5f;
-
+    //que solo puedas dfisapara cuando el alnzador este activo
+    public bool lanzadorActivado = false;
     #region SlowTime
     float slowedTimeScale = 0.2f;
     bool timeIsSlowed = false;
@@ -68,7 +69,7 @@ public class AttackPlayer : MonoBehaviour
             
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && lanzadorActivado == true)
         {
             
             if (currentCooldownAttack <= 0f)
