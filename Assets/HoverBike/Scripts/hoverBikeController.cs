@@ -217,7 +217,8 @@ public class hoverBikeController : MonoBehaviour
     void DescativarFrezeControles()
     {
         movementPlayer.SetBikeLockControls(true);
-        Invoke("FreezePlayer", 2f);
+        Invoke("FreezePlayer", 1.7f);
+        Canvas.SetActive(false);
     }
     public void FreezePlayer()
     {
