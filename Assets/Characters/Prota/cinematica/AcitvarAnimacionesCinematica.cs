@@ -24,4 +24,14 @@ public class AcitvarAnimacionesCinematica : MonoBehaviour
         animator.SetBool("colacarLanzador", false);
     }
 
+    public void ActivarCinematicaAikaMano()
+    {
+        animator.SetBool("activarAikaMano", true);
+        //Canviar el valor de false a true de la activacion de las particulas
+    }
+    public void DeactivarCinematicaAikaMano()
+    {
+        animator.SetBool("activarAikaMano", false);
+    }
+
 }
