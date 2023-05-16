@@ -8,11 +8,6 @@ public class MenuDePausa : MonoBehaviour
     [SerializeField] GameObject pauseMenu;
     [SerializeField] CameraMove camMove;
 
-    private void Awake()
-    {
-        
-    }
-
     public void OnContinue()
     {
         HidePauseMenu();
@@ -21,11 +16,14 @@ public class MenuDePausa : MonoBehaviour
 
     private void Update()
     {
+        /*
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             HidePauseMenu();
             ReturnGameTime();
         }
+        */
+        
     }
 
     void HidePauseMenu()
