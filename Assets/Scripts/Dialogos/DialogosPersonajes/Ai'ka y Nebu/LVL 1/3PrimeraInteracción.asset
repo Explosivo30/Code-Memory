@@ -1,0 +1,453 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8654477477361908767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5306911cf2b5e47b0294ed7d06e629, type: 3}
+  m_Name: c086519c-66a2-403b-b9ea-3e988debeef2
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogo: "\xBFUn caminante de estrellas? Gracias al Supervisor, llevo meses esperando
+    a alguien."
+  respuestas:
+  - 80ccc41e-bd40-4d28-b412-033359651acc
+  rect:
+    serializedVersion: 2
+    x: 30
+    y: 41
+    width: 200
+    height: 100
+--- !u!114 &-8375539341810742143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5306911cf2b5e47b0294ed7d06e629, type: 3}
+  m_Name: cced7b38-fba2-433c-861f-e0e2ba22da9b
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  dialogo: "\xBFSin supervivientes? \xBFNinguno?..."
+  respuestas:
+  - d4c357c2-d419-461f-a74a-f65468c0194d
+  rect:
+    serializedVersion: 2
+    x: 306
+    y: 157
+    width: 200
+    height: 100
+--- !u!114 &-6861080534810768450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5306911cf2b5e47b0294ed7d06e629, type: 3}
+  m_Name: 342f4db8-88a9-48b6-9f2d-a86a2f92cf56
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogo: "Oh, s\xED, al parecer mi planeta natal es el \xFAnico que prefiere no
+    hacer uso de sus cuerdas vocales para no influir en la creaci\xF3n del Supervisor
+    con nuestros ruidos. Tonter\xEDas, pero he descubierto que viene muy bien para
+    que otros no sepan qu\xE9 digo."
+  respuestas:
+  - 3b630abb-96a0-4126-af21-e34f62ee6118
+  rect:
+    serializedVersion: 2
+    x: 581
+    y: 43
+    width: 200
+    height: 100
+--- !u!114 &-5553193726547064074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5306911cf2b5e47b0294ed7d06e629, type: 3}
+  m_Name: bf247ae3-b984-4c5e-863f-5ae2bddd1db4
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  dialogo: "Algo as\xED\u2026 De todos modos, el planeta es grande, podr\xEDan estar
+    en cualquier parte, muriendo\u2026 He de darme prisa."
+  respuestas:
+  - 05993aac-b692-4fba-be6c-ed9706dd7f16
+  rect:
+    serializedVersion: 2
+    x: 814
+    y: 173
+    width: 200
+    height: 100
+--- !u!114 &-4442539465199243470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5306911cf2b5e47b0294ed7d06e629, type: 3}
+  m_Name: ba8ded73-e6b9-49ec-9867-1a3430f69616
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  dialogo: "\xBFBuena forma? Lo \xFAnico que he hecho en mi vida ha sido desarrollar
+    mi cuerpo, espero estar m\xE1s que a la altura. De acuerdo, vamos. Sin embargo,
+    no dudar\xE9 en dar media vuelta si veo que es una p\xE9rdida de tiempo."
+  respuestas:
+  - 603c0872-9f2a-4e41-adea-cb1f7d7b05bd
+  rect:
+    serializedVersion: 2
+    x: 812
+    y: 425
+    width: 200
+    height: 100
+--- !u!114 &-3820892940895711737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5306911cf2b5e47b0294ed7d06e629, type: 3}
+  m_Name: d4c357c2-d419-461f-a74a-f65468c0194d
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogo: "Oh\u2026 has venido buscando a alguien, verdad?..."
+  respuestas:
+  - bf247ae3-b984-4c5e-863f-5ae2bddd1db4
+  rect:
+    serializedVersion: 2
+    x: 576
+    y: 162
+    width: 200
+    height: 100
+--- !u!114 &-3006266101368665491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5306911cf2b5e47b0294ed7d06e629, type: 3}
+  m_Name: 4f0d6b2c-500d-43bf-8d05-2a62d6ec9a3f
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  dialogo: "Si no voy a buscarlos no va a hacerlo nadie, pero supongo que tienes
+    raz\xF3n. \xBFQu\xE9 propones?"
+  respuestas:
+  - 9c923558-7832-4921-8252-4ac0c8de971d
+  rect:
+    serializedVersion: 2
+    x: 294
+    y: 296
+    width: 200
+    height: 100
+--- !u!114 &-2465874003086034941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5306911cf2b5e47b0294ed7d06e629, type: 3}
+  m_Name: b74f1847-1061-498f-846e-c288713ca032
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  dialogo: "\xBFQu\xE9 hay que hacer?"
+  respuestas:
+  - 81dab7b8-8642-450f-9837-a0d5b38e671d
+  rect:
+    serializedVersion: 2
+    x: 290
+    y: 422
+    width: 200
+    height: 100
+--- !u!114 &-2402113825343311157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5306911cf2b5e47b0294ed7d06e629, type: 3}
+  m_Name: 80ccc41e-bd40-4d28-b412-033359651acc
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  dialogo: "\xBFQu\xE9? \xBFQu\xE9 est\xE1s haciendo? Esto es totalmente antinatural."
+  respuestas:
+  - 342f4db8-88a9-48b6-9f2d-a86a2f92cf56
+  rect:
+    serializedVersion: 2
+    x: 304
+    y: 41
+    width: 200
+    height: 100
+--- !u!114 &-2145083981473612682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5306911cf2b5e47b0294ed7d06e629, type: 3}
+  m_Name: 05993aac-b692-4fba-be6c-ed9706dd7f16
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogo: "\xA1Espera! \xBFD\xF3nde ir\xE1s? \xBFA dar vueltas por el desierto hasta
+    que te quedes sin provisiones y mueras junto a quienquiera que buscas?"
+  respuestas:
+  - 4f0d6b2c-500d-43bf-8d05-2a62d6ec9a3f
+  rect:
+    serializedVersion: 2
+    x: 35
+    y: 279
+    width: 200
+    height: 100
+--- !u!114 &-1191289130220561736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5306911cf2b5e47b0294ed7d06e629, type: 3}
+  m_Name: b3ec648c-b75a-40c9-95ef-3a5d1d01c2dd
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogo: "Hay una cosa m\xE1s que he de darte. Desde que llegu\xE9 he despertado
+    algo que no comprendo del todo, pero s\xED s\xE9 que puedo darte una parte. Toma.
+    Te ser\xE1 \xFAtil."
+  respuestas: []
+  rect:
+    serializedVersion: 2
+    x: 306
+    y: 545
+    width: 200
+    height: 100
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93760c4d873707f4097bac1200685602, type: 3}
+  m_Name: "3PrimeraInteracci\xF3n"
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -8654477477361908767}
+  - {fileID: -2402113825343311157}
+  - {fileID: -6861080534810768450}
+  - {fileID: 152323426163087250}
+  - {fileID: 4687852611030226697}
+  - {fileID: -8375539341810742143}
+  - {fileID: -3820892940895711737}
+  - {fileID: -5553193726547064074}
+  - {fileID: -2145083981473612682}
+  - {fileID: -3006266101368665491}
+  - {fileID: 7316293463824781190}
+  - {fileID: 689166928122083238}
+  - {fileID: 8492398812911557445}
+  - {fileID: -2465874003086034941}
+  - {fileID: 2432766565895017349}
+  - {fileID: -4442539465199243470}
+  - {fileID: 6643786062106431228}
+  - {fileID: -1191289130220561736}
+  newNodeOffset: {x: 200, y: 0}
+--- !u!114 &152323426163087250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5306911cf2b5e47b0294ed7d06e629, type: 3}
+  m_Name: 3b630abb-96a0-4126-af21-e34f62ee6118
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  dialogo: "\xBFEres la \xFAnica extranjera de este lugar?\xBFSabes si hay alguien
+    m\xE1s que haya sobrevivido a un accidente?"
+  respuestas:
+  - f3f8a8c0-5a73-4fcf-85cc-fea9779b7990
+  rect:
+    serializedVersion: 2
+    x: 781
+    y: 43
+    width: 200
+    height: 100
+--- !u!114 &689166928122083238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5306911cf2b5e47b0294ed7d06e629, type: 3}
+  m_Name: 105efc82-fd71-4cbf-be8b-3d340bc66fed
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  dialogo: "No parec\xEDan muy dispuestos a recibir ayuda"
+  respuestas:
+  - cecf10c9-b31b-4297-844b-49376da3fe77
+  rect:
+    serializedVersion: 2
+    x: 813
+    y: 303
+    width: 200
+    height: 100
+--- !u!114 &2432766565895017349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5306911cf2b5e47b0294ed7d06e629, type: 3}
+  m_Name: 81dab7b8-8642-450f-9837-a0d5b38e671d
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogo: "Vi c\xF3mo los soldados se dirig\xEDan a la parte trasera de la monta\xF1a,
+    por el paso cerca de los tres pilares. Si nos acercamos all\xED, podr\xEDamos
+    averiguar qu\xE9 traman y quiz\xE1 podamos desbaratarlos. Pareces en buena forma,
+    nos vendr\xE1 bien."
+  respuestas:
+  - ba8ded73-e6b9-49ec-9867-1a3430f69616
+  rect:
+    serializedVersion: 2
+    x: 572
+    y: 424
+    width: 200
+    height: 100
+--- !u!114 &4687852611030226697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5306911cf2b5e47b0294ed7d06e629, type: 3}
+  m_Name: f3f8a8c0-5a73-4fcf-85cc-fea9779b7990
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogo: "En el tiempo que llevo aqu\xED he visto que las naves estrelladas sin
+    supervivientes son el fen\xF3meno meteorol\xF3gico m\xE1s com\xFAn, aparte de
+    las tormentas de arena."
+  respuestas:
+  - cced7b38-fba2-433c-861f-e0e2ba22da9b
+  rect:
+    serializedVersion: 2
+    x: 47
+    y: 153
+    width: 200
+    height: 100
+--- !u!114 &6643786062106431228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5306911cf2b5e47b0294ed7d06e629, type: 3}
+  m_Name: 603c0872-9f2a-4e41-adea-cb1f7d7b05bd
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogo: "Si, claro, como quieras, pero toma eso que hay en la mesa, te har\xE1
+    falta. Es rudimentario, pero dada la baja equipaci\xF3n de los soldados ser\xE1
+    \xFAtil, es lo bueno de la Secta, es el nivel militar m\xE1s bajo."
+  respuestas:
+  - b3ec648c-b75a-40c9-95ef-3a5d1d01c2dd
+  rect:
+    serializedVersion: 2
+    x: 39
+    y: 540
+    width: 200
+    height: 100
+--- !u!114 &7316293463824781190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5306911cf2b5e47b0294ed7d06e629, type: 3}
+  m_Name: 9c923558-7832-4921-8252-4ac0c8de971d
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogo: "En el tiempo que llevo en este basurero he descubierto que la Conjunci\xF3n
+    mand\xF3 aqu\xED a su S\xE9quito buscando algo concreto. No s\xE9 el qu\xE9,
+    pero debe ser importante. A causa de ello los aldeanos de este poblado est\xE1n
+    esclavizados desde hace decenas de generaciones. Yo puedo ayudarte a buscar a
+    quien quieras si primero tratamos de liberar a esta gente"
+  respuestas:
+  - 105efc82-fd71-4cbf-be8b-3d340bc66fed
+  rect:
+    serializedVersion: 2
+    x: 574
+    y: 303
+    width: 200
+    height: 100
+--- !u!114 &8492398812911557445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5306911cf2b5e47b0294ed7d06e629, type: 3}
+  m_Name: cecf10c9-b31b-4297-844b-49376da3fe77
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogo: "T\xFA tampoco lo estar\xEDas si los extranjeros fueran los que te han
+    esclavizado."
+  respuestas:
+  - b74f1847-1061-498f-846e-c288713ca032
+  rect:
+    serializedVersion: 2
+    x: 35
+    y: 414
+    width: 200
+    height: 100
