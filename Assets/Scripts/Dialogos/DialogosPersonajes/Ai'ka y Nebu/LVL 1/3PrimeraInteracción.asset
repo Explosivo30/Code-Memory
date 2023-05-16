@@ -229,29 +229,6 @@ MonoBehaviour:
     y: 279
     width: 200
     height: 100
---- !u!114 &-1191289130220561736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad5306911cf2b5e47b0294ed7d06e629, type: 3}
-  m_Name: b3ec648c-b75a-40c9-95ef-3a5d1d01c2dd
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  dialogo: "Hay una cosa m\xE1s que he de darte. Desde que llegu\xE9 he despertado
-    algo que no comprendo del todo, pero s\xED s\xE9 que puedo darte una parte. Toma.
-    Te ser\xE1 \xFAtil."
-  respuestas: []
-  rect:
-    serializedVersion: 2
-    x: 306
-    y: 545
-    width: 200
-    height: 100
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,15 +368,13 @@ MonoBehaviour:
   m_Name: 603c0872-9f2a-4e41-adea-cb1f7d7b05bd
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  dialogo: "Si, claro, como quieras, pero toma eso que hay en la mesa, te har\xE1
-    falta. Es rudimentario, pero dada la baja equipaci\xF3n de los soldados ser\xE1
-    \xFAtil, es lo bueno de la Secta, es el nivel militar m\xE1s bajo."
-  respuestas:
-  - b3ec648c-b75a-40c9-95ef-3a5d1d01c2dd
+  dialogo: "Si, claro, como quieras. Antes de nada, quiero darte algo que reside
+    en mi interior. T\xF3malo."
+  respuestas: []
   rect:
     serializedVersion: 2
-    x: 39
-    y: 540
+    x: 48
+    y: 553
     width: 200
     height: 100
 --- !u!114 &7316293463824781190
