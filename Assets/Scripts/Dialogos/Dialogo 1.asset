@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: 8635c739-3265-46f6-b70e-254b83fc1e8d
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  dialogo: 
-  respuestas: []
+  dialogo: eaweaw
+  respuestas:
+  - b1e168a1-a536-4d39-9900-72ef7ffe1c16
+  - 7141d3ce-279a-40a0-8b6f-afe5d9309921
   rect:
     serializedVersion: 2
-    x: 817
-    y: 62
+    x: 655
+    y: 56
     width: 200
     height: 100
 --- !u!114 &-5367143594556791364
@@ -59,6 +61,8 @@ MonoBehaviour:
   - {fileID: -5367143594556791364}
   - {fileID: 121035549595023182}
   - {fileID: -8014782233491861033}
+  - {fileID: 2680532681432080031}
+  - {fileID: 3736851098099082828}
   newNodeOffset: {x: 200, y: 0}
 --- !u!114 &121035549595023182
 MonoBehaviour:
@@ -73,12 +77,54 @@ MonoBehaviour:
   m_Name: 17a909f8-5d1a-40db-af98-26a60a533324
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  dialogo: ewaeawe
+  dialogo: ewaeaweewaeaw
   respuestas:
   - 8635c739-3265-46f6-b70e-254b83fc1e8d
   rect:
     serializedVersion: 2
-    x: 572
-    y: 321
+    x: 389
+    y: 232
+    width: 200
+    height: 100
+--- !u!114 &2680532681432080031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5306911cf2b5e47b0294ed7d06e629, type: 3}
+  m_Name: b1e168a1-a536-4d39-9900-72ef7ffe1c16
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogo: aweaw
+  respuestas: []
+  rect:
+    serializedVersion: 2
+    x: 882
+    y: 53
+    width: 200
+    height: 100
+--- !u!114 &3736851098099082828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5306911cf2b5e47b0294ed7d06e629, type: 3}
+  m_Name: 7141d3ce-279a-40a0-8b6f-afe5d9309921
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogo: eaweaw
+  respuestas: []
+  rect:
+    serializedVersion: 2
+    x: 860
+    y: 195
     width: 200
     height: 100
