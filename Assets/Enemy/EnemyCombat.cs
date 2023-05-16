@@ -25,10 +25,5 @@ public class EnemyCombat : MonoBehaviour
     {
         Destroy(gameObject);
     }
-
-
-
     //Hola Edgar m'agraden los flors vermelles y els keebabs, espero que a tu també. Aquest codi es molt bonic, com els canelon beshamel.
-
-
 }

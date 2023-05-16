@@ -11,6 +11,6 @@ public class CanvasDialogo : MonoBehaviour
 
     private void Start()
     {
-        textDialogo.text = dialogoAika.GetRootNode().dialogo;
+        textDialogo.text = dialogoAika.GetRootNode().GetDialogo();
     }
 }
