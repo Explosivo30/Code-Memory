@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93760c4d873707f4097bac1200685602, type: 3}
+  m_Name: 1Aterrizaje
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 3227106858036136497}
+  newNodeOffset: {x: 200, y: 0}
+--- !u!114 &3227106858036136497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5306911cf2b5e47b0294ed7d06e629, type: 3}
+  m_Name: 55b4b647-d684-403d-b647-e88bb2a23d04
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  dialogo: "Mam\xE1, pap\xE1... juro que os encontrar\xE9, no importa lo que haga
+    falta."
+  respuestas: []
+  rect:
+    serializedVersion: 2
+    x: 223
+    y: 278
+    width: 200
+    height: 100
