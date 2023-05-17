@@ -17,13 +17,26 @@ public class animationHoverBike : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate ()
     {
-        if (hoverbike.activarAnimacion == true)
+        if (hoverbike.activarAnimacionsubidaYBajada == true)
         {
             animator.SetBool("Conducir", true);
         }
-        if (hoverbike.activarAnimacion == false)
+        if (hoverbike.activarAnimacionsubidaYBajada == false)
         {
             animator.SetBool("Conducir", false);
+        }
+        if (hoverbike.activarAnimacionturnLeft == true)
+        {
+            animator.SetBool("TurnLeft", true);
+        }
+        if (hoverbike.activarAnimacionturnRigth == true)
+        {
+            animator.SetBool("TurnRigth", true);
+        }
+        if (hoverbike.activarAnimacionturnRigth == false && hoverbike.activarAnimacionturnLeft == false)
+        {
+            animator.SetBool("TurnRigth", false);
+            animator.SetBool("TurnLeft", false);
         }
     }
 }

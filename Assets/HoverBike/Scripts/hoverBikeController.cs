@@ -11,6 +11,8 @@ public class hoverBikeController : MonoBehaviour
     [SerializeField] Rigidbody rigidbody;
     [SerializeField] GameObject playerPosicionBajada;
     [SerializeField] GameObject Canvas;
+    [SerializeField] GameObject ManillarAOCultar;
+    [SerializeField] GameObject ManillarManos;
     [SerializeField] MovementPlayer movementPlayer; 
     [SerializeField] Vector3 centerOfMass;
     public float acceleration;
@@ -38,7 +40,9 @@ public class hoverBikeController : MonoBehaviour
  
     public bool inBike = false;
     public bool playerInisde = false;
-    public bool activarAnimacion = false;
+    public bool activarAnimacionsubidaYBajada = false;
+    public bool activarAnimacionturnLeft = false;
+    public bool activarAnimacionturnRigth = false;
     [SerializeField] float extraGravity = 500f;
     private bool YaPuedeBajarDeHoverBike = false;
     private bool IsGorund = true;
@@ -85,12 +89,35 @@ public class hoverBikeController : MonoBehaviour
         }
         if (inBike == true)
         {
+            Invoke("ActivarManillar", 1f);
             curretTimeToWait += 1;
+            
+            if (Input.GetKey(KeyCode.A))
+            {
+                activarAnimacionturnLeft = true;
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                activarAnimacionturnRigth = true;
+            }
+            if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+            {
+                activarAnimacionturnLeft = false;
+                activarAnimacionturnRigth = false;
+            }
+            if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D))
+            {
+                activarAnimacionturnLeft = false;
+                activarAnimacionturnRigth = false;
+            }
+
         }
         //GirarMoto();
         if ((inBike == true) && (Input.GetKeyDown(KeyCode.E)) && (YaPuedeBajarDeHoverBike == true) && IsGorund == true)
         {
-            activarAnimacion = false;
+            ManillarAOCultar.SetActive(true);
+            ManillarManos.SetActive(false);
+            activarAnimacionsubidaYBajada = false;
             inBike = false;
             Invoke("SpawnearPlayer", 2.7f);
             Invoke("DesactivarCam", 3f);
@@ -163,6 +190,12 @@ public class hoverBikeController : MonoBehaviour
         }
         return Direction;
     }
+    void ActivarManillar()
+    {
+        ManillarAOCultar.SetActive(false);
+        ManillarManos.SetActive(true);
+    }
+
     public void MovimientoHoverBike()
     {
         if (Physics.Raycast(transform.position, transform.up * -1, 5f))
@@ -173,6 +206,7 @@ public class hoverBikeController : MonoBehaviour
             rigidbody.AddForce(forwardForce);
             IsGorund = true;
             rigidbody.AddForce(-transform.up * basicExtraForce);
+            
         }
         else
         {
@@ -192,10 +226,11 @@ public class hoverBikeController : MonoBehaviour
         Vector3 newRotation = transform.eulerAngles;
         newRotation.z = Mathf.SmoothDampAngle(newRotation.z, Input.GetAxis("Horizontal") * -turnRotationAngle, ref rotationVelocity, turnRotationSeekSpeed);
         transform.eulerAngles = newRotation;
+        
     }
     void OcultarPlayer()
     {
-        activarAnimacion = true;
+        activarAnimacionsubidaYBajada = true;
         Player.SetActive(false);
         PlayerInBike.SetActive(true);
     }
