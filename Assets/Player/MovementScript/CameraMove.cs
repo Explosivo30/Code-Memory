@@ -39,8 +39,6 @@ public class CameraMove : MonoBehaviour
 
             xRotation = Mathf.Clamp(xRotation, -85, 60);
 
-            //TODO: only let it rotate  if you are not wall running with a boolean
-
             transform.localRotation = Quaternion.Euler(xRotation, 0f, rotateZ);
             if (isWallRunning == false)
             {
@@ -48,9 +46,6 @@ public class CameraMove : MonoBehaviour
             }
         }
 
-        
-
-        //END TODO HERE
 
     }
 
