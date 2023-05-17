@@ -23,6 +23,10 @@ public class EventForGame: MonoBehaviour
 
     public UnityEvent deadWhip = new UnityEvent();
 
+    public UnityEvent activarManillar = new UnityEvent();
 
-    
+    public UnityEvent desactivarManillar = new UnityEvent();
+
+
+
 }

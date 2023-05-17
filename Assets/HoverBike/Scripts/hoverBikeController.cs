@@ -51,6 +51,12 @@ public class hoverBikeController : MonoBehaviour
     [SerializeField] float basicExtraForce = 1000f;
     [SerializeField] int DragInBike = 4;
 
+    private void Awake()
+    {
+        EventForGame.instance.activarManillar.AddListener(ActivarManillar3Seconds);
+        EventForGame.instance.desactivarManillar.AddListener(DesactivarManillar);
+
+    }
 
     private void Start()
     {
@@ -59,6 +65,7 @@ public class hoverBikeController : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
         rigidbody.centerOfMass = centerOfMass;
         Canvas.SetActive(false);
+        
     }
     void OnTriggerEnter(Collider other)
     {
@@ -86,10 +93,11 @@ public class hoverBikeController : MonoBehaviour
             Invoke("TiempoDeEsperaParaBajar", 0.3f);
             playerInisde = false;
             sonido.SetActive(true);
+            EventForGame.instance.activarManillar.Invoke();
+
         }
         if (inBike == true)
         {
-            Invoke("ActivarManillar", 1f);
             curretTimeToWait += 1;
             
             if (Input.GetKey(KeyCode.A))
@@ -115,8 +123,7 @@ public class hoverBikeController : MonoBehaviour
         //GirarMoto();
         if ((inBike == true) && (Input.GetKeyDown(KeyCode.E)) && (YaPuedeBajarDeHoverBike == true) && IsGorund == true)
         {
-            ManillarAOCultar.SetActive(true);
-            ManillarManos.SetActive(false);
+          
             activarAnimacionsubidaYBajada = false;
             inBike = false;
             Invoke("SpawnearPlayer", 2.7f);
@@ -124,11 +131,13 @@ public class hoverBikeController : MonoBehaviour
             YaPuedeBajarDeHoverBike = false;
             rigidbody.drag = 4f;
             sonido.SetActive(false);
+            EventForGame.instance.desactivarManillar.Invoke();
         }
         if (inBike == false)
         {
             rigidbody.drag = 20f;
             curretTimeToWait += 0;
+            Invoke("DesactivarManillar", 0f);
         }
         /*if (Input.GetKeyDown("space"))
         {
@@ -190,10 +199,19 @@ public class hoverBikeController : MonoBehaviour
         }
         return Direction;
     }
+    void ActivarManillar3Seconds()
+    {
+        Invoke("ActivarManillar", 2.7f);
+    }
     void ActivarManillar()
     {
         ManillarAOCultar.SetActive(false);
         ManillarManos.SetActive(true);
+    }
+    void DesactivarManillar()
+    {
+        ManillarAOCultar.SetActive(true);
+        ManillarManos.SetActive(false);
     }
 
     public void MovimientoHoverBike()
@@ -211,7 +229,7 @@ public class hoverBikeController : MonoBehaviour
         else
         {
             Vector3 automaticTurnForce;
-            rigidbody.drag = 0.5f;
+            rigidbody.drag = 0.1f;
             IsGorund = false;
             float turn = Input.GetAxis("Vertical");
             automaticTurnForce = transform.right * Time.deltaTime * rigidbody.mass * turn * 100f;
