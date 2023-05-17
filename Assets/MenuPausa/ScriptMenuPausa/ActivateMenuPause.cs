@@ -6,15 +6,10 @@ public class ActivateMenuPause : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
     bool menuPauseIsActive = false;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
+        
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Time.timeScale = 0f;
@@ -25,6 +20,7 @@ public class ActivateMenuPause : MonoBehaviour
             
         }
         
+        /*
         if(pauseMenu.activeInHierarchy == false)
         {
             //Debug.Log("DEVOLVEMOS EL TIEMPO");
@@ -33,5 +29,6 @@ public class ActivateMenuPause : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
+        */
     }
 }
