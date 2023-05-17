@@ -78,7 +78,7 @@ public class AttackPlayer : MonoBehaviour
            
         }
 
-        /*
+        
 
         if (menuPausa.gameObject.activeInHierarchy == false)
         {
@@ -95,7 +95,7 @@ public class AttackPlayer : MonoBehaviour
 
             }
         }
-        */
+        
 
     }
 
