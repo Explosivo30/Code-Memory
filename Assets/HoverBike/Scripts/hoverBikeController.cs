@@ -53,9 +53,8 @@ public class hoverBikeController : MonoBehaviour
 
     void Awake()
     {
-        //EventForGame.instance.activarManillar.AddListener(ActivarManillar3Seconds);
+       // EventForGame.instance.activarManillar.AddListener(ActivarManillar3Seconds);
         //EventForGame.instance.desactivarManillar.AddListener(DesactivarManillar);
-
     }
 
     private void Start()

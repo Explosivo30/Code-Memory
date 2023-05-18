@@ -8269,6 +8269,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HoverBike
       objectReference: {fileID: 0}
+    - target: {fileID: 372109874398990781, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
+      propertyPath: m_TagString
+      value: HoverBike
+      objectReference: {fileID: 0}
     - target: {fileID: 1851845973306100913, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
       propertyPath: m_Lens.m_SensorSize.x
       value: 1.7067546
@@ -12684,10 +12688,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9161d4a048366124ea7764a24b236b26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToInstantiate: {fileID: 30711917, guid: ae53e2080e884bd4cb5bd843d30f836c, type: 3}
+  anim: {fileID: 0}
+  Disco: {fileID: 0}
   player: {fileID: 73975218}
   gravity: -18
   h: 5
+  timerToSpawn: 1
+  timer: 0
+  TimeToWaitToSpawn: 100
 --- !u!4 &8709533155789170949
 Transform:
   m_ObjectHideFlags: 0
