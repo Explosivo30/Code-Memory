@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class ApareceMoto : MonoBehaviour
 {
@@ -17,14 +18,24 @@ public class ApareceMoto : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Invoke("OnGounded", 2f);
+        Invoke("OcultarHoverBike", 1f);
+        //.transform.DOScale(new Vector3(0, 0, 0), 1);
+
+
     }
     void OnGounded()
     {
+        //HoverBike.transform.DOScale(new Vector3(1, 1, 1), 1);
+        //HoverBike.SetActive(true);
         PositionASpawnear = Disco.transform.position;
         rotacionobjectHoverBike = Disco.transform.eulerAngles.y;
         HoverBike.transform.position = new Vector3(PositionASpawnear.x, PositionASpawnear.y + 2f, PositionASpawnear.z);
         HoverBike.transform.rotation = Quaternion.AngleAxis(rotacionobjectHoverBike, Vector3.up);
         Invoke("EliminarDisco", 1f);
+    }
+    void OcultarHoverBike()
+    {
+        //HoverBike.SetActive(false);
     }
     void EliminarDisco()
     {

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpawnearHoverBike : MonoBehaviour
 {
+    [SerializeField] Animator anim;
     private Rigidbody objectToInstantiate;
     [SerializeField] GameObject Disco;
     [SerializeField] Transform player;
@@ -23,8 +24,11 @@ public class SpawnearHoverBike : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.V) && timerToSpawn == true)
         {
-            ThrowObject();
+            Invoke("ThrowObject",1.1f);
             timerToSpawn = false;
+            anim.SetBool("SacarMoto", true);
+            Invoke("DesactivarAnimacion", 0.5f);
+
         }
         if (timer >= TimeToWaitToSpawn)
         {
@@ -33,7 +37,10 @@ public class SpawnearHoverBike : MonoBehaviour
         }
         timer += 1f;
     }
-
+    void DesactivarAnimacion()
+    {
+        anim.SetBool("SacarMoto", false);
+    }
     #region ThrowWeapon
     void ThrowObject()
     {
