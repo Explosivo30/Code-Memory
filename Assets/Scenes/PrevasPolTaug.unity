@@ -2139,6 +2139,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameEvents
       objectReference: {fileID: 0}
+    - target: {fileID: 5266278712982340330, guid: c7cd77d3d9a9c694caa9846a3ebe2aac, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6531639730741565837, guid: c7cd77d3d9a9c694caa9846a3ebe2aac, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -8353,6 +8357,10 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 8709533155582706156}
+    - target: {fileID: 6281505725516691288, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cccca6dd51c720e489223a84dcfcab0b, type: 3}
 --- !u!1 &4900583064091027710

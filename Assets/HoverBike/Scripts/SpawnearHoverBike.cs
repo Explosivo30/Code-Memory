@@ -4,20 +4,34 @@ using UnityEngine;
 
 public class SpawnearHoverBike : MonoBehaviour
 {
-    [SerializeField] Rigidbody objectToInstantiate;
+    private Rigidbody objectToInstantiate;
+    [SerializeField] GameObject Disco;
     [SerializeField] Transform player;
     Rigidbody objectInstantiation;
     [SerializeField] float gravity = -18;
     [SerializeField] float h = 5f;
+    [SerializeField] bool timerToSpawn = true;
+    public float timer = 0;
+    [SerializeField] float TimeToWaitToSpawn = 100f;
 
-
+    private void Awake()
+    {
+        objectToInstantiate = Disco.GetComponent<Rigidbody>();
+    }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.V))
+        if (Input.GetKeyDown(KeyCode.V) && timerToSpawn == true)
         {
             ThrowObject();
+            timerToSpawn = false;
         }
+        if (timer >= TimeToWaitToSpawn)
+        {
+            timer = 0f;
+            timerToSpawn = true;
+        }
+        timer += 1f;
     }
 
     #region ThrowWeapon

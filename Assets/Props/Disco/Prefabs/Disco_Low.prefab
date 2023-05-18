@@ -143,6 +143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 911ef05c1d8163544b8d7274e77d414f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PositionASpawnear: {x: 0, y: 0, z: 0}
+  Disco: {fileID: 4042317902829814674}
 --- !u!54 &8206426720424834608
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -51,10 +51,10 @@ public class hoverBikeController : MonoBehaviour
     [SerializeField] float basicExtraForce = 1000f;
     [SerializeField] int DragInBike = 4;
 
-    private void Awake()
+    void Awake()
     {
-        EventForGame.instance.activarManillar.AddListener(ActivarManillar3Seconds);
-        EventForGame.instance.desactivarManillar.AddListener(DesactivarManillar);
+        //EventForGame.instance.activarManillar.AddListener(ActivarManillar3Seconds);
+        //EventForGame.instance.desactivarManillar.AddListener(DesactivarManillar);
 
     }
 
@@ -199,6 +199,7 @@ public class hoverBikeController : MonoBehaviour
         }
         return Direction;
     }
+    
     void ActivarManillar3Seconds()
     {
         Invoke("ActivarManillar", 2.7f);
@@ -213,7 +214,7 @@ public class hoverBikeController : MonoBehaviour
         ManillarAOCultar.SetActive(true);
         ManillarManos.SetActive(false);
     }
-
+    
     public void MovimientoHoverBike()
     {
         if (Physics.Raycast(transform.position, transform.up * -1, 5f))
