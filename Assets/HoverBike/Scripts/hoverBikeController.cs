@@ -53,8 +53,8 @@ public class hoverBikeController : MonoBehaviour
 
     void Awake()
     {
-       // EventForGame.instance.activarManillar.AddListener(ActivarManillar3Seconds);
-        //EventForGame.instance.desactivarManillar.AddListener(DesactivarManillar);
+        EventForGame.instance.activarManillar.AddListener(ActivarManillar3Seconds);
+        EventForGame.instance.desactivarManillar.AddListener(DesactivarManillar);
     }
 
     private void Start()
@@ -93,6 +93,7 @@ public class hoverBikeController : MonoBehaviour
             playerInisde = false;
             sonido.SetActive(true);
             EventForGame.instance.activarManillar.Invoke();
+
 
         }
         if (inBike == true)
@@ -134,9 +135,10 @@ public class hoverBikeController : MonoBehaviour
         }
         if (inBike == false)
         {
-            rigidbody.drag = 20f;
+            rigidbody.drag = 100f;
             curretTimeToWait += 0;
             Invoke("DesactivarManillar", 0f);
+            Invoke("ContrainMovments", 3f);
         }
         /*if (Input.GetKeyDown("space"))
         {
@@ -153,6 +155,8 @@ public class hoverBikeController : MonoBehaviour
     {
         if (inBike)
         {
+            rigidbody.constraints = RigidbodyConstraints.None;
+
             if (curretTimeToWaitStartMovement >= TimeToWaitStartMovements)
             {
                 MovimientoHoverBike();
@@ -213,7 +217,10 @@ public class hoverBikeController : MonoBehaviour
         ManillarAOCultar.SetActive(true);
         ManillarManos.SetActive(false);
     }
-    
+    void ContrainMovments()
+    {
+        rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+    }
     public void MovimientoHoverBike()
     {
         if (Physics.Raycast(transform.position, transform.up * -1, 5f))
