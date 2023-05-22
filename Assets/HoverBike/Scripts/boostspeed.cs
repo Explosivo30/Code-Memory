@@ -14,6 +14,8 @@ public class boostspeed : MonoBehaviour
     [SerializeField] float fovToChange = 90;
     [SerializeField] float startFov = 60;
     public float currentFov;
+    [SerializeField] AudioSource TurboSound;
+
 
     private void Awake()
     {
@@ -29,6 +31,7 @@ public class boostspeed : MonoBehaviour
             ChangeFovValues(fovToChange);
 
             particulas.SetActive(true);
+            TurboSound.Play();
         }
     }
     void OnTriggerExit(Collider other)

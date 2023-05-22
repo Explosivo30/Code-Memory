@@ -15,6 +15,7 @@ public class SpawnearHoverBike : MonoBehaviour
     public float timer = 0;
     [SerializeField] float TimeToWaitToSpawn = 100f;
 
+
     private void Awake()
     {
         objectToInstantiate = Disco.GetComponent<Rigidbody>();
