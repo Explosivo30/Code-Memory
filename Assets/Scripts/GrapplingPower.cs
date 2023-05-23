@@ -19,6 +19,7 @@ public class GrapplingPower : MonoBehaviour
     [SerializeField] float moveTowardsGrappedPoint = 25f;
     [SerializeField] float hookshotThrowSpeed = 500f;
     [SerializeField] Animator anim;
+    public bool gancho = false;
 
     public State state;
     public enum State
@@ -46,20 +47,21 @@ public class GrapplingPower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        if (gancho == true)
+        {
             switch (state)
             {
                 default:
                 case State.Normal:
                     hookshotTransform.transform.position = hookshotTransform.parent.transform.position;
-                DebugHitPointTransform.position = transform.position;
-                hookshotTransform.gameObject.SetActive(false);
-                
-                    
+                    DebugHitPointTransform.position = transform.position;
+                    hookshotTransform.gameObject.SetActive(false);
+
+
                     HandleHookshotStart();
                     isGrappling = false;
-                    
-                break;
+
+                    break;
                 case State.HookshotFlyingPlayer:
                     isGrappling = true;
                     HandleHookshotMovement();
@@ -68,6 +70,7 @@ public class GrapplingPower : MonoBehaviour
                     HandleHookshotThrow();
                     break;
             }
+        }
         
         
         

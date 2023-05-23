@@ -10,6 +10,7 @@ public class AttackPlayer : MonoBehaviour
 {
     [SerializeField] Animator anim;
     bool isAiming = false;
+    [SerializeField]MenuDePausa menuPausa;
     
     [SerializeField] AudioSource knifeShoot;
     #region Disparar Cuchillo
@@ -32,11 +33,6 @@ public class AttackPlayer : MonoBehaviour
 
     #endregion
 
-
-    private void Awake()
-    {
-       
-    }
 
     void Start()
     {
@@ -82,18 +78,24 @@ public class AttackPlayer : MonoBehaviour
            
         }
 
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            timeIsSlowed = true;
-            Time.timeScale = slowedTimeScale;
+        
 
-        }
-        else
+        if (menuPausa.gameObject.activeInHierarchy == false)
         {
-            Time.timeScale = 1f;
-            timeIsSlowed = false;
-            
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                timeIsSlowed = true;
+                Time.timeScale = slowedTimeScale;
+
+            }
+            else
+            {
+                Time.timeScale = 1f;
+                timeIsSlowed = false;
+
+            }
         }
+        
 
     }
 

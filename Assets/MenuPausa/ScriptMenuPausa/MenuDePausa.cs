@@ -5,37 +5,17 @@ using UnityEngine.UI;
 
 public class MenuDePausa : MonoBehaviour
 {
-    [SerializeField] GameObject pauseMenu;
+    [SerializeField] ActivateMenuPause pauseMenu;
     [SerializeField] CameraMove camMove;
-
-    private void Awake()
-    {
-        
-    }
 
     public void OnContinue()
     {
-        HidePauseMenu();
         ReturnGameTime();
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            HidePauseMenu();
-            ReturnGameTime();
-        }
-    }
-
-    void HidePauseMenu()
-    {
-        pauseMenu.SetActive(false);
     }
 
     void ReturnGameTime()
     {
-        Time.timeScale = 1.0f;
+        pauseMenu.Resume();
     }
 
     public void SetHorizontalValue(float sensH)

@@ -175,6 +175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2450959735170087586}
+  - component: {fileID: 156496938836852716}
   m_Layer: 0
   m_Name: Bandera_Grande
   m_TagString: Untagged
@@ -200,6 +201,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!205 &156496938836852716
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4160530231951308264}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.0030515194, y: 0.5269103, z: -0.031772956}
+  m_Size: 9.958594
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.03431958
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 7114570233465851780}
+    - renderer: {fileID: 3977438238819783174}
+    - renderer: {fileID: 5987955214237093023}
+  m_Enabled: 1
 --- !u!1 &6872921593246292822
 GameObject:
   m_ObjectHideFlags: 0

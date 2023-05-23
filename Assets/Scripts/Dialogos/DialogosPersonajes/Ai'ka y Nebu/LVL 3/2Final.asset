@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6579475290396118840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5306911cf2b5e47b0294ed7d06e629, type: 3}
+  m_Name: 9c3f471b-0ae5-4e5b-8e37-36718c9661ee
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  dialogo: "\xBFQu\xE9 era eso? De verdad, el universo aguarda cosas horribles."
+  respuestas:
+  - bdd0766a-9703-4519-930d-96a9b70feca2
+  rect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 200
+    height: 100
+--- !u!114 &-4173133052812488743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5306911cf2b5e47b0294ed7d06e629, type: 3}
+  m_Name: e0717824-be1b-4ab3-b76f-ca35044c9019
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  dialogo: "\xBFCrees que aqu\xED pas\xF3 algo m\xE1s?"
+  respuestas:
+  - bcaa3f1c-fbd0-41f1-8518-2f2eb696bc30
+  rect:
+    serializedVersion: 2
+    x: 494
+    y: 5
+    width: 200
+    height: 100
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93760c4d873707f4097bac1200685602, type: 3}
+  m_Name: 2Final
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -6579475290396118840}
+  - {fileID: 8369356435446820254}
+  - {fileID: -4173133052812488743}
+  - {fileID: 1813532470845759186}
+  newNodeOffset: {x: 200, y: 0}
+--- !u!114 &1813532470845759186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5306911cf2b5e47b0294ed7d06e629, type: 3}
+  m_Name: bcaa3f1c-fbd0-41f1-8518-2f2eb696bc30
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogo: "Hemos de descubrir m\xE1s. Avancemos. Hay misterios que esperan ser descubiertos."
+  respuestas: []
+  rect:
+    serializedVersion: 2
+    x: 694
+    y: 5
+    width: 200
+    height: 100
+--- !u!114 &8369356435446820254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5306911cf2b5e47b0294ed7d06e629, type: 3}
+  m_Name: bdd0766a-9703-4519-930d-96a9b70feca2
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogo: "Todo esto son restos de algo que vivi\xF3 en este planeta. Los ojos de
+    los aldeanos... Las banderas sin cambiar..."
+  respuestas:
+  - e0717824-be1b-4ab3-b76f-ca35044c9019
+  rect:
+    serializedVersion: 2
+    x: 249
+    y: 1
+    width: 200
+    height: 100
