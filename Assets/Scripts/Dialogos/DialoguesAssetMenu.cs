@@ -15,8 +15,11 @@ namespace Dialogo
         Vector2 newNodeOffset = new Vector2(200, 0);
 
         Dictionary<string, DialogoNode> nodeLookup = new Dictionary<string, DialogoNode>();
-        
 
+        private void Awake()
+        {
+            OnValidate();
+        }
 
         private void OnValidate()
         {
