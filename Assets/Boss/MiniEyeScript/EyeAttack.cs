@@ -14,6 +14,8 @@ public class EyeAttack : MonoBehaviour
 
     [SerializeField] float timeResetAttack = 3f;
 
+    [SerializeField] GameObject bullet;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +40,7 @@ public class EyeAttack : MonoBehaviour
             //Instantiate(bullet, fatherToRotate.position, fatherToRotate.rotation);
             DecideTimeAttack();
             timeToAttack = timeResetAttack;
+            
         }
     }
 
