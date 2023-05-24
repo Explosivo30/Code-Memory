@@ -22,25 +22,27 @@ public class boostspeed : MonoBehaviour
     {
         currentFov = startFov;
         DOTween.Init();
+
     }
 
     void OnTriggerEnter(Collider other)
     {
+
         if (other.CompareTag("Boost"))
         {
             Rb.AddForce(transform.forward * addSpeed);
             ChangeFovValues(fovToChange);
-
-            particulas.SetActive(true);
             TurboSound.Play();
+            particulas.SetActive(true);
+            
         }
         if (other.CompareTag("Boost2"))
         {
             Rb.AddForce(transform.forward * LowSpeed);
             ChangeFovValues(fovToChange);
-
-            particulas.SetActive(true);
             TurboSound.Play();
+            particulas.SetActive(true);
+            
         }
 
     }
@@ -50,6 +52,7 @@ public class boostspeed : MonoBehaviour
         {
             Rb.AddForce(Vector3.ProjectOnPlane(transform.forward, Vector3.up).normalized * addSpeed);
             Invoke("TimeToWaitFov", 1.5f);
+
         }
         if (other.CompareTag("Boost2"))
         {
