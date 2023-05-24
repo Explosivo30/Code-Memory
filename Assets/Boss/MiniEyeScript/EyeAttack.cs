@@ -36,8 +36,9 @@ public class EyeAttack : MonoBehaviour
         //Spawn gameobject with constant force until we have particles;
         if (timeToAttack < 0)
         {
+            Debug.Log("AtacaMiniojos");
             //playerAttack
-            //Instantiate(bullet, fatherToRotate.position, fatherToRotate.rotation);
+            Instantiate(bullet, transform.position,transform.rotation);
             DecideTimeAttack();
             timeToAttack = timeResetAttack;
             
