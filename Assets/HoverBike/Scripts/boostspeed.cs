@@ -10,6 +10,7 @@ public class boostspeed : MonoBehaviour
     [SerializeField] Rigidbody Rb;
     [SerializeField] GameObject particulas;
     public float addSpeed = 10000f;
+    public float LowSpeed = 5000f;
     [SerializeField] CinemachineVirtualCamera cam;
     [SerializeField] float fovToChange = 90;
     [SerializeField] float startFov = 60;
@@ -33,10 +34,24 @@ public class boostspeed : MonoBehaviour
             particulas.SetActive(true);
             TurboSound.Play();
         }
+        if (other.CompareTag("Boost2"))
+        {
+            Rb.AddForce(transform.forward * LowSpeed);
+            ChangeFovValues(fovToChange);
+
+            particulas.SetActive(true);
+            TurboSound.Play();
+        }
+
     }
     void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Boost"))
+        {
+            Rb.AddForce(Vector3.ProjectOnPlane(transform.forward, Vector3.up).normalized * addSpeed);
+            Invoke("TimeToWaitFov", 1.5f);
+        }
+        if (other.CompareTag("Boost2"))
         {
             Rb.AddForce(Vector3.ProjectOnPlane(transform.forward, Vector3.up).normalized * addSpeed);
             Invoke("TimeToWaitFov", 1.5f);

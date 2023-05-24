@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2416442492827032253
 Transform:
@@ -84,7 +84,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 1
@@ -280,6 +280,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7321053520503427823, guid: 5287305c512fe6e4bb65af83dc95a193, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -2582785051707682119, guid: 5287305c512fe6e4bb65af83dc95a193, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -860156181786700646, guid: 5287305c512fe6e4bb65af83dc95a193, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: -262657780806218636, guid: 5287305c512fe6e4bb65af83dc95a193, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -287,6 +299,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5287305c512fe6e4bb65af83dc95a193, type: 3}
       propertyPath: m_Name
       value: Setas_low Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5287305c512fe6e4bb65af83dc95a193, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3401447497653365154, guid: 5287305c512fe6e4bb65af83dc95a193, type: 3}
       propertyPath: m_Materials.Array.data[0]
