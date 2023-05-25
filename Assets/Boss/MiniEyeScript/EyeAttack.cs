@@ -15,6 +15,7 @@ public class EyeAttack : MonoBehaviour
     [SerializeField] float timeResetAttack = 3f;
 
     [SerializeField] GameObject bullet;
+    [SerializeField] bool detenerMovimiento = false;
 
     // Start is called before the first frame update
     void Start()
@@ -25,8 +26,11 @@ public class EyeAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(player);
-        AttackPlayer();
+        if (detenerMovimiento == false)
+        {
+            transform.LookAt(player);
+            AttackPlayer();
+        }      
     }
 
 
@@ -45,7 +49,10 @@ public class EyeAttack : MonoBehaviour
         }
     }
 
-
+    public void DetenerMovimneto()
+    {
+        detenerMovimiento = true;
+    }
 
     void DecideTimeAttack()
     {
