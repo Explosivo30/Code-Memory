@@ -13,6 +13,7 @@ public class ScriptMenuOpciones : MonoBehaviour
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        FadeOut(0f);
     }
 
     public void DeSelected()
@@ -31,7 +32,7 @@ public class ScriptMenuOpciones : MonoBehaviour
 
     void FadeIn(float duration)
     {
-        Fade(255f, duration, () =>
+        Fade(1f, duration, () =>
         {
             //canvasGroup.interactable = true;
             //canvasGroup.blocksRaycasts = true;
@@ -56,7 +57,9 @@ public class ScriptMenuOpciones : MonoBehaviour
             fadeTween.Kill(false);
         }
 
-        fadeTween = spriteRenderer.material.DOBlendableColor(new Color(2,4,5,0), duration);
+        fadeTween = spriteRenderer.DOFade(endValue, duration);
+        //fadeTween = spriteRenderer.material.DOFloat(endValue,"hola", duration);
+        //spriteRenderer.material.al
         fadeTween.onComplete += onEnd;
 
     }
