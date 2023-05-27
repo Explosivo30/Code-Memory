@@ -7,15 +7,14 @@ using UnityEngine.Audio;
 
 public class SettingsMenu : MonoBehaviour
 {
-
-    //Crear un Audio mixer exponer los parametros y cambiar el nombre de la variable expuesta a volume
     [SerializeField] AudioMixer audioMixer;
 
     Resolution[] resolutions;
 
     [SerializeField] TMP_Dropdown resolutionDropdown;
+    [SerializeField] SpriteRenderer spriteFullScreen;
 
-    
+    bool isFullScreen = true;
     private void Start()
     {
         
@@ -55,10 +54,20 @@ public class SettingsMenu : MonoBehaviour
         Debug.Log(QualitySettings.GetQualityLevel());
     }
 
-    public void SetFullScreen(bool isFullScreen)
+    public void SetFullScreen()
     {
-        
+        Debug.Log("Screen");
+        Debug.Log(isFullScreen);
+        isFullScreen = !isFullScreen;
         Screen.fullScreen = isFullScreen;
+        if(isFullScreen == false)
+        {
+            spriteFullScreen.enabled = false;
+        }
+        else
+        {
+            spriteFullScreen.enabled = true;
+        }
     }
 
 
