@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2872.8145, g: 2529.6152, b: 2244.9922, a: 1}
+  m_IndirectSpecularColor: {r: 2872.7812, g: 2529.5625, b: 2245.0156, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13943,6 +13943,10 @@ PrefabInstance:
     - target: {fileID: 1331922601651158044, guid: 910d1c24e425fdb4692a0116cf78f8b3, type: 3}
       propertyPath: m_Name
       value: UI_PausaForUnity
+      objectReference: {fileID: 0}
+    - target: {fileID: 1331922601651158044, guid: 910d1c24e425fdb4692a0116cf78f8b3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4633647492911784767, guid: 910d1c24e425fdb4692a0116cf78f8b3, type: 3}
       propertyPath: camMove
