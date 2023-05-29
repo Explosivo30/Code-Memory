@@ -5,10 +5,15 @@ using UnityEngine;
 public class EnemyStateManager : MonoBehaviour
 {
     [SerializeField]EnemyState currentState;
+    [SerializeField] bool idleEnemy = false;
     // Update is called once per frame
     void Update()
     {
-        RunEnemyStateMachine();
+        if (idleEnemy == false)
+        {
+            RunEnemyStateMachine();
+        }
+        
     }
 
     private void RunEnemyStateMachine()
