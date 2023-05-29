@@ -9,7 +9,7 @@ public class MovementPlayer : MonoBehaviour
     [SerializeField] Animator anim;
     [Header("Player")]
     float speed = 12f;
-    [SerializeField]float walkingSpeed = 12f;
+    [SerializeField]float walkingSpeed = 15f;
     [SerializeField] float maxSpeed = 40f;
     [SerializeField] CharacterController ch;
     [SerializeField] float cooldownBoostTotal;
