@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ClickMenuOptions : MonoBehaviour
 {
@@ -54,6 +55,11 @@ public class ClickMenuOptions : MonoBehaviour
         generalBoton.SetActive(false);
         sensibilidadBoton.SetActive(false);
         controlesBoton.SetActive(true);
+    }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenuFinal");
     }
 
 }

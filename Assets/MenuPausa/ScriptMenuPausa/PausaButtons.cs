@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PausaButtons : MonoBehaviour
 {
@@ -31,5 +32,10 @@ public class PausaButtons : MonoBehaviour
         controles.SetActive(false);
         sensibilidad.SetActive(false);
         menu.SetActive(true);
+    }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenuFinal");
     }
 }
