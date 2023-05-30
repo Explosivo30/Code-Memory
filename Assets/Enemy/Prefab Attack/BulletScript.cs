@@ -20,6 +20,15 @@ public class BulletScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            EventForGame.instance.bossHit.Invoke();          
+        }
+    Invoke("Detroy", 0.1f);
+    }
+    void Detroy()
+    {
         Destroy(gameObject);
+
     }
 }
