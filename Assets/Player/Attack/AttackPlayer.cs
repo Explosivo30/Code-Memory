@@ -33,6 +33,14 @@ public class AttackPlayer : MonoBehaviour
 
     #endregion
 
+    [SerializeField] GameObject spawnPoint;
+
+
+    private void Awake()
+    {
+        
+        EventForGame.instance.bossHit.AddListener(BossHit);
+    }
 
     void Start()
     {
@@ -114,7 +122,11 @@ public class AttackPlayer : MonoBehaviour
         Debug.Log("HITMARKER SPAWN");
     }
 
-
+    void BossHit()
+    {
+        Debug.Log("Collision BossHit");
+        transform.position = spawnPoint.transform.position;// spawnPoint.position;
+    }
    
 
 
