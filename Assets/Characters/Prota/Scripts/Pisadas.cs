@@ -10,7 +10,9 @@ public class Pisadas : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if ((1 << other.gameObject.layer & groundLayerMask) != 0)
-            { audioSource.Play(); }
+            { audioSource.Play();
+            Debug.Log("Pasos");
+            }
     }
 
 }
