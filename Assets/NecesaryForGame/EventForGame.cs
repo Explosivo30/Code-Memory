@@ -28,5 +28,10 @@ public class EventForGame: MonoBehaviour
     public UnityEvent desactivarManillar = new UnityEvent();
 
 
+    public UnityEvent bossHit = new UnityEvent();
+
+    
+
+
 
 }
