@@ -30,6 +30,8 @@ public class EventForGame: MonoBehaviour
 
     public UnityEvent bossHit = new UnityEvent();
 
+    public UnityEvent activarDialogo = new UnityEvent();
+
     
 
 

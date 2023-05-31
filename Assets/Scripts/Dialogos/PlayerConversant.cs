@@ -8,6 +8,8 @@ namespace Dialogo
     {
         [SerializeField] DialoguesAssetMenu currentDialogue;
 
+       
+
         public string GetText()
         {
             if(currentDialogue == null)
@@ -17,5 +19,13 @@ namespace Dialogo
 
            return currentDialogue.GetRootNode().GetDialogo();
         }
+
+
+        public void GetDialogue(DialoguesAssetMenu currentDialogue)
+        {
+            this.currentDialogue = currentDialogue;
+        }
+
+        
     }
 }
