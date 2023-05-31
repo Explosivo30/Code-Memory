@@ -23,7 +23,7 @@ public class CameraMove : MonoBehaviour
         posCameraX = transform.position.x;
         posCameraY = transform.position.y;
 
-        //Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame

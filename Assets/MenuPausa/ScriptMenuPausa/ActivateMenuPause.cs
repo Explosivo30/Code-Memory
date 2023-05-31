@@ -9,7 +9,6 @@ public class ActivateMenuPause : MonoBehaviour
 
     void Update()
     {
-        Debug.Log($"Cursor Lock - {Cursor.lockState}");
         if(Input.GetKeyDown(KeyCode.Escape))
             if(menuPauseIsActive)
             {
