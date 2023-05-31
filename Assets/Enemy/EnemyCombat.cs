@@ -7,13 +7,8 @@ using UnityEngine.Events;
 public class EnemyCombat : MonoBehaviour
 {
     [SerializeField] Transform myTransform;
-    
-    void Start()
-    {
-        //AttackEvents.attackEvents.AssasinationEvent.AddListener(Attacked);
-    }
 
-    // Update is called once per frame
+
  
     void Attacked()
     {

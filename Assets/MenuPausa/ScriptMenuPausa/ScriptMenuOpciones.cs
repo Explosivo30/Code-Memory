@@ -57,7 +57,7 @@ public class ScriptMenuOpciones : MonoBehaviour
             fadeTween.Kill(false);
         }
 
-        fadeTween = spriteRenderer.DOFade(endValue, duration);
+        fadeTween = spriteRenderer.DOFade(endValue, duration).SetUpdate(true);
         //fadeTween = spriteRenderer.material.DOFloat(endValue,"hola", duration);
         //spriteRenderer.material.al
         fadeTween.onComplete += onEnd;

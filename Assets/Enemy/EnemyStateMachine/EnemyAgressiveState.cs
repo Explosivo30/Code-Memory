@@ -5,6 +5,7 @@ using System.Threading;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Animations;
+using UnityEngine.UI;
 
 public class EnemyAgressiveState : EnemyState
 {
@@ -30,6 +31,10 @@ public class EnemyAgressiveState : EnemyState
 
     [SerializeField] EnemyAlertState alertState;
     Vector3 lastPosPlayer;
+
+    [SerializeField] Sprite visualizer;
+    [SerializeField] Image image;
+
     bool isInside = true;
     
     //MAKE IT FASTER
@@ -56,7 +61,10 @@ public class EnemyAgressiveState : EnemyState
         {
             LookAtPlayer();
             UpdateAgressive();
-            
+
+            image.sprite = visualizer;
+
+
             return this;
         }
     }
