@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyAlertState : EnemyState
 {
@@ -10,6 +11,9 @@ public class EnemyAlertState : EnemyState
     [SerializeField] float maxTimeAlertState = 5f;
     float counterLeftAlertState;
     bool deadBody = false;
+    [SerializeField] Sprite visualizer;
+    [SerializeField] Image image;
+
     public override EnemyState RunCurrentState()
     {
         if (enemyFOV.GetPlayerInside() == true)
@@ -24,6 +28,7 @@ public class EnemyAlertState : EnemyState
         }
         else
         {
+            image.sprite = visualizer;
             counterLeftAlertState -= Time.deltaTime;
             if (counterLeftAlertState < 0)
             {

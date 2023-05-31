@@ -379,6 +379,8 @@ MonoBehaviour:
   enemyAgressive: {fileID: 543923715874660211}
   enemyFOV: {fileID: 543923716448018550}
   maxTimeAlertState: 5
+  visualizer: {fileID: 21300000, guid: 30b8b7973c9c2e2438961c28fc58df33, type: 3}
+  image: {fileID: 1052264833406829907}
 --- !u!1 &543923714880108773
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,6 +556,8 @@ MonoBehaviour:
   fatherToRotate: {fileID: 543923716448018536}
   bullet: {fileID: 2568181938658600540, guid: 0ad9cfd30910ccb4f88c667a39bb5bb6, type: 3}
   alertState: {fileID: 543923714418079525}
+  visualizer: {fileID: 21300000, guid: 4cdb6adea4ec683409ad803b95f8d72a, type: 3}
+  image: {fileID: 1052264833406829907}
 --- !u!1 &543923716406308137
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,6 +606,7 @@ MonoBehaviour:
   enemyAlert: {fileID: 543923714418079525}
   enemyFOV: {fileID: 543923716448018550}
   enemyAgressive: {fileID: 543923715874660211}
+  image: {fileID: 1052264833406829907}
   pathPoints: {fileID: 0}
   visualizer: {fileID: 21300000, guid: bd9a4b0149607794088066f03fba4a03, type: 3}
 --- !u!1 &543923716448018543
@@ -696,6 +701,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: {fileID: 543923716406308148}
+  idleEnemy: 0
 --- !u!114 &543923716448018550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1144,7 +1150,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b61c1473d73ae6b4f8bc9ae8e0cf05c9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bd9a4b0149607794088066f03fba4a03, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class EnemyCalmState : EnemyState
 {
@@ -15,7 +16,7 @@ public class EnemyCalmState : EnemyState
     float threshold = .3f;
 
     float currentTimer;
-
+    [SerializeField] Image image;
     [SerializeField] Transform pathPoints;
     int pathCount = 0;
 
@@ -47,7 +48,7 @@ public class EnemyCalmState : EnemyState
 
     void EnemyCalmUpdate()
     {
-
+        image.sprite = visualizer;
         if (pathEnded == false)
         {
             if(pathPoints == null)
