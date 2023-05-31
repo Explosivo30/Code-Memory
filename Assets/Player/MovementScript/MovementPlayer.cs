@@ -16,7 +16,7 @@ public class MovementPlayer : MonoBehaviour
     [SerializeField] float cooldownBoostTimer = 5f;
     [SerializeField] float gravity = -9.81f;
     public bool lockControls = false;
-    [SerializeField]bool bikeLockControls = false; 
+    public bool bikeLockControls = false; 
     [SerializeField]bool playerTouchingSomething;
 
     #region SprintWallRunning
