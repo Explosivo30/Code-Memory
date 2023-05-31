@@ -10,6 +10,7 @@ public class ApareceMoto : MonoBehaviour
     private float rotacionobjectHoverBike;
     [SerializeField] GameObject Disco;
     [SerializeField] AudioSource SpawnAudio;
+    [SerializeField] GameObject particulas;
 
 
     // Start is called before the first frame update
@@ -34,6 +35,7 @@ public class ApareceMoto : MonoBehaviour
         HoverBike.transform.rotation = Quaternion.AngleAxis(rotacionobjectHoverBike, Vector3.up);
         Invoke("EliminarDisco", 1f);
         SpawnAudio.Play();
+        particulas.SetActive(true);
     }
     void EliminarDisco()
     {
