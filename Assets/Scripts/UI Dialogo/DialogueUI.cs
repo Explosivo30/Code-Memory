@@ -16,9 +16,6 @@ namespace UI
             playerConversant = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerConversant>();
             AIText.text = playerConversant.GetText();
         }
-
-        
-
     }
 }
 
