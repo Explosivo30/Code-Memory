@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2873.5254, g: 2530.3906, b: 2245.705, a: 1}
+  m_IndirectSpecularColor: {r: 2882.5586, g: 2540.9473, b: 2258.1973, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -626,6 +626,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   bossHit:
+    m_PersistentCalls:
+      m_Calls: []
+  activarDialogo:
     m_PersistentCalls:
       m_Calls: []
 --- !u!4 &270235629
@@ -2217,7 +2220,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1093586362}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56666c5a40171f54783dd416a44f42bf, type: 3}
   m_Name: 
@@ -2233,7 +2236,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1093586362}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c49b4cc203aa6414fae5c798d1d0e7d6, type: 3}
   m_Name: 
@@ -3504,24 +3507,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1815817379 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7753319776307288660, guid: 910d1c24e425fdb4692a0116cf78f8b3, type: 3}
-  m_PrefabInstance: {fileID: 8298826947165132054}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1815817385
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1815817379}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 6.81, y: 0.75, z: 0.2}
-  m_Center: {x: 0, y: -0.00000047683716, z: 0.0000019073486}
 --- !u!1 &1861831058
 GameObject:
   m_ObjectHideFlags: 0
@@ -5649,7 +5634,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7762557, y: 1}
+    m_SensorSize: {x: 1.7781818, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -7318,6 +7303,10 @@ PrefabInstance:
     - target: {fileID: 2327584537622778359, guid: 41ac3908f39fbb34b96d13950ea05e02, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584537646354623, guid: 41ac3908f39fbb34b96d13950ea05e02, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 864399235, guid: 41ac3908f39fbb34b96d13950ea05e02, type: 3}
@@ -13594,8 +13583,7 @@ PrefabInstance:
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 5366206125120709023}
-    m_RemovedComponents:
-    - {fileID: 4998096501037288713, guid: 910d1c24e425fdb4692a0116cf78f8b3, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 910d1c24e425fdb4692a0116cf78f8b3, type: 3}
 --- !u!4 &8298826947165132055 stripped
 Transform:
