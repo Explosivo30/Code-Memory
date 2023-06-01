@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Dialogo;
 using TMPro;
+using UnityEngine.UI;
 
 namespace UI
 {
@@ -10,11 +11,27 @@ namespace UI
     {
         PlayerConversant playerConversant;
         [SerializeField] TextMeshProUGUI AIText;
-        // Start is called before the first frame update
+        [SerializeField] Button nextButton;
+
+
         void Start()
         {
             playerConversant = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerConversant>();
+            nextButton.onClick.AddListener(Next);
+            UpdateUI();
+            
+        }
+
+        void Next()
+        {
+            playerConversant.Next();
+            UpdateUI();
+        }
+
+        void UpdateUI()
+        {
             AIText.text = playerConversant.GetText();
+            nextButton.gameObject.SetActive(playerConversant.HasNext());
         }
     }
 }
