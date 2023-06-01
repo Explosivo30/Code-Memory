@@ -18,10 +18,11 @@ public class ActivarDialogo : MonoBehaviour
             PlayerConversant hola = other.GetComponent<PlayerConversant>();
             hola.GetDialogue(dialogoADar);
 
-            EventForGame.instance.activarDialogo.Invoke();
+            
             movementPlayer.bikeLockControls = true;
             Dialgo.SetActive(true);
-            textDialogo.UpdateUI();
+            EventForGame.instance.activarDialogo.Invoke();
+            
 
         }
     }
