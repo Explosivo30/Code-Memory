@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Dialogo;
+using UI;
 
 public class ActivarDialogo : MonoBehaviour
 {
     [SerializeField] MovementPlayer movementPlayer;
     [SerializeField] DialoguesAssetMenu dialogoADar;
     [SerializeField] GameObject Dialgo;
+    [SerializeField] DialogueUI textDialogo;
     public bool textoYaAcabado = false;
     private void OnTriggerEnter(Collider other)
     {
@@ -19,6 +21,7 @@ public class ActivarDialogo : MonoBehaviour
             EventForGame.instance.activarDialogo.Invoke();
             movementPlayer.bikeLockControls = true;
             Dialgo.SetActive(true);
+            textDialogo.UpdateUI();
 
         }
     }

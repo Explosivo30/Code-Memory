@@ -13,6 +13,10 @@ namespace UI
         [SerializeField] TextMeshProUGUI AIText;
         [SerializeField] Button nextButton;
 
+        private void Awake()
+        {
+            EventForGame.instance.activarDialogo.AddListener(UpdateUI);
+        }
 
         void Start()
         {
@@ -28,7 +32,7 @@ namespace UI
             UpdateUI();
         }
 
-        void UpdateUI()
+        public void UpdateUI()
         {
             AIText.text = playerConversant.GetText();
             nextButton.gameObject.SetActive(playerConversant.HasNext());
