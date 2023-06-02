@@ -34,7 +34,7 @@ public class EventForGame: MonoBehaviour
 
     public UnityEvent desactivarDialogo = new UnityEvent();
 
-
+    public UnityEvent wallJump = new UnityEvent();
 
     
 
