@@ -5,14 +5,18 @@ using UnityEngine;
 public class activarYdesactivar : MonoBehaviour
 {
     [SerializeField] GameObject canvasActivar;
-    [SerializeField] GameObject canvasDesactivar;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             canvasActivar.SetActive(true);
-            canvasDesactivar.SetActive(false);
+            Invoke("DesactivarTutorial", 20f);
+            
         }
+    }
+    void DesactivarTutorial()
+    {
+        canvasActivar.SetActive(false);
     }
 }
