@@ -16,12 +16,11 @@ public class ActivarDialogo : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             PlayerConversant hola = other.GetComponent<PlayerConversant>();
-            hola.GetDialogue(dialogoADar);
-
-            
-            movementPlayer.bikeLockControls = true;
             Dialgo.SetActive(true);
+            hola.GetDialogue(dialogoADar);
             EventForGame.instance.activarDialogo.Invoke();
+
+            EventForGame.instance.desactivarDialogo.AddListener(TextoAcabado);
             
 
         }
@@ -33,11 +32,9 @@ public class ActivarDialogo : MonoBehaviour
             Dialgo.SetActive(false);
         }
     }
-    private void Update()
+
+    void TextoAcabado()
     {
-        if (textoYaAcabado == true)
-        {
-            movementPlayer.bikeLockControls = false;
-        }
+        gameObject.SetActive(false);
     }
 }

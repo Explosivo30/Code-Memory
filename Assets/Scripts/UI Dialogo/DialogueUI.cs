@@ -12,6 +12,7 @@ namespace UI
         PlayerConversant playerConversant;
         [SerializeField] TextMeshProUGUI AIText;
         [SerializeField] Button nextButton;
+        MovementPlayer playerMovement;
 
         private void Awake()
         {
@@ -21,9 +22,26 @@ namespace UI
         void Start()
         {
             playerConversant = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerConversant>();
+            playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<MovementPlayer>();
             nextButton.onClick.AddListener(Next);
             UpdateUI();
             
+        }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Comma))
+            {
+                if(playerConversant.HasNext())
+                {
+                    Next();
+                }
+                else
+                {
+                    playerMovement.bikeLockControls = false;
+                }
+                
+            }
         }
 
         void Next()

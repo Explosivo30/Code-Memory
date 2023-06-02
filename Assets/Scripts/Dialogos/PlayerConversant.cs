@@ -10,11 +10,6 @@ namespace Dialogo
         [SerializeField] DialoguesAssetMenu currentDialogue;
         DialogoNode currentNode = null;
 
-        private void Awake()
-        {
-            currentNode = currentDialogue.GetRootNode();
-        }
-
         public string GetText()
         {
             if(currentNode == null)
@@ -25,9 +20,12 @@ namespace Dialogo
            return currentNode.GetDialogo();
         }
 
+        
+
         public void GetDialogue(DialoguesAssetMenu currentDialogue)
         {
             this.currentDialogue = currentDialogue;
+            currentNode = currentDialogue.GetRootNode();
         }
 
         public void Next()

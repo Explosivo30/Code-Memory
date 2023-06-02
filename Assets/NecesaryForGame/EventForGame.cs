@@ -32,6 +32,10 @@ public class EventForGame: MonoBehaviour
 
     public UnityEvent activarDialogo = new UnityEvent();
 
+    public UnityEvent desactivarDialogo = new UnityEvent();
+
+
+
     
 
 
