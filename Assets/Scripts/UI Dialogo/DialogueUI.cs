@@ -9,27 +9,32 @@ namespace UI
 {
     public class DialogueUI : MonoBehaviour
     {
-        PlayerConversant playerConversant;
+        [SerializeField]PlayerConversant playerConversant;
         [SerializeField] TextMeshProUGUI AIText;
         [SerializeField] Button nextButton;
-        MovementPlayer playerMovement;
+        [SerializeField]MovementPlayer playerMovement;
 
         private void Awake()
         {
-            EventForGame.instance.activarDialogo.AddListener(UpdateUI);
+            //EventForGame.instance.activarDialogo.AddListener(UpdateUI);
+            //playerConversant = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerConversant>();
+            //playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<MovementPlayer>();
+            nextButton.onClick.AddListener(Next);
+            //UpdateUI();
         }
 
         void Start()
         {
-            playerConversant = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerConversant>();
-            playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<MovementPlayer>();
-            nextButton.onClick.AddListener(Next);
-            UpdateUI();
+            //playerConversant = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerConversant>();
+            //playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<MovementPlayer>();
+            //nextButton.onClick.AddListener(Next);
+            
             
         }
 
         private void Update()
         {
+            
             if (Input.GetKeyDown(KeyCode.Comma))
             {
                 if(playerConversant.HasNext())

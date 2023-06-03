@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using DG.Tweening;
+using Cinemachine;
 
 public class MovementPlayer : MonoBehaviour
 {
@@ -23,6 +25,9 @@ public class MovementPlayer : MonoBehaviour
     float timeBoostLeft;
     [SerializeField]float timerBoostTotal;
     [SerializeField]float sumarVelocidad = 5f;
+    [SerializeField] CinemachineVirtualCamera playerCamFov;
+    float startingFov;
+    float currentFov;
     #endregion
 
     #region WallRunning
@@ -109,6 +114,7 @@ public class MovementPlayer : MonoBehaviour
         onMovilityWallEvent.AddListener(Jump);
         canSprint = false;
         timeBoostLeft = timerBoostTotal;
+        startingFov = playerCamFov.m_Lens.FieldOfView;
 
     }
 
@@ -146,6 +152,7 @@ public class MovementPlayer : MonoBehaviour
                 if (isWall == false && speed <= maxSpeed)
                 {
                     speed += sumarVelocidad;
+                    playerCamFov.m_Lens.FieldOfView += 4f;
                     cooldownBoostTimer = cooldownBoostTotal;
                 }
                
@@ -163,6 +170,7 @@ public class MovementPlayer : MonoBehaviour
             if(cooldownBoostTimer <= 0f)
             {
                 speed = walkingSpeed;
+                playerCamFov.m_Lens.FieldOfView = startingFov;
             }
 
             Slide();

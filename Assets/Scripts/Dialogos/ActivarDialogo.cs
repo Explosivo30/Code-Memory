@@ -18,9 +18,8 @@ public class ActivarDialogo : MonoBehaviour
             PlayerConversant hola = other.GetComponent<PlayerConversant>();
             Dialgo.SetActive(true);
             hola.GetDialogue(dialogoADar);
-            EventForGame.instance.activarDialogo.Invoke();
-
-            EventForGame.instance.desactivarDialogo.AddListener(TextoAcabado);
+            textDialogo.UpdateUI();
+            //EventForGame.instance.desactivarDialogo.AddListener(TextoAcabado);
             
 
         }
