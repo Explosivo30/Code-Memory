@@ -27,7 +27,8 @@ public class MovementPlayer : MonoBehaviour
     [SerializeField]float sumarVelocidad = 5f;
     [SerializeField] CinemachineVirtualCamera playerCamFov;
     float startingFov;
-    float currentFov;
+    [SerializeField]GameObject[] numberSpeed;
+    int currentNumberSpeed = 0;
     #endregion
 
     #region WallRunning
@@ -152,10 +153,12 @@ public class MovementPlayer : MonoBehaviour
                 if (isWall == false && speed <= maxSpeed)
                 {
                     speed += sumarVelocidad;
-                    playerCamFov.m_Lens.FieldOfView += 4f;
+                    playerCamFov.m_Lens.FieldOfView += 2.5f;
+                    AddNewUINumberSpeed();
+
                     cooldownBoostTimer = cooldownBoostTotal;
                 }
-               
+
                 canSprint = true;
                 timeBoostLeft = timerBoostTotal;
                 isGrounded = true;
@@ -171,6 +174,7 @@ public class MovementPlayer : MonoBehaviour
             {
                 speed = walkingSpeed;
                 playerCamFov.m_Lens.FieldOfView = startingFov;
+                UpdateSpeedUIReset();
             }
 
             Slide();
@@ -219,6 +223,21 @@ public class MovementPlayer : MonoBehaviour
         {
             velocity.y = 0f;
         }
+    }
+
+    private void AddNewUINumberSpeed()
+    {
+        numberSpeed[currentNumberSpeed].SetActive(true);
+        currentNumberSpeed += 1;
+    }
+
+    private void UpdateSpeedUIReset()
+    {
+        foreach (GameObject multiplicador in numberSpeed)
+        {
+            multiplicador.SetActive(false);
+        }
+        currentNumberSpeed = 0;
     }
 
     private void WallRunningMovement()
@@ -308,7 +327,6 @@ public class MovementPlayer : MonoBehaviour
             }
             else if (isWallRight)
             {
-                
                 JumpLeft();
             }
             isGrounded = false;
