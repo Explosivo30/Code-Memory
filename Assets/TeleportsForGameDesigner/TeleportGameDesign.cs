@@ -26,6 +26,14 @@ public class TeleportGameDesign : MonoBehaviour
         {
             playerTransform.position = teleportPoints.transform.GetChild(1).position;
         }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            playerTransform.position = teleportPoints.transform.GetChild(2).position;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            playerTransform.position = teleportPoints.transform.GetChild(3).position;
+        }
 
     }
 
