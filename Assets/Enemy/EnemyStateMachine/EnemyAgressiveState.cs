@@ -16,6 +16,8 @@ public class EnemyAgressiveState : EnemyState
     Coroutine lookCoroutine;
     [SerializeField] Animator anim;
     bool chasePlayer = false;
+    [SerializeField] AudioSource sound;
+    private bool yaASonadoUnaVez = false;
 
     #region AttackPlayer
     [SerializeField] Transform fatherToRotate;
@@ -136,6 +138,12 @@ public class EnemyAgressiveState : EnemyState
             //Instantiate(bullet,fatherToRotate.position, fatherToRotate.rotation);
             carga.Play();
             disparo.Play();
+
+            if (disparo.isPlaying && yaASonadoUnaVez == false)
+            {
+                sound.Play();
+                yaASonadoUnaVez = true;
+            }
             Debug.Log("Atacamos");
             timeToAttack = timeResetAttack;
         }
