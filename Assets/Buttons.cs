@@ -12,6 +12,7 @@ public class Buttons : MonoBehaviour
     {
         audioSource = gameObject.AddComponent<AudioSource>();   // Crea una instancia de AudioSource
         audioSource.clip = clickSound;   // Asigna el archivo de sonido al componente AudioSource
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void OnPlay()
@@ -37,7 +38,7 @@ public class Buttons : MonoBehaviour
     public void OnReturnToMainMenu()
     {
         audioSource.Play();
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("MainMenuFinal");
     }
 
 }
