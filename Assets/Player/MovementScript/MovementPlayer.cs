@@ -28,6 +28,7 @@ public class MovementPlayer : MonoBehaviour
     [SerializeField] CinemachineVirtualCamera playerCamFov;
     float startingFov;
     [SerializeField]GameObject[] numberSpeed;
+    [SerializeField] GameObject[] cubeSpeed;
     int currentNumberSpeed = 0;
     #endregion
 
@@ -228,6 +229,7 @@ public class MovementPlayer : MonoBehaviour
     private void AddNewUINumberSpeed()
     {
         numberSpeed[currentNumberSpeed].SetActive(true);
+        cubeSpeed[currentNumberSpeed].SetActive(true);
         currentNumberSpeed += 1;
     }
 
@@ -237,6 +239,12 @@ public class MovementPlayer : MonoBehaviour
         {
             multiplicador.SetActive(false);
         }
+
+        foreach(GameObject barraMultiplicador in cubeSpeed)
+        {
+            barraMultiplicador.SetActive(false);
+        }
+
         currentNumberSpeed = 0;
     }
 
